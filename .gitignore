@@ -4,5 +4,8 @@
 /.tools/
 /.venv/
 /.venv-*/
+/models/
+/artifacts/
+/results/
 __pycache__/
 *.py[cod]

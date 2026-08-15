@@ -1,1 +1,8 @@
 pyarrow==21.0.0
+numpy>=1.26.4,<3
+scikit-learn>=1.4,<2
+torch>=2.2
+transformers>=4.45,<5
+modelscope==1.39.1
+repeng @ git+https://github.com/vgel/repeng.git@0ba7196d81f7c5de28b1159c9d1732440afd97ce
+pytest>=8,<9
