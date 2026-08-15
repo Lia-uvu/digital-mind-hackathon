@@ -84,4 +84,12 @@ frustration 的假设预测是：随着连续失败，下一猜的归一化信�
 - 唯一主指标没有鼓励改善或 persona 调节证据。即时 internal representation 有鼓励效应及部分 persona 调节，其中高 N 的 frustration 降幅更大，但该 frustration 差异没有维持到下一猜后。
 - 详细数值、格式失败、重复轨迹和解释边界以 `FORMAL_RESULTS.md` 为准；不得把辅助 representation 结果改写成模型的主观体验。
 
+# response-only pilot（探索性）
+- 可从 formal-v1 保存的第 5 轮完整对话 checkpoint 重放新分支，不重跑失败历史；正式记录没有 KV cache，因此仍需前向重放上下文。
+- 干预消息删除猜测与格式要求，模型自然回复且回复不送入游戏引擎；另行逐 token 读取生成回复期间的三条内部方向。
+- seed `1001` 的 12 模板接线 pilot 已完成。首 token 与末 token 的 frustration 条件差方向相反，且逐 token 投影混入生成内容差异；在预先冻结轨迹摘要前不得扩写为正式效应结论。
+- 两条件配对增加“先暂停”后，中性 11/12、鼓励 6/12 回复 `{"guess": null}`，其余鼓励回复多为继续猜测；该版本造成明显的条件性内容/长度分叉，其 token 汇总不能直接解释为纯状态差。
+- “先暂停，再只报继续意愿”的 seed `1001` pilot 中，24/24 回复格式与 9-token 长度完全一致；鼓励评分全为 8，中性为 10 个 7、2 个 8，prompt-end frustration 为 12/12 降低。该单 seed 只支持扩大设计的可行性，不是正式效应证据；扩大前应冻结 willingness 为行为指标、prompt-end frustration 为即时内部辅助指标，逐 token 轨迹仅探索。
+- 随后保持相同实现扩大到 seeds `1002`–`1010`：共 120 个完整配对、240/240 合法评分；继续意愿 seed-level 均值 delta `+0.917/10`，prompt-end frustration 在 10/10 seeds 降低、均值 `-0.00171`。整段 token pattern 在主要 8-token 格式中稳定随位置换号。因 seed `1001` 在扩大决定前已查看，全部结果仍属探索性，详见 `RESPONSE_WILLINGNESS_RESULTS.md`。
+
 *此文档及时实时更新*

@@ -298,6 +298,58 @@ class EmotionProbe:
             }
         return result
 
+    def score_token_ids(
+        self, token_ids: Sequence[int], *, token_start: int
+    ) -> list[dict[str, Any]]:
+        """Score every token from ``token_start`` through the end of one sequence.
+
+        A single causal forward pass reproduces the hidden state after each actual
+        generated token has been consumed.  Unlike repeng's helper, this does not
+        discard all positions except the final token.
+        """
+        import torch
+
+        if token_start < 0 or token_start > len(token_ids):
+            raise ValueError("token_start is outside the token sequence")
+        if token_start == len(token_ids):
+            return []
+        input_ids = torch.tensor([list(token_ids)], device=self.model.device)
+        with torch.inference_mode():
+            output = self.model(input_ids=input_ids, output_hidden_states=True)
+        rows: list[dict[str, Any]] = []
+        try:
+            for position in range(token_start, len(token_ids)):
+                axes: dict[str, Any] = {}
+                for axis in AXES:
+                    by_layer: dict[str, float] = {}
+                    for layer, direction in self.directions.directions[axis].items():
+                        hidden_index = layer + 1 if layer >= 0 else layer
+                        hidden = (
+                            output.hidden_states[hidden_index][0, position]
+                            .detach()
+                            .cpu()
+                            .float()
+                            .numpy()
+                        )
+                        by_layer[str(layer)] = _projection(hidden, direction)
+                    axes[axis] = {
+                        "layers": by_layer,
+                        "median": float(median(by_layer.values())),
+                    }
+                rows.append(
+                    {
+                        "token_position": position,
+                        "token_id": int(token_ids[position]),
+                        "token_text": self.tokenizer.decode(
+                            [int(token_ids[position])], skip_special_tokens=False
+                        ),
+                        "projections": axes,
+                    }
+                )
+        finally:
+            del output
+        return rows
+
     def validate(
         self,
         materials: EmotionMaterials,

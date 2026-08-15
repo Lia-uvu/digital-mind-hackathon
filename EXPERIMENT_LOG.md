@@ -139,3 +139,36 @@
 - 鼓励后的即时内部表示表现为 positive 上升、negative 与 frustration 下降。frustration 的高 N−低 N contrast 为 `-0.000483`（Holm p `0.0117`），但下一猜后 frustration 平均效应和 persona contrasts 均不再可见。
 - 继续意愿平均 delta 为 `+0.217/10`（exact p `0.250`）；鼓励与中性分支各有 13/120 个无效猜测，规则违反条件差为零。
 - 详细表格、数据质量和解释边界见 `FORMAL_RESULTS.md`。
+
+## 2026-08-15：response-only token-trajectory pilot
+
+- 另建 `response_pilot_prompts.md`，从鼓励与中性消息中删除“现在猜测”和 JSON 格式要求；模型可自然回复，回复不进入 Absurdle 引擎、不计作新一轮猜测。
+- 新入口 `run_response_pilot.py` 从 `results/formal-v1.jsonl` 验证并恢复 120 个共享 round-5 对话 checkpoint，不重跑五轮历史；正式记录未保存 KV cache，因此每个新分支仍需重放完整上下文。
+- 确认固定 commit 的 `repeng.batched_get_hiddens` 只返回输入最后一个非 padding token。新增 read-only token scorer：先按冻结采样生成一次，再对 prompt 与实际生成 token 做单次 causal forward，保存每个生成 token 在五层上的 positive、negative、frustration 投影。该 forward 不改变生成。
+- 使用 seed `1001` 跑完 12 templates × 2 conditions 的接线 pilot，共 24 条回复、约 `0.77 MB`。模型即使未被要求猜测，也因既有游戏上下文自行继续输出类似猜测；这些内容原样保留但不解析、不计分。
+- 描述性结果：encouragement−neutral frustration 的首 token delta 为 12/12 负向，中位 `-0.00159`；末 token delta 为 12/12 正向，中位 `+0.00209`；跨回复 token 中位数的条件 delta 中位为 `+0.000694`（11/12 正向）。prompt-end delta 为 12/12 正向，中位 `+0.00978`。
+- 以上只有一个 seed，且 token 轨迹混入输出内容差异，不是新的正式结果。若扩到其余 seeds，必须先冻结使用首 token、末 token还是预先规定的轨迹摘要，不能看完 seed `1001` 后挑选方向最有利的位置。
+
+**“先暂停”文案复测**
+
+- 按用户修订，在鼓励与中性消息末尾同样加入 `For now, pause here.`，没有使用“不要再猜”的直接禁令；使用同一 seed `1001`、12 templates 另存 `results/response-pilot-pause-seed1001-v1.jsonl`。
+- 中性条件 11/12 精确回复 `{"guess": null}`，鼓励条件 6/12 精确回复该文本；鼓励其余 6 条仍生成较长的猜测样式内容，中性仅 1 条为其他短回复。暂停指令明显减少续猜，但两条件的生成内容和长度不再匹配。
+- 描述性 encouragement−neutral frustration：首 token 12/12 正向，中位 `+0.00558`；末 token 12/12 正向，中位 `+0.00169`；跨 token 中位数的条件差中位 `+0.00261`（11/12 正向）；prompt-end 差中位 `+0.02015`。这些数值与无暂停版本方向不同，且被条件性输出分叉混入，不作为鼓励提高 frustration 的证据。
+
+**“先暂停，再评分”复测**
+
+- 另建 `response_willingness_pilot_prompts.md`：两条件均以 `For now, pause here.` 开始，末尾要求只返回 1–10 继续意愿 JSON；不展示任何示例分数。仍从 formal-v1 checkpoint 重放 seed `1001` 的 12 templates。
+- 24/24 回复合法且均为 9 tokens。鼓励条件 12/12 评分 8；中性条件 10/12 评分 7、2/12 评分 8；paired willingness delta 为 10 个 `+1`、2 个 `0`，均值 `+0.833/10`。
+- 在回复生成前的 prompt-end readout，encouragement−neutral positive 中位 `+0.00877`（12/12 正），negative 中位 `-0.000491`，frustration 中位 `-0.00145`（12/12 负）。这是消息读完后的即时表示，尚未混入评分 token。
+- 逐 token 回复虽然格式和长度完全对齐，frustration 条件差仍随位置换号；跨 9 tokens 的中位数为 12/12 负向、中位 `-0.00412`，但首 token与末 token均为 12/12 正向。逐 token 投影同时编码具体 token 位置与完整条件上下文，不能因格式对齐就视为稳定的纯情绪时间序列。
+- 该结果只有一个 seed，而正式数据本来就只有 10 条独特预干预轨迹；不得把 12 templates 当作 12 个独立重复。若扩大，先冻结 willingness 与 prompt-end frustration 为主要/辅助指标，token 轨迹保持探索性。
+
+**扩大至剩余 seeds**
+
+- 用户确认整段 token pattern 可以作为探索对象，并要求保持同一做法运行 seeds `1002`–`1010`；文案、采样、checkpoint、方向与读取代码均未改变。
+- 最终得到 120 个完整配对、240/240 合法 willingness JSON。继续意愿配对 delta：56 个 `+1`、18 个 `+3`、46 个 `0`，无负向；按 frozen formal 层级先平均 quadrant × seed 内三模板后，seed-level 平均 treatment delta 为 `+0.917/10`（探索性 exact p=`0.0156`）。
+- prompt-end frustration 的 seed-level 平均条件差为 `-0.00171`，10/10 seeds 负向；persona contrasts 没有清晰证据。
+- 108/120 配对为相同 8-token 紧凑 JSON，12/120 为相同 9-token 带空格 JSON，两条件内长度始终匹配。8-token 轨迹稳定呈现开头两 token 正、`illing`/`ness` 负、评分附近变化、`}` 正、结束位置接近零的 pattern。
+- 完整数值与解释边界见 `RESPONSE_WILLINGNESS_RESULTS.md`。因为 seed `1001` 已在扩大决定前查看，全部扩展结果仍标为探索性，不改写 formal-v1。
+- 追加 persona 降幅检查：鼓励分支自身的 pre→prompt-end 变化存在高 N−低 N contrast `+0.000878`（Holm p=`0.0117`），但 neutral 也有同方向 pattern；在正确的 encouragement−neutral difference-in-differences 中 N contrast 为 `+0.000136`（Holm p=`0.557`），故不作为 persona 调节证据。
+- 追加正式 pre-intervention round-1→round-5 persona 检查：116/120 runs 上升，四象限平衡均值 HH `+0.00625`、HL `+0.00720`、LH `+0.00506`、LL `+0.00607`。高 E−低 E 为 `+0.00116`（探索性 Holm p=`0.00586`），高 N−低 N 为 `-0.000982`（Holm p=`0.00586`），interaction `+0.000055`（Holm p=`0.918`）。这支持 buildup 幅度与 E、N 描述有关，但该 persona 对比不是原 manipulation pass 的冻结判据，且 endpoint 差不等同于完整五轮线性 slope。

@@ -22,6 +22,13 @@ class SamplingConfig:
         return self.temperature > 0
 
 
+@dataclass(frozen=True)
+class GeneratedText:
+    text: str
+    prompt_token_ids: tuple[int, ...]
+    generated_token_ids: tuple[int, ...]
+
+
 class LocalChatModel:
     """Own one Hugging Face causal LM and expose deterministic seeded turns."""
 
@@ -95,6 +102,18 @@ class LocalChatModel:
         seed: int,
         sampling: SamplingConfig,
     ) -> str:
+        return self.generate_detailed(
+            messages, seed=seed, sampling=sampling
+        ).text
+
+    def generate_detailed(
+        self,
+        messages: Sequence[ChatMessage],
+        *,
+        seed: int,
+        sampling: SamplingConfig,
+    ) -> GeneratedText:
+        """Generate once while retaining the exact prompt/completion token boundary."""
         import torch
 
         torch.manual_seed(seed)
@@ -122,7 +141,11 @@ class LocalChatModel:
             output = self.model.generate(**encoded, **generate_kwargs)
         prompt_length = encoded["input_ids"].shape[1]
         new_tokens = output[0, prompt_length:]
-        return self.tokenizer.decode(new_tokens, skip_special_tokens=True).strip()
+        return GeneratedText(
+            text=self.tokenizer.decode(new_tokens, skip_special_tokens=True).strip(),
+            prompt_token_ids=tuple(int(token) for token in encoded["input_ids"][0]),
+            generated_token_ids=tuple(int(token) for token in new_tokens),
+        )
 
     def metadata(self) -> dict[str, Any]:
         config = self.model.config
