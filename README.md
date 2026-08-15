@@ -43,3 +43,14 @@ python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
 .venv/bin/python sample_nemotron_personas.py
 ```
+
+## Candidate task bank
+
+`download_bbh.py` downloads the three-, five-, and seven-object variants of
+the BBH `logical_deduction` and `tracking_shuffled_objects` task families from
+a pinned upstream commit. These local task files are inputs to a later neutral
+baseline screening step; they are not screened by this script.
+
+```sh
+python3 download_bbh.py
+```
