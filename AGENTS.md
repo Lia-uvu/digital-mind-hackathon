@@ -91,5 +91,6 @@ frustration 的假设预测是：随着连续失败，下一猜的归一化信�
 - 两条件配对增加“先暂停”后，中性 11/12、鼓励 6/12 回复 `{"guess": null}`，其余鼓励回复多为继续猜测；该版本造成明显的条件性内容/长度分叉，其 token 汇总不能直接解释为纯状态差。
 - “先暂停，再只报继续意愿”的 seed `1001` pilot 中，24/24 回复格式与 9-token 长度完全一致；鼓励评分全为 8，中性为 10 个 7、2 个 8，prompt-end frustration 为 12/12 降低。该单 seed 只支持扩大设计的可行性，不是正式效应证据；扩大前应冻结 willingness 为行为指标、prompt-end frustration 为即时内部辅助指标，逐 token 轨迹仅探索。
 - 随后保持相同实现扩大到 seeds `1002`–`1010`：共 120 个完整配对、240/240 合法评分；继续意愿 seed-level 均值 delta `+0.917/10`，prompt-end frustration 在 10/10 seeds 降低、均值 `-0.00171`。整段 token pattern 在主要 8-token 格式中稳定随位置换号。因 seed `1001` 在扩大决定前已查看，全部结果仍属探索性，详见 `RESPONSE_WILLINGNESS_RESULTS.md`。
+- 另在 `codex/pause-prompt-state` 上去掉评分与全部回复生成，只读纯 pause 鼓励/中性消息后的 prompt-end state。120 个配对中 encouragement−neutral frustration 为 `+0.02456`、negative 为 `-0.00656`，frustration 无 persona 调节。该结果说明 probe 强烈编码干预文本语义；即使没有生成回复，也不能把 prompt-end projection 当成内容无关的潜在情绪值。
 
 *此文档及时实时更新*

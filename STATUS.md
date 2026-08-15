@@ -1,6 +1,6 @@
 # 当前状态
 
-更新时间：2026-08-16（formal-v1 已完成；pause-then-willingness 探索性扩展已完成）
+更新时间：2026-08-16（formal-v1 已完成；pause-only prompt-state 探索已完成）
 
 ## 已完成
 
@@ -20,6 +20,7 @@
 - 在两条件末尾配对加入 `For now, pause here.` 后复跑 seed `1001`：中性 11/12 回复 `{"guess": null}`，鼓励仅 6/12，另 6 条仍输出猜测样式内容。该版本虽能减少惯性续猜，却造成明显的条件性回复内容/长度分叉，不适合把整段 token 汇总直接解释为 frustration 状态差。
 - 新增“先暂停，再只报继续意愿”的配对 pilot。seed `1001` 下 24/24 回复均为同样 9-token JSON；鼓励 12/12 评分 8，中性为 10 个 7、2 个 8，配对平均 delta `+0.833/10`。回复前 prompt-end frustration 为 12/12 降低，中位条件差 `-0.00145`。只有一个 seed，暂不作推断。
 - 按相同实现完成其余 seeds `1002`–`1010`，合计 120 个配对、240/240 合法评分。继续意愿 delta 为 56 个 `+1`、18 个 `+3`、46 个 `0`、无负向；seed-level 平均效应 `+0.917/10`。prompt-end frustration 在 10/10 seeds 降低，均值 `-0.00171`。因扩展决定发生在查看 seed `1001` 后，结果保持探索性，详见 `RESPONSE_WILLINGNESS_RESULTS.md`。
+- 新分支另做纯 pause prompt-state：不评分、不猜测、不生成回复。120 个配对中 encouragement−neutral frustration 为 `+0.02456`、negative 为 `-0.00656`；frustration 没有 persona 调节。该反向结果显示 prompt-end probe 强烈编码干预文本语义，详见 `PAUSE_PROMPT_STATE_RESULTS.md`。
 
 ## 当前结论
 
@@ -55,3 +56,4 @@
 - 正式冻结协议：[`FORMAL_PROTOCOL.md`](FORMAL_PROTOCOL.md)
 - 正式结果：[`FORMAL_RESULTS.md`](FORMAL_RESULTS.md)
 - 暂停后继续意愿探索：[`RESPONSE_WILLINGNESS_RESULTS.md`](RESPONSE_WILLINGNESS_RESULTS.md)
+- 纯暂停 prompt-end 探索：[`PAUSE_PROMPT_STATE_RESULTS.md`](PAUSE_PROMPT_STATE_RESULTS.md)

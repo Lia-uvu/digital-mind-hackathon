@@ -172,3 +172,11 @@
 - 完整数值与解释边界见 `RESPONSE_WILLINGNESS_RESULTS.md`。因为 seed `1001` 已在扩大决定前查看，全部扩展结果仍标为探索性，不改写 formal-v1。
 - 追加 persona 降幅检查：鼓励分支自身的 pre→prompt-end 变化存在高 N−低 N contrast `+0.000878`（Holm p=`0.0117`），但 neutral 也有同方向 pattern；在正确的 encouragement−neutral difference-in-differences 中 N contrast 为 `+0.000136`（Holm p=`0.557`），故不作为 persona 调节证据。
 - 追加正式 pre-intervention round-1→round-5 persona 检查：116/120 runs 上升，四象限平衡均值 HH `+0.00625`、HL `+0.00720`、LH `+0.00506`、LL `+0.00607`。高 E−低 E 为 `+0.00116`（探索性 Holm p=`0.00586`），高 N−低 N 为 `-0.000982`（Holm p=`0.00586`），interaction `+0.000055`（Holm p=`0.918`）。这支持 buildup 幅度与 E、N 描述有关，但该 persona 对比不是原 manipulation pass 的冻结判据，且 endpoint 差不等同于完整五轮线性 slope。
+
+## 2026-08-16：纯 pause prompt-end state
+
+- 从提交 `6e07521` 新开 `codex/pause-prompt-state`。复用 `response_pilot_prompts.md` 的鼓励/中性文本与配对 pause 句，删除评分及所有 assistant 回复生成；只读取 user message 后 assistant generation prompt 位置的 hidden state。
+- 采集 12 templates × 10 seeds × 2 conditions，共 240 条、120 对；所有 `generated_response` 为 null。
+- encouragement−neutral：positive `-0.00115`、negative `-0.00656`、frustration `+0.02456`。negative 与 frustration 的 seed-level exact p 均 `0.00195`，但 frustration 的 E/N/interaction Holm p 均大于 `0.56`。
+- 鼓励自身 pre→prompt-end frustration 为 `+0.02521`；E/N/interaction 均无 Holm 显著调节。没有生成回复后，frustration 仍大幅上升，说明主要混入来自鼓励文本中“困难、持续努力、继续追求解决”等语义，而非回复 token。
+- 完整数值和解释边界见 `PAUSE_PROMPT_STATE_RESULTS.md`。不得把这个 prompt-text projection 改写成鼓励使模型主观受挫。
