@@ -1,0 +1,8 @@
+# Raw source dataset and local tooling are intentionally not published.
+/data/
+/nemotron_personas_6.json
+/.tools/
+/.venv/
+/.venv-*/
+__pycache__/
+*.py[cod]

@@ -1,0 +1,34 @@
+{
+  "source": "NVIDIA Nemotron-Personas-USA-Extended",
+  "source_version": "0.0.2",
+  "source_url": "https://catalog.ngc.nvidia.com/orgs/nvidia/nemotron-personas/resources/nemotron-personas-dataset-en_us/-",
+  "input_filename": "en_US.parquet",
+  "input_sha256": "0341192b00a376cf5643d98cb244e596529030fb3011694ca6ab381f149d3ae8",
+  "input_row_count": 1000000,
+  "seed": 20260815,
+  "filter_terms": [
+    "encourag",
+    "frustrat",
+    "give\\s+up",
+    "giving\\s+up",
+    "gave\\s+up",
+    "confidence",
+    "confident",
+    "self[- ]?assur",
+    "鼓励",
+    "挫败",
+    "放弃",
+    "自信"
+  ],
+  "filter_scope": "all record fields",
+  "selected_row_indices": [
+    91881,
+    30399,
+    788363,
+    752875,
+    548487,
+    577975
+  ],
+  "private_output_sha256": "4fe7dc9893f0d200464afae971fcdd56db0d03fe6ea374e7bfa5f95087e83628",
+  "note": "The complete selected records remain local because the NVIDIA Dataset License Agreement prohibits redistribution in whole or in part."
+}
