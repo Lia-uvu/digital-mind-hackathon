@@ -100,4 +100,15 @@ frustration 的假设预测是：随着连续失败，下一猜的归一化信�
 - 从 formal-v1 的 120 个第 5 轮 checkpoint 重放得到 240/240 合法评分，输出长度 120/120 配对。stated willingness 平均 delta 为 `+0.200/10`（探索性 exact p=`0.250`），persona contrasts 均无证据；旧直接继续提示版本的 `+0.917/10` 没有复现。
 - prompt-end supportive−neutral 为 positive `+0.006485`、negative `-0.000685`、frustration `+0.001979`。这些是具体支持文本与失败历史交互后的最后位置表示，不解释为安抚后的纯情绪。详见 `SUPPORTIVE_WILLINGNESS_RESULTS.md`。
 
+# formal-v2（结构已接受，尚未冻结）
+- follow-up 只研究首五轮 frustration trajectory；规划为 12 templates × fresh seeds `2001`–`2010` × `feedback_only`/`supportive`/`neutral` 三个完整独立 run，共 360 runs，不从第 5 轮 checkpoint 分叉。
+- Fable 的最小对齐 persona 结构方向已接受；精确 persona/filler 文案与最终 formal-v2 freeze 尚未完成，**不得采集**。draft activation calibration 的 pass rule 已在运行前写死，不得按结果回改。
+- 唯一的 forward design 入口为 `FORMAL_V2_PROTOCOL.md`；它不替代冻结的 `FORMAL_PROTOCOL.md` 或改写 formal-v1。
+- draft persona 的无游戏、无生成 activation calibration v0 已跑：token audit 通过，但 3-suffix leave-one-template-out 规则为 5/6（held-out `v2` 的 E margin 未过），且 N 文案含禁止的 shift/change 轨迹语言；v0 被拒绝但文案/结果保留为 `formal_v2_personas.md`、`results/formal-v2-persona-calibration.json`。不得改判定、suffix、层或 runner 来迁就 v1，更不得冻结刺激。
+- v1 只改 persona 文案，沿用同一 token audit、三 suffix、层和判据后为 6/6、18/18 suffix-specific signs 正确；这只允许进入后续 freeze 讨论，不等于 formal-v2 刺激已冻结。结果在 `formal_v2_personas_v1.md`、`results/formal-v2-persona-calibration-v1.json`。
+- 复核发现 v1 的 N carrier 三 template 完全相同，不能构成独立 paraphrase generalization；v1 保留但不冻结。v2 只替换 v2/v3 N carrier，仍必须用同一校准设置重新检验。
+- v2 保留 E carriers、改为三条独立 N carrier；同一规则结果为 6/6、18/18。它仅证明 draft activation legibility，不等于 formal-v2 刺激已冻结；完整结果在 `formal_v2_personas_v2.md`、`results/formal-v2-persona-calibration-v2.json`。
+- v3 仅将 v1 template 四处 `You feel worry` 改为 `You feel worried`，沿用同一设置后仍为 6/6、18/18；v0/v1/v2/v3 都未冻结，结果在 `formal_v2_personas_v3.md`、`results/formal-v2-persona-calibration-v3.json`。
+- v3 的 persona-only existing-probe baseline raw JSON/CSV 已生成，属于论文快照而非 formal collection；解释边界见 `FORMAL_V2_PERSONA_CALIBRATION_RESULTS.md`，下一步顺序见 `FORMAL_V2_PROTOCOL.md` 的 compaction handoff。
+
 *此文档及时实时更新*

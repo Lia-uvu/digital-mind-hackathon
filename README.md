@@ -10,8 +10,9 @@ reassurance plus affirmation as one bundled intervention.
 The four quadrants form a controlled `extraversion × neuroticism` design, with
 three parallel persona wordings per quadrant (12 prompts total). They contain
 general traits only; they never prescribe how the model reacts to failure or
-support. Treatment and neutral conditions are paired from the exact same
-conversation and candidate-set checkpoint.
+support. This describes the completed formal-v1 paired-checkpoint design;
+formal-v2's accepted three-arm, full-run structure is separately documented
+and is not yet frozen for collection.
 
 See [`AGENTS.md`](AGENTS.md) for the accepted research design and
 [`INSTRUCTION.md`](INSTRUCTION.md) for implementation boundaries. The dated
@@ -19,6 +20,11 @@ research history is in [`EXPERIMENT_LOG.md`](EXPERIMENT_LOG.md), while
 [`STATUS.md`](STATUS.md) tracks the current state and next work. Frozen formal
 sampling and analysis decisions are in [`FORMAL_PROTOCOL.md`](FORMAL_PROTOCOL.md),
 and the completed formal-v1 report is in [`FORMAL_RESULTS.md`](FORMAL_RESULTS.md).
+The accepted-but-not-yet-frozen formal-v2 structure is in
+[`FORMAL_V2_PROTOCOL.md`](FORMAL_V2_PROTOCOL.md); it is explicitly not a
+collection command.
+The immutable v3 persona-only probe baseline and its tidy table are documented
+in [`FORMAL_V2_PERSONA_CALIBRATION_RESULTS.md`](FORMAL_V2_PERSONA_CALIBRATION_RESULTS.md).
 The current bundled-intervention protocol and results are in
 [`SUPPORTIVE_WILLINGNESS_PROTOCOL.md`](SUPPORTIVE_WILLINGNESS_PROTOCOL.md) and
 [`SUPPORTIVE_WILLINGNESS_RESULTS.md`](SUPPORTIVE_WILLINGNESS_RESULTS.md).

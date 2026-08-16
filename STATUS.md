@@ -2,6 +2,19 @@
 
 更新时间：2026-08-16（formal-v1 勘误与 supportive reassurance willingness 探索已完成）
 
+## formal-v2（已确认结构，尚不得采集）
+
+- 已接受 follow-up 的三臂五轮结构：`feedback_only`、`supportive`、`neutral`，每个 arm 从头独立完成五次失败；12 templates × fresh seeds `2001`–`2010` × 3 arms，共 360 runs。
+- 已接受 Fable 的最小对齐 persona 骨架：四象限同 template 内仅以固定槽位调节两轴，保留三模板；精确文案与最终 formal-v2 freeze 仍未完成。draft activation calibration 的 pass rule 已在运行前写死，不可按其结果回改。
+- 逐轮顺序、planned contrasts、耐久数据与出图链路见 [`FORMAL_V2_PROTOCOL.md`](FORMAL_V2_PROTOCOL.md)。在该文件的 freeze gate 完成前，不得运行 formal-v2 采集。
+- 已完成一轮无游戏、无生成的 draft persona activation calibration：Qwen tokenizer audit 在每个 template 内通过；预先写死的 3-suffix、leave-one-template-out 判定为 5/6，`v2` 的 held-out E margin 未过。该 v0 还因 N 文案含 shift/change 轨迹语言被拒绝；v0 文案与 artifact 保留不改：`formal_v2_personas.md`、`results/formal-v2-persona-calibration.json`。v1 只能在不改判定、suffix、层或 runner 的前提下重测，未过 6/6 不冻结。
+- v1 在同一 Qwen token audit、三 suffix、倒数五层和 leave-one-template-out 规则下为 6/6，18/18 suffix-specific signs 正确；因此仅可进入后续 freeze 讨论，尚未冻结为 formal-v2 刺激。完整结果：`formal_v2_personas_v1.md`、`results/formal-v2-persona-calibration-v1.json`。
+- 复核后 v1 的 N carrier 在三 template blocks 中逐字相同，故其 N LOTO 不是独立 paraphrase generalization；v1 仍保留不改但不进入 freeze。v2 仅替换 v2/v3 的 N carrier，将在完全相同的校准设置下另存结果。
+- v2 保留 v1 的 E carriers，只将 v2/v3 N carrier 改为独立一般负性情感措辞；同一 token audit、三 suffix、倒数五层和 LOTO 规则为 6/6、18/18。它证明 draft activation legibility，仍不等于刺激冻结；完整 token/layer/cosine/probe contamination 结果：`formal_v2_personas_v2.md`、`results/formal-v2-persona-calibration-v2.json`。
+- v3 只把 v2 中 v1 template 的四处 `You feel worry` 改为自然的 `You feel worried`；Qwen token audit 仍通过，同一校准为 6/6、18/18。它与历史 v0/v1/v2 一并保留、仍未冻结；完整 cosines 与 probe contamination：`formal_v2_personas_v3.md`、`results/formal-v2-persona-calibration-v3.json`。
+- v3 的 persona-only existing-probe baseline 已作为不可覆盖论文快照保存（raw JSON + tidy CSV + 完整 provenance）；读法与边界见 [`FORMAL_V2_PERSONA_CALIBRATION_RESULTS.md`](FORMAL_V2_PERSONA_CALIBRATION_RESULTS.md)。协议末尾的 `Compaction handoff / next implementation order` 是下一步唯一顺序入口。
+- `FORMAL_PROTOCOL.md` 与 formal-v1 结果保持冻结、未被本规划改变。
+
 ## 已完成
 
 - 明确研究边界：测 persona prompt 对模型行为与内部可测表示的调节，不主张模型主观体验。
