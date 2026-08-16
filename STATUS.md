@@ -5,6 +5,8 @@
 ## formal-v2（已确认结构，尚不得采集）
 
 - 已接受 follow-up 的三臂五轮结构：`feedback_only`、`supportive`、`neutral`，每个 arm 从头独立完成五次失败；12 templates × fresh seeds `2001`–`2010` × 3 arms，共 360 runs。
+- 已批准 v2 分析规则：两个 co-primary arm contrasts 作两项 Holm；其六项 E/N/interaction moderation 作一组 Holm；derived total 仅描述。feedback_only manipulation 为合资格 seed-level slope median>0、R5−R1 median>0、至少 7/10 seed-level R5−R1>0。early win、missing probe、missing template-arm 完整报告并排除相关 metric seed block，不补零、不凑平均、不换 seed；失败只降级解释。
+- 已实现独立 formal-v2 分析器与非覆盖式导出 CLI：严格 JSONL/provenance、run 级原子排除、template 内先作 arm contrast、缺 cell 时整项 seed contrast 排除、两项/六项 Holm、R5−R1 robustness、feedback-only 7/10 gate，并输出 tidy CSV、summary、hash 与 data dictionary。手算 synthetic 全设计及缺失/early-win 测试已覆盖；未读取正式数据，图表脚本仍待实现。
 - 已实现候选专用三臂 plumbing：`formal_v2_prompts.md` 是单一 runtime candidate；独立 runner 每 arm 写一条完整 JSONL，含 transcript、逐轮 prompt-boundary readout、candidate count+SHA、严格 provenance/resume。invalid 计失败且 state 不变；early win 保留 partial record；三臂同 attempt 共用 RNG seed、state 独立。CLI 只允许 `--dry-run`，尚未加载真实模型、未 smoke、未冻结或采集；当时全套 98 tests 通过。
 - 已接受 Fable 的最小对齐 persona 骨架：四象限同 template 内仅以固定槽位调节两轴，保留三模板；用户已于 2026-08-16 人工语义接受 v3 作为当前 freeze candidate。最终 dated freeze 仍未完成，严禁采集。draft activation calibration 的 pass rule 已在运行前写死，不可按其结果回改。
 - 逐轮顺序、planned contrasts、耐久数据与出图链路见 [`FORMAL_V2_PROTOCOL.md`](FORMAL_V2_PROTOCOL.md)。在该文件的 freeze gate 完成前，不得运行 formal-v2 采集。

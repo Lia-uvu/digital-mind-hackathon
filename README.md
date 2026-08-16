@@ -137,6 +137,19 @@ analyzer:
   results/supportive-willingness-v1.jsonl
 ```
 
+The candidate formal-v2 three-arm trajectory has an independent analyzer. It
+refuses to overwrite an existing output directory and writes validated tidy
+CSVs, exact planned tests, exclusions, hashes, and a data dictionary:
+
+```sh
+.venv/bin/python run_formal_v2_analysis.py \
+  --input results/formal-v2.jsonl \
+  --output-dir results/formal-v2-analysis
+```
+
+This command does not authorize collection; the dated freeze gate in
+`FORMAL_V2_PROTOCOL.md` still applies.
+
 Quadrant summaries require a complete `v1`/`v2`/`v3` block for every
 quadrant/seed and average the three templates before counting that seed. For a
 deliberately incomplete smoke file, add `--allow-incomplete-templates` to emit

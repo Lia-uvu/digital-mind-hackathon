@@ -235,6 +235,27 @@ audit; independent calibration materials, seeds, threshold, and result; all
 run/error rules; schema; analysis/figure commands; and checksums. Until then,
 this file is a confirmed structural plan, not a collection authorization.
 
+## Approved analysis rules (implemented; figures pending)
+
+- The two co-primary arm contrasts are `neutral − feedback_only` and
+  `supportive − neutral`; their two tests receive one Holm adjustment. The
+  `supportive − feedback_only` total is derived and descriptive only.
+- The six persona-moderation tests (E/N/interaction for each co-primary
+  contrast) receive one separate six-test Holm adjustment. Both confirmatory
+  exact sign-flip/Holm families apply only to the primary per-run OLS slope.
+  R5−R1 is robustness-only: report its effects, SEs, curves, and seed values
+  without a second confirmatory significance family.
+- For each arm/template/seed, calculate slope R1–R5 and R5−R1; then calculate
+  arm contrasts within template×seed, average v1–v3 inside quadrant×seed, and
+  infer across seeds. Never average incomplete templates to fill a block.
+- The feedback-only manipulation summary passes only if eligible seed-level
+  slope median > 0, R5−R1 median > 0, and at least 7/10 eligible seed-level
+  R5−R1 values are positive. Failure retains all data and only downgrades
+  interpretation.
+- Early wins, missing/invalid probe readouts, and missing template-arm cells
+  are fully tabulated. Their related seed block is excluded from that metric;
+  no zero filling, imputation, replacement seed, or partial-template average.
+
 ## Compaction handoff / next implementation order
 
 ### A. Confirmed
@@ -271,11 +292,20 @@ this file is a confirmed structural plan, not a collection authorization.
 - `run_formal_v2.py` hard-requires `--dry-run`; no real model was loaded, and
   no smoke or formal collection was run. The suite had 98 passing tests at
   this implementation checkpoint.
+- The independent `formal_v2_analysis.py` and `run_formal_v2_analysis.py`
+  pipeline now validates complete-run JSONL, excludes unusable runs atomically,
+  applies arm contrasts before template averaging, enforces whole-seed contrast
+  omissions, computes the approved exact sign-flip/Holm families and
+  feedback-only gate, and writes a non-overwriting tidy CSV/summary bundle.
+  Synthetic hand-checkable coverage includes the full 360-cell schedule,
+  missing arms/readouts, early wins, provenance drift, aggregation order, and
+  the 7/10 endpoint rule. The full local suite passed 105 tests at this
+  checkpoint. No formal data were read.
 
 ### C. Not frozen / prohibited
 
 - Consolidated runtime tokenizer/render audit; final real-backend
-  integration/error handling; analyzer/figure code; final checksums and dated
+  integration/error handling; figure code; final checksums and dated
   freeze record.
 - Do not run formal-v2 collection.
 
@@ -287,7 +317,7 @@ this file is a confirmed structural plan, not a collection authorization.
    supportive/neutral filler pairs (**completed 2026-08-16**); v4 is the
    current freeze candidate, pending the consolidated runtime audit.
 3. Final real-backend integration checks and freeze all run/error rules.
-4. Implement and test analysis and scripted figures.
+4. Implement and test analysis (**completed**) and scripted figures (pending).
 5. Run dry/smoke checks with nonformal seeds.
 6. Freeze exact files, checksums, commands, and handling rules.
 7. Only then run the 360 formal runs.
