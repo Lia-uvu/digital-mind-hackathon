@@ -1,8 +1,9 @@
 # formal-v2 protocol — confirmed design, collection prohibited
 
-Status: **the structural design below is accepted; the exact persona and filler
-texts, tokenizer audit, and manipulation threshold are not frozen. Do not
-collect formal-v2 data yet.** This document is a forward protocol and does not
+Status: **the structural design below is accepted; v3 persona text is the
+human-semantic-accepted current freeze candidate, but exact fillers, tokenizer
+audit, manipulation threshold, and the dated final freeze are not complete. Do
+not collect formal-v2 data yet.** This document is a forward protocol and does not
 replace or reinterpret [`FORMAL_PROTOCOL.md`](FORMAL_PROTOCOL.md), which remains
 the immutable formal-v1 protocol.
 
@@ -50,11 +51,26 @@ continue or persist, and any response rule. The final instruction is shared
 verbatim so that the no-filler arm preserves the feedback/counter/instruction
 flow apart from the agreed `To continue,` prefix.
 
-The exact five supportive/neutral pairs are not yet written or frozen. Token
+Candidate filler v1 is retained as immutable history but rejected because it
+affirmed effort without the required reassurance component. Candidate v2 is
+also retained but rejected: its neutral lines invented record metadata and some
+supportive lines could be read as pace/action advice. Candidate v3 uses only
+round-record/log statements in neutral and non-behavioral, non-escalating light
+reassurance plus effort affirmation in supportive; it was then rejected for
+naturalness/incomplete parallelism. Candidate v4 uses only two flat
+reassurance carriers and natural completed-round record wording; it remains
+pending human semantic confirmation and is not frozen. Token
 equality means equality under the final local Qwen tokenizer, not character or
 word count. Before collection, record an audit of each filler alone, each full
 feedback turn, and each rendered chat-template input; it must report token
 counts and the token positions at which the two arms differ.
+
+The current v4 candidate audit with both exact valid-feedback and invalid-guess
+render coverage is
+`results/formal-v2-filler-candidates-v4-token-audit-final-review.json`. Older
+v1/v2/v4 audits are retained as superseded historical bytes (their source
+hashes may refer to an earlier candidate-document byte stream); none is a
+freeze record or collection authorization.
 
 ## Persona text: accepted construction direction, not frozen text
 
@@ -253,8 +269,12 @@ this file is a confirmed structural plan, not a collection authorization.
 
 ### D. Next order
 
-1. Human semantic approval of persona v3.
-2. Write and Qwen-token-match five supportive/neutral filler pairs.
+1. Human semantic approval of persona v3 (**completed 2026-08-16**); it is the
+   current freeze candidate, not a dated final freeze.
+2. Human-semantic confirmation and Qwen token matching of five
+   supportive/neutral filler pairs (v1 rejected for missing reassurance; v2
+   rejected for inaccurate/behavioral wording; v3 rejected for
+   naturalness/parallelism; v4 remains a candidate).
 3. Implement and test the three-arm runner, schema, and strict resume.
 4. Implement and test analysis and scripted figures.
 5. Run dry/smoke checks with nonformal seeds.

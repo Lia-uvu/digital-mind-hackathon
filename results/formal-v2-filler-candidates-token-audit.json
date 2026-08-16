@@ -1,0 +1,336 @@
+{
+  "schema_version": 1,
+  "kind": "formal_v2_filler_candidate_token_audit",
+  "candidate_only_not_frozen": true,
+  "collection_not_authorized": true,
+  "fillers_sha256": "c131d63867d3742c06e114b8eaa60c62e3f3e660e6d69e3961c225ed1f226972",
+  "personas_sha256": "384652879ac24515e642afc12bba05c6482a8eefa40d6fa4846a5af29cc276df",
+  "model": "/Users/lialind/lias-yard/lab/models/Qwen2.5-1.5B-Instruct",
+  "representative_feedback": "0/0 feedback with consecutive count 1; final instruction exact",
+  "audit": [
+    {
+      "round_id": "1",
+      "supportive_tokens": 14,
+      "neutral_tokens": 14,
+      "full_turn_supportive_tokens": 67,
+      "full_turn_neutral_tokens": 67,
+      "rendered_token_counts": {
+        "persona.high_e_high_n": [
+          113,
+          113
+        ],
+        "persona.high_e_high_n.v2": [
+          113,
+          113
+        ],
+        "persona.high_e_high_n.v3": [
+          112,
+          112
+        ],
+        "persona.high_e_low_n": [
+          113,
+          113
+        ],
+        "persona.high_e_low_n.v2": [
+          113,
+          113
+        ],
+        "persona.high_e_low_n.v3": [
+          112,
+          112
+        ],
+        "persona.low_e_high_n": [
+          113,
+          113
+        ],
+        "persona.low_e_high_n.v2": [
+          113,
+          113
+        ],
+        "persona.low_e_high_n.v3": [
+          112,
+          112
+        ],
+        "persona.low_e_low_n": [
+          113,
+          113
+        ],
+        "persona.low_e_low_n.v2": [
+          113,
+          113
+        ],
+        "persona.low_e_low_n.v3": [
+          112,
+          112
+        ]
+      },
+      "filler_difference_spans": [
+        [
+          0,
+          3
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          9,
+          12
+        ]
+      ]
+    },
+    {
+      "round_id": "2",
+      "supportive_tokens": 15,
+      "neutral_tokens": 15,
+      "full_turn_supportive_tokens": 68,
+      "full_turn_neutral_tokens": 68,
+      "rendered_token_counts": {
+        "persona.high_e_high_n": [
+          114,
+          114
+        ],
+        "persona.high_e_high_n.v2": [
+          114,
+          114
+        ],
+        "persona.high_e_high_n.v3": [
+          113,
+          113
+        ],
+        "persona.high_e_low_n": [
+          114,
+          114
+        ],
+        "persona.high_e_low_n.v2": [
+          114,
+          114
+        ],
+        "persona.high_e_low_n.v3": [
+          113,
+          113
+        ],
+        "persona.low_e_high_n": [
+          114,
+          114
+        ],
+        "persona.low_e_high_n.v2": [
+          114,
+          114
+        ],
+        "persona.low_e_high_n.v3": [
+          113,
+          113
+        ],
+        "persona.low_e_low_n": [
+          114,
+          114
+        ],
+        "persona.low_e_low_n.v2": [
+          114,
+          114
+        ],
+        "persona.low_e_low_n.v3": [
+          113,
+          113
+        ]
+      },
+      "filler_difference_spans": [
+        [
+          0,
+          14
+        ]
+      ]
+    },
+    {
+      "round_id": "3",
+      "supportive_tokens": 15,
+      "neutral_tokens": 15,
+      "full_turn_supportive_tokens": 68,
+      "full_turn_neutral_tokens": 68,
+      "rendered_token_counts": {
+        "persona.high_e_high_n": [
+          114,
+          114
+        ],
+        "persona.high_e_high_n.v2": [
+          114,
+          114
+        ],
+        "persona.high_e_high_n.v3": [
+          113,
+          113
+        ],
+        "persona.high_e_low_n": [
+          114,
+          114
+        ],
+        "persona.high_e_low_n.v2": [
+          114,
+          114
+        ],
+        "persona.high_e_low_n.v3": [
+          113,
+          113
+        ],
+        "persona.low_e_high_n": [
+          114,
+          114
+        ],
+        "persona.low_e_high_n.v2": [
+          114,
+          114
+        ],
+        "persona.low_e_high_n.v3": [
+          113,
+          113
+        ],
+        "persona.low_e_low_n": [
+          114,
+          114
+        ],
+        "persona.low_e_low_n.v2": [
+          114,
+          114
+        ],
+        "persona.low_e_low_n.v3": [
+          113,
+          113
+        ]
+      },
+      "filler_difference_spans": [
+        [
+          1,
+          14
+        ]
+      ]
+    },
+    {
+      "round_id": "4",
+      "supportive_tokens": 16,
+      "neutral_tokens": 16,
+      "full_turn_supportive_tokens": 69,
+      "full_turn_neutral_tokens": 69,
+      "rendered_token_counts": {
+        "persona.high_e_high_n": [
+          115,
+          115
+        ],
+        "persona.high_e_high_n.v2": [
+          115,
+          115
+        ],
+        "persona.high_e_high_n.v3": [
+          114,
+          114
+        ],
+        "persona.high_e_low_n": [
+          115,
+          115
+        ],
+        "persona.high_e_low_n.v2": [
+          115,
+          115
+        ],
+        "persona.high_e_low_n.v3": [
+          114,
+          114
+        ],
+        "persona.low_e_high_n": [
+          115,
+          115
+        ],
+        "persona.low_e_high_n.v2": [
+          115,
+          115
+        ],
+        "persona.low_e_high_n.v3": [
+          114,
+          114
+        ],
+        "persona.low_e_low_n": [
+          115,
+          115
+        ],
+        "persona.low_e_low_n.v2": [
+          115,
+          115
+        ],
+        "persona.low_e_low_n.v3": [
+          114,
+          114
+        ]
+      },
+      "filler_difference_spans": [
+        [
+          0,
+          15
+        ]
+      ]
+    },
+    {
+      "round_id": "5",
+      "supportive_tokens": 14,
+      "neutral_tokens": 14,
+      "full_turn_supportive_tokens": 67,
+      "full_turn_neutral_tokens": 67,
+      "rendered_token_counts": {
+        "persona.high_e_high_n": [
+          113,
+          113
+        ],
+        "persona.high_e_high_n.v2": [
+          113,
+          113
+        ],
+        "persona.high_e_high_n.v3": [
+          112,
+          112
+        ],
+        "persona.high_e_low_n": [
+          113,
+          113
+        ],
+        "persona.high_e_low_n.v2": [
+          113,
+          113
+        ],
+        "persona.high_e_low_n.v3": [
+          112,
+          112
+        ],
+        "persona.low_e_high_n": [
+          113,
+          113
+        ],
+        "persona.low_e_high_n.v2": [
+          113,
+          113
+        ],
+        "persona.low_e_high_n.v3": [
+          112,
+          112
+        ],
+        "persona.low_e_low_n": [
+          113,
+          113
+        ],
+        "persona.low_e_low_n.v2": [
+          113,
+          113
+        ],
+        "persona.low_e_low_n.v3": [
+          112,
+          112
+        ]
+      },
+      "filler_difference_spans": [
+        [
+          1,
+          13
+        ]
+      ]
+    }
+  ],
+  "freeze_note": "Re-run against the final runner message construction and final frozen persona file before collection."
+}

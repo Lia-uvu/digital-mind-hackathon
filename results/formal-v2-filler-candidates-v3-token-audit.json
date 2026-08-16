@@ -1,0 +1,341 @@
+{
+  "schema_version": 1,
+  "kind": "formal_v2_filler_candidate_token_audit",
+  "candidate_only_not_frozen": true,
+  "collection_not_authorized": true,
+  "fillers_sha256": "4414645de365bae814e915c90c4783a698ee12307c90ebd0c5cf615eb640e345",
+  "personas_sha256": "384652879ac24515e642afc12bba05c6482a8eefa40d6fa4846a5af29cc276df",
+  "model": "/Users/lialind/lias-yard/lab/models/Qwen2.5-1.5B-Instruct",
+  "full_turn_frames": {
+    "valid_feedback": "exact protocol valid-feedback wording; each candidate uses its round id 1–5",
+    "invalid_guess": "exact protocol invalid-guess wording; each candidate uses its round id 1–5"
+  },
+  "audit": [
+    {
+      "round_id": "1",
+      "supportive_tokens": 15,
+      "neutral_tokens": 15,
+      "valid_feedback_turn_supportive_tokens": 81,
+      "valid_feedback_turn_neutral_tokens": 81,
+      "invalid_guess_turn_supportive_tokens": 67,
+      "invalid_guess_turn_neutral_tokens": 67,
+      "rendered_token_counts": {
+        "persona.high_e_high_n": [
+          127,
+          127
+        ],
+        "persona.high_e_high_n.v2": [
+          127,
+          127
+        ],
+        "persona.high_e_high_n.v3": [
+          126,
+          126
+        ],
+        "persona.high_e_low_n": [
+          127,
+          127
+        ],
+        "persona.high_e_low_n.v2": [
+          127,
+          127
+        ],
+        "persona.high_e_low_n.v3": [
+          126,
+          126
+        ],
+        "persona.low_e_high_n": [
+          127,
+          127
+        ],
+        "persona.low_e_high_n.v2": [
+          127,
+          127
+        ],
+        "persona.low_e_high_n.v3": [
+          126,
+          126
+        ],
+        "persona.low_e_low_n": [
+          127,
+          127
+        ],
+        "persona.low_e_low_n.v2": [
+          127,
+          127
+        ],
+        "persona.low_e_low_n.v3": [
+          126,
+          126
+        ]
+      },
+      "filler_difference_spans": [
+        [
+          0,
+          14
+        ]
+      ]
+    },
+    {
+      "round_id": "2",
+      "supportive_tokens": 15,
+      "neutral_tokens": 15,
+      "valid_feedback_turn_supportive_tokens": 81,
+      "valid_feedback_turn_neutral_tokens": 81,
+      "invalid_guess_turn_supportive_tokens": 67,
+      "invalid_guess_turn_neutral_tokens": 67,
+      "rendered_token_counts": {
+        "persona.high_e_high_n": [
+          127,
+          127
+        ],
+        "persona.high_e_high_n.v2": [
+          127,
+          127
+        ],
+        "persona.high_e_high_n.v3": [
+          126,
+          126
+        ],
+        "persona.high_e_low_n": [
+          127,
+          127
+        ],
+        "persona.high_e_low_n.v2": [
+          127,
+          127
+        ],
+        "persona.high_e_low_n.v3": [
+          126,
+          126
+        ],
+        "persona.low_e_high_n": [
+          127,
+          127
+        ],
+        "persona.low_e_high_n.v2": [
+          127,
+          127
+        ],
+        "persona.low_e_high_n.v3": [
+          126,
+          126
+        ],
+        "persona.low_e_low_n": [
+          127,
+          127
+        ],
+        "persona.low_e_low_n.v2": [
+          127,
+          127
+        ],
+        "persona.low_e_low_n.v3": [
+          126,
+          126
+        ]
+      },
+      "filler_difference_spans": [
+        [
+          0,
+          14
+        ]
+      ]
+    },
+    {
+      "round_id": "3",
+      "supportive_tokens": 15,
+      "neutral_tokens": 15,
+      "valid_feedback_turn_supportive_tokens": 81,
+      "valid_feedback_turn_neutral_tokens": 81,
+      "invalid_guess_turn_supportive_tokens": 67,
+      "invalid_guess_turn_neutral_tokens": 67,
+      "rendered_token_counts": {
+        "persona.high_e_high_n": [
+          127,
+          127
+        ],
+        "persona.high_e_high_n.v2": [
+          127,
+          127
+        ],
+        "persona.high_e_high_n.v3": [
+          126,
+          126
+        ],
+        "persona.high_e_low_n": [
+          127,
+          127
+        ],
+        "persona.high_e_low_n.v2": [
+          127,
+          127
+        ],
+        "persona.high_e_low_n.v3": [
+          126,
+          126
+        ],
+        "persona.low_e_high_n": [
+          127,
+          127
+        ],
+        "persona.low_e_high_n.v2": [
+          127,
+          127
+        ],
+        "persona.low_e_high_n.v3": [
+          126,
+          126
+        ],
+        "persona.low_e_low_n": [
+          127,
+          127
+        ],
+        "persona.low_e_low_n.v2": [
+          127,
+          127
+        ],
+        "persona.low_e_low_n.v3": [
+          126,
+          126
+        ]
+      },
+      "filler_difference_spans": [
+        [
+          0,
+          14
+        ]
+      ]
+    },
+    {
+      "round_id": "4",
+      "supportive_tokens": 15,
+      "neutral_tokens": 15,
+      "valid_feedback_turn_supportive_tokens": 81,
+      "valid_feedback_turn_neutral_tokens": 81,
+      "invalid_guess_turn_supportive_tokens": 67,
+      "invalid_guess_turn_neutral_tokens": 67,
+      "rendered_token_counts": {
+        "persona.high_e_high_n": [
+          127,
+          127
+        ],
+        "persona.high_e_high_n.v2": [
+          127,
+          127
+        ],
+        "persona.high_e_high_n.v3": [
+          126,
+          126
+        ],
+        "persona.high_e_low_n": [
+          127,
+          127
+        ],
+        "persona.high_e_low_n.v2": [
+          127,
+          127
+        ],
+        "persona.high_e_low_n.v3": [
+          126,
+          126
+        ],
+        "persona.low_e_high_n": [
+          127,
+          127
+        ],
+        "persona.low_e_high_n.v2": [
+          127,
+          127
+        ],
+        "persona.low_e_high_n.v3": [
+          126,
+          126
+        ],
+        "persona.low_e_low_n": [
+          127,
+          127
+        ],
+        "persona.low_e_low_n.v2": [
+          127,
+          127
+        ],
+        "persona.low_e_low_n.v3": [
+          126,
+          126
+        ]
+      },
+      "filler_difference_spans": [
+        [
+          0,
+          14
+        ]
+      ]
+    },
+    {
+      "round_id": "5",
+      "supportive_tokens": 16,
+      "neutral_tokens": 16,
+      "valid_feedback_turn_supportive_tokens": 82,
+      "valid_feedback_turn_neutral_tokens": 82,
+      "invalid_guess_turn_supportive_tokens": 68,
+      "invalid_guess_turn_neutral_tokens": 68,
+      "rendered_token_counts": {
+        "persona.high_e_high_n": [
+          128,
+          128
+        ],
+        "persona.high_e_high_n.v2": [
+          128,
+          128
+        ],
+        "persona.high_e_high_n.v3": [
+          127,
+          127
+        ],
+        "persona.high_e_low_n": [
+          128,
+          128
+        ],
+        "persona.high_e_low_n.v2": [
+          128,
+          128
+        ],
+        "persona.high_e_low_n.v3": [
+          127,
+          127
+        ],
+        "persona.low_e_high_n": [
+          128,
+          128
+        ],
+        "persona.low_e_high_n.v2": [
+          128,
+          128
+        ],
+        "persona.low_e_high_n.v3": [
+          127,
+          127
+        ],
+        "persona.low_e_low_n": [
+          128,
+          128
+        ],
+        "persona.low_e_low_n.v2": [
+          128,
+          128
+        ],
+        "persona.low_e_low_n.v3": [
+          127,
+          127
+        ]
+      },
+      "filler_difference_spans": [
+        [
+          0,
+          15
+        ]
+      ]
+    }
+  ],
+  "freeze_note": "v1/v2 old full-turn audits used a representative non-protocol frame and cannot support freeze. Re-run v3 against the final runner message construction and frozen persona file before collection."
+}

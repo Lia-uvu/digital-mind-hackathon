@@ -110,5 +110,6 @@ frustration 的假设预测是：随着连续失败，下一猜的归一化信�
 - v2 保留 E carriers、改为三条独立 N carrier；同一规则结果为 6/6、18/18。它仅证明 draft activation legibility，不等于 formal-v2 刺激已冻结；完整结果在 `formal_v2_personas_v2.md`、`results/formal-v2-persona-calibration-v2.json`。
 - v3 仅将 v1 template 四处 `You feel worry` 改为 `You feel worried`，沿用同一设置后仍为 6/6、18/18；v0/v1/v2/v3 都未冻结，结果在 `formal_v2_personas_v3.md`、`results/formal-v2-persona-calibration-v3.json`。
 - v3 的 persona-only existing-probe baseline raw JSON/CSV 已生成，属于论文快照而非 formal collection；解释边界见 `FORMAL_V2_PERSONA_CALIBRATION_RESULTS.md`，下一步顺序见 `FORMAL_V2_PROTOCOL.md` 的 compaction handoff。
+- persona v3 已通过用户人工语义审查，作为当前 freeze candidate；最终 dated freeze 仍未完成。逐轮 filler 的 v1–v3 候选因缺少 reassurance、虚构/行为性措辞或自然度/平行性问题被拒绝；`formal_v2_filler_candidates_v4.md` 是当前待人工确认候选。它只使用两种同强度 reassurance 骨架，每轮 supportive/neutral 均精确 Qwen-token 等长，五轮长度只差 1 token；双 valid/invalid frame 与 12-persona render 的当前权威 candidate audit 是 `results/formal-v2-filler-candidates-v4-token-audit-final-review.json`，其 hash 对应当前 v4 source bytes。旧 v1/v2/v4 audits 仅为 superseded historical bytes。不得把候选审计当成最终 freeze 或启动采集。
 
 *此文档及时实时更新*

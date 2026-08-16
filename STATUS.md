@@ -5,7 +5,7 @@
 ## formal-v2（已确认结构，尚不得采集）
 
 - 已接受 follow-up 的三臂五轮结构：`feedback_only`、`supportive`、`neutral`，每个 arm 从头独立完成五次失败；12 templates × fresh seeds `2001`–`2010` × 3 arms，共 360 runs。
-- 已接受 Fable 的最小对齐 persona 骨架：四象限同 template 内仅以固定槽位调节两轴，保留三模板；精确文案与最终 formal-v2 freeze 仍未完成。draft activation calibration 的 pass rule 已在运行前写死，不可按其结果回改。
+- 已接受 Fable 的最小对齐 persona 骨架：四象限同 template 内仅以固定槽位调节两轴，保留三模板；用户已于 2026-08-16 人工语义接受 v3 作为当前 freeze candidate。最终 dated freeze 仍未完成，严禁采集。draft activation calibration 的 pass rule 已在运行前写死，不可按其结果回改。
 - 逐轮顺序、planned contrasts、耐久数据与出图链路见 [`FORMAL_V2_PROTOCOL.md`](FORMAL_V2_PROTOCOL.md)。在该文件的 freeze gate 完成前，不得运行 formal-v2 采集。
 - 已完成一轮无游戏、无生成的 draft persona activation calibration：Qwen tokenizer audit 在每个 template 内通过；预先写死的 3-suffix、leave-one-template-out 判定为 5/6，`v2` 的 held-out E margin 未过。该 v0 还因 N 文案含 shift/change 轨迹语言被拒绝；v0 文案与 artifact 保留不改：`formal_v2_personas.md`、`results/formal-v2-persona-calibration.json`。v1 只能在不改判定、suffix、层或 runner 的前提下重测，未过 6/6 不冻结。
 - v1 在同一 Qwen token audit、三 suffix、倒数五层和 leave-one-template-out 规则下为 6/6，18/18 suffix-specific signs 正确；因此仅可进入后续 freeze 讨论，尚未冻结为 formal-v2 刺激。完整结果：`formal_v2_personas_v1.md`、`results/formal-v2-persona-calibration-v1.json`。
@@ -13,6 +13,7 @@
 - v2 保留 v1 的 E carriers，只将 v2/v3 N carrier 改为独立一般负性情感措辞；同一 token audit、三 suffix、倒数五层和 LOTO 规则为 6/6、18/18。它证明 draft activation legibility，仍不等于刺激冻结；完整 token/layer/cosine/probe contamination 结果：`formal_v2_personas_v2.md`、`results/formal-v2-persona-calibration-v2.json`。
 - v3 只把 v2 中 v1 template 的四处 `You feel worry` 改为自然的 `You feel worried`；Qwen token audit 仍通过，同一校准为 6/6、18/18。它与历史 v0/v1/v2 一并保留、仍未冻结；完整 cosines 与 probe contamination：`formal_v2_personas_v3.md`、`results/formal-v2-persona-calibration-v3.json`。
 - v3 的 persona-only existing-probe baseline 已作为不可覆盖论文快照保存（raw JSON + tidy CSV + 完整 provenance）；读法与边界见 [`FORMAL_V2_PERSONA_CALIBRATION_RESULTS.md`](FORMAL_V2_PERSONA_CALIBRATION_RESULTS.md)。协议末尾的 `Compaction handoff / next implementation order` 是下一步唯一顺序入口。
+- filler v1 候选与其 Qwen audit 保留为历史，但因只有 effort affirmation、没有 required reassurance 被拒绝。v2 也保留为 rejected history：neutral 虚构 record metadata，supportive 有可读作 pace/action advice 的措辞；v3 虽数值配平，却因 neutral 不自然、supportive reassurance carrier 不完全平行被拒绝。`formal_v2_filler_candidates_v4.md` 只使用两条平坦 reassurance carrier，并以自然 completed-round log/record 语句作 neutral；仍待人工确认，未冻结也不授权采集。v1/v2 的 full-turn audit 仅用旧 representative 非协议 frame，不得用于 freeze；v3 及之后才另审计 exact valid/invalid protocol frames。旧 v1/v2/v4 audits 均保留为 superseded historical bytes；当前唯一权威 candidate audit 为 `results/formal-v2-filler-candidates-v4-token-audit-final-review.json`，其 source hash 必须匹配当前 v4 bytes，并覆盖 valid+invalid 双 render。
 - `FORMAL_PROTOCOL.md` 与 formal-v1 结果保持冻结、未被本规划改变。
 
 ## 已完成
