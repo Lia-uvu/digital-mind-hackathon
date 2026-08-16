@@ -70,3 +70,7 @@ PYTORCH_ENABLE_MPS_FALLBACK=1 .venv/bin/python run_experiment.py \
 - 结论对象是这些冻结 persona prompts 对该模型行为与内部表示的调节，不是模型主观体验。
 - 三模板比单模板更能检查措辞稳健性，但仍不是对所有可能人格描述的总体抽样。
 - 重复生成轨迹会同时报告名义 run 数与唯一轨迹数，并做去重轨迹敏感性描述；不会事后换 seed 制造更多不同轨迹。
+
+## 采集后实现勘误（2026-08-16）
+
+边界审计发现，正式 runner 在 assistant guess 已结束后计算 `post_guess` projection 时仍使用 `add_generation_prompt=True`，因而读到人工追加的空 assistant header。该错误只影响辅助 `post_guess` representation，不影响 checkpoint、干预后猜测、信息效率、规则违反、继续意愿或消息后 projection。修复后的实现按末条消息角色选择 chat-template 边界，并增加真实 Qwen tokenizer 回归测试；历史 JSONL 不改写，纠正后的只读复算与解释以 `FORMAL_RESULTS.md` 为准。

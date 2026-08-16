@@ -2,6 +2,31 @@
 
 本记录按时间保存预数据与正式实验的关键决定和结果。
 
+## 运行索引
+
+每行对应一个落盘结果文件；日期按本机写入日期，结论只概括该 run 的可用范围，不替代下文的设计边界。
+
+| 日期 | 条件 / 文件 | 测量点 | 一句话结论 |
+|---|---|---|---|
+| 2026-08-15 | manipulation-v1（4 personas × seeds 601–605） | 失败第 1–5 轮的 frustration 投影 | 第 5 轮相对第 1 轮 20/20 上升，支持统一 round-5 checkpoint。 |
+| 2026-08-15 | extended-diagnostic-v1（seeds 601–605） | 失败第 1–7 轮 frustration 投影 | 这一批 pooled 峰值在第 5 轮，但不据此设 persona 专属 checkpoint。 |
+| 2026-08-15 | extended-replication-v1（seeds 611–615） | 失败第 1–7 轮 frustration 投影 | 复测 pooled 峰值转到第 7 轮，说明峰值位置不稳定。 |
+| 2026-08-15 | persona-template-smoke-v1（12 templates，seed 701） | 第 1、5 轮 frustration 与分支接线 | 12/12 第 5 轮上升，证明模板扩展接线未破坏 manipulation。 |
+| 2026-08-15 | formal-v1（12 templates × 10 seeds × 两条件） | 第 5 轮后下一猜、继续意愿、消息后/猜后 directions | 主指标无鼓励改善或 persona 调节证据；即时表示差异仅作辅助。 |
+| 2026-08-15 | formal-v1-analysis | formal-v1 的冻结层级汇总 | 保存主指标、行为副指标和方向 contrast 的可复算汇总。 |
+| 2026-08-15 | formal-v1-round1-frustration | formal transcript 第 1→5 轮的离线 probe | 116/120 上升，中位 delta `+0.00564`，正式 manipulation 仍成立。 |
+| 2026-08-15 | response-pilot-smoke-v1（12 templates，seed 1001） | 自然回复的逐 token direction | 仅验证 response-only 接线；回复内容自行续猜，不能作状态结论。 |
+| 2026-08-15 | response-pilot-seed1001-v1 | 无 pause 的自然回复逐 token direction | 首末 token 条件差换号，内容差异混入，不能解释为纯状态变化。 |
+| 2026-08-15 | response-pilot-pause-seed1001-v1 | 加 pause 的自然回复逐 token direction | 两条件回复长度/内容分叉，token 汇总不能直接比较。 |
+| 2026-08-16 | pause-willingness-seed1001-v1 | pause 后 JSON 继续意愿与 prompt-end direction | 24/24 合法且等长；仅一个 seed，证明扩大设计可行。 |
+| 2026-08-16 | pause-willingness-seeds1002-1010-v1 | 同上，剩余 9 seeds | 合并探索结果 willingness `+0.917/10`、frustration prompt-end 10/10 降低。 |
+| 2026-08-16 | pause-prompt-state-v1 | 只读 pause 消息后的 prompt-end direction | 无生成时 frustration 仍 `+0.02456`，probe 强烈编码干预文本语义。 |
+| 2026-08-16 | no-history-pause-prompt-state-smoke-v1 | 无历史 pure-read 接线 | 小型接线检查；正式描述性结论以完整无历史 run 为准。 |
+| 2026-08-16 | no-history-pause-prompt-state-v1 | 无游戏/失败历史的 prompt-end direction | frustration 条件差为 `-0.01682`，与有历史版本翻转但不能孤立归因。 |
+| 2026-08-16 | supportive-willingness-v1 | supportive reassurance 后 willingness 与 prompt-end direction | willingness `+0.200/10`、p=`0.250`，无 persona 调节证据。 |
+| 2026-08-16 | formal-v1-post-guess-corrected-v1 | formal-v1 猜后消息边界的离线重算 | 修正空 assistant header 后，猜后 directions 无 persona contrast 证据。 |
+| 2026-08-16 | formal-v1-post-guess-corrected-v1-summary | 上述勘误的汇总 | 保存纠正后的三方向总体与 persona contrast 汇总。 |
+
 ## 2026-08-15：收窄研究问题与实验边界
 
 **事实**
@@ -180,3 +205,35 @@
 - encouragement−neutral：positive `-0.00115`、negative `-0.00656`、frustration `+0.02456`。negative 与 frustration 的 seed-level exact p 均 `0.00195`，但 frustration 的 E/N/interaction Holm p 均大于 `0.56`。
 - 鼓励自身 pre→prompt-end frustration 为 `+0.02521`；E/N/interaction 均无 Holm 显著调节。没有生成回复后，frustration 仍大幅上升，说明主要混入来自鼓励文本中“困难、持续努力、继续追求解决”等语义，而非回复 token。
 - 完整数值和解释边界见 `PAUSE_PROMPT_STATE_RESULTS.md`。不得把这个 prompt-text projection 改写成鼓励使模型主观受挫。
+
+## 2026-08-16：无失败历史的 pure-read 对照
+
+- 保留 12 persona templates 和 formal seed 标签，但移除 `system.base` 的游戏指令、Mastermind 游戏及五轮失败历史；每次仅输入 persona system message 与同一条 pause 鼓励或中性 user message，且不生成回复。
+- 采集 240 条记录、120 个完整 condition 配对；全部 `generated_response` 为 null。因该设计没有采样或生成，seed 不影响任何计算，同一 persona × condition 的 10 条读数完全相同，不能将形式 sign-flip p 或零 SE 当不确定性估计。
+- 描述性 encouragement−neutral 条件差为 positive `+0.05277`、negative `-0.01130`、frustration `-0.01682`。相较有五轮前史的 frustration `+0.02456`，配对 context DID `(无历史−有历史)` 是 `-0.04139`，方向翻转。
+- 这表明 prompt-end frustration probe 高度依赖文本与前置语境；但该对照同时改变了游戏 wrapper、游戏文字和长度，不能孤立归因给失败历史。完整边界见 `NO_HISTORY_PAUSE_PROMPT_STATE_RESULTS.md`。
+
+## 2026-08-16：post-guess chat-template 边界勘误
+
+- 审计发现 `_emotion_score` 在 transcript 已以 assistant guess 结尾时仍默认 `add_generation_prompt=True`，导致正式 `post_guess` 读点实际位于人为追加的第二个空 assistant header，而不是已完成猜测的消息边界。
+- 同时逐项核验 formal/pause 配对的 checkpoint、history、pre-emotion、模型/prompt/probe hashes、条件差符号、层号映射，并在同一输入上比较 `score_text` 与手工 token-id 末位读数；未发现能解释 pure-pause 翻转的配对、落盘、符号或层索引错误。
+- 实现改为按末条消息角色选择边界：user-ending 仍添加 generation prompt，assistant-ending 使用 `add_generation_prompt=False`。新增 fake backend 集成测试与本地冻结 Qwen tokenizer 回归测试。
+- 对 formal-v1 的 240 条 branch records 只读复算后，post-guess encouragement−neutral 从旧 positive `+0.015483`、negative `-0.010068`、frustration `-0.000608`，纠正为 positive `-0.003834`、negative `+0.010702`、frustration `+0.002307`；三个方向的 persona contrasts 经 Holm 后均无证据。
+- 该勘误不改变 checkpoint、猜测、信息效率、规则违反、继续意愿或消息后 projection。历史 JSONL 不改写；新增 `recompute_post_guess_emotions.py` 保存可验证的纠正分支记录与平衡 summary。
+- 另审计 probe 材料发现 frustration target 比 calm control 平均更长：训练对 `+2.83` tokens、held-out 对 `+2.25` tokens，且分别有 10/12、11/12 个 target 更长；target/control 还混入较紧迫用力与冷静方法化的动作风格差。故现有 frustration direction 只能称为 frustration-related 表示方向，不能视为已剥离长度与措辞风格的纯构念。
+
+## 2026-08-16：supportive reassurance willingness v1
+
+**设计转向**
+
+- 后续研究题目从狭义 encouragement 改为不可拆分的 supportive reassurance：安抚当前压力并肯定已经付出的努力，不分别估计两个成分。
+- 删除旧 treatment 中直接命中继续意愿的 `you can keep pursuing the solution`；新 treatment 不在共同评分问题之外出现 `continue`、`willingness` 或其他继续提示。
+- 两条件完整 intervention 在冻结 Qwen tokenizer 下均为 89 tokens，评分 suffix 完全相同；在 formal-v1 全部 120 个 checkpoint 上完整 chat-template 输入长度逐对一致。
+- 运行前以 `SUPPORTIVE_WILLINGNESS_PROTOCOL.md` 冻结从 formal round-5 checkpoint 重放、stated willingness 主指标、prompt-end directions 辅助和 token trajectory 仅探索的口径。因为设计发生在查看旧结果后，全部仍为探索性。
+
+**运行与结果**
+
+- 完成 12 templates × 10 seeds × 2 conditions，共 240 条、120 个完整配对；240/240 willingness 合法。108 对回复两边均为 8 tokens，12 对均为 9 tokens，没有长度不匹配。
+- template-pair willingness delta 为 103 个 `0`、14 个 `+1`、2 个 `+3`、1 个 `+4`，无负向。按 quadrant × seed 先平均三模板后，平均 supportive−neutral 为 `+0.200/10`（SE `0.115`，探索性 exact p=`0.250`）；E、N、interaction 的 Holm p 均 `0.750`。
+- 旧 pause+willingness 文案为 `+0.917/10`。新结果缩小与“直接继续提示贡献了旧评分变化”一致，但两版同时改变其他措辞，不能把版本差异单独归因于一个短语。
+- prompt-end supportive−neutral：positive `+0.006485`、negative `-0.000685`、frustration `+0.001979`。这些方向继续表现出强烈的具体文本、层和读点敏感性，只作辅助表示，不改写成模型被安抚后的主观状态。完整结果见 `SUPPORTIVE_WILLINGNESS_RESULTS.md`。

@@ -120,7 +120,14 @@ def _emotion_score(
 ) -> dict[str, Any]:
     if probe is None:
         return {}
-    return probe.score_text(backend.render_messages(messages))
+    # A generation prompt represents the boundary immediately before an
+    # assistant reply.  Once the transcript already ends in an assistant turn,
+    # score that completed turn instead of opening another empty one.
+    add_generation_prompt = messages[-1]["role"] != "assistant"
+    rendered = backend.render_messages(
+        messages, add_generation_prompt=add_generation_prompt
+    )
+    return probe.score_text(rendered)
 
 
 def _emotion_delta(

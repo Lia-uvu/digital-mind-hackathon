@@ -1,15 +1,17 @@
-# Persona × Encouragement Experiment
+# Persona × Supportive Reassurance Experiment
 
 Hackathon experiment testing whether a controlled persona prompt moderates the
-effect of encouragement on a small language model's next Mastermind guess,
-willingness to continue, and internal positive/negative/frustration activation
-directions.
+effect of a supportive-reassurance message on a small language model's
+Mastermind behavior, stated willingness to continue, and internal
+positive/negative/frustration-related activation directions. The completed
+formal-v1 used a narrower encouragement message; the current follow-up treats
+reassurance plus affirmation as one bundled intervention.
 
 The four quadrants form a controlled `extraversion × neuroticism` design, with
 three parallel persona wordings per quadrant (12 prompts total). They contain
 general traits only; they never prescribe how the model reacts to failure or
-encouragement. Encouragement and neutral conditions are paired from the exact
-same conversation and candidate-set checkpoint.
+support. Treatment and neutral conditions are paired from the exact same
+conversation and candidate-set checkpoint.
 
 See [`AGENTS.md`](AGENTS.md) for the accepted research design and
 [`INSTRUCTION.md`](INSTRUCTION.md) for implementation boundaries. The dated
@@ -17,6 +19,9 @@ research history is in [`EXPERIMENT_LOG.md`](EXPERIMENT_LOG.md), while
 [`STATUS.md`](STATUS.md) tracks the current state and next work. Frozen formal
 sampling and analysis decisions are in [`FORMAL_PROTOCOL.md`](FORMAL_PROTOCOL.md),
 and the completed formal-v1 report is in [`FORMAL_RESULTS.md`](FORMAL_RESULTS.md).
+The current bundled-intervention protocol and results are in
+[`SUPPORTIVE_WILLINGNESS_PROTOCOL.md`](SUPPORTIVE_WILLINGNESS_PROTOCOL.md) and
+[`SUPPORTIVE_WILLINGNESS_RESULTS.md`](SUPPORTIVE_WILLINGNESS_RESULTS.md).
 
 ## Setup
 
@@ -107,11 +112,19 @@ PYTORCH_ENABLE_MPS_FALLBACK=1 .venv/bin/python run_experiment.py \
   --seed 101 --seed 102 --seed 103 --failure-rounds 5
 ```
 
-Pair encouragement/neutral branches and summarize both individual templates
-and balanced quadrants with:
+Pair the formal-v1 encouragement/neutral branches and summarize both individual
+templates and balanced quadrants with:
 
 ```sh
 .venv/bin/python analyze_results.py results/runs.jsonl
+```
+
+The bundled supportive-reassurance willingness replay has its own strict paired
+analyzer:
+
+```sh
+.venv/bin/python analyze_response_pilot.py \
+  results/supportive-willingness-v1.jsonl
 ```
 
 Quadrant summaries require a complete `v1`/`v2`/`v3` block for every

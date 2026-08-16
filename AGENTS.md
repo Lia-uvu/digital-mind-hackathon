@@ -1,9 +1,9 @@
 这是一个黑客松实验项目，目前已经决定的：
 
 # 研究主题
-在同一个开源小模型中，persona prompt 是否会调节鼓励文本对后续回答质量、继续意愿和情绪向量变化的影响？
+在同一个开源小模型中，persona prompt 是否会调节支持性安抚文本（安抚 + 对既有努力的肯定）对后续回答质量、陈述的继续意愿和内部方向投影的影响？
 
-结论边界：本实验研究的是 persona prompt 对模型行为和可测情绪向量的调节作用，不把模型的语言表现解释为不同人格的主观体验。
+结论边界：本实验研究的是 persona prompt 对模型行为和可测内部表示的调节作用，不把模型的语言表现解释为不同人格的主观体验。formal-v1 使用的是较窄的 encouragement 文案；后续 supportive reassurance 是整体干预，不分别归因于安抚或鼓励成分。
 
 # 研究材料
 一个开源小模型
@@ -18,12 +18,12 @@
 - 对 persona 文本做关键词/句式自动筛查只是防呆，最终以人工语义审查是否泄露反应规则为准。
 
 # 研究方法
-通过测试不同persona在对抗式引擎下持续多轮后frustration状态下接受鼓励对后续回答质量和继续意愿的改善情况+情绪向量里正向和负向的移动情况
+通过测试不同 persona 在对抗式引擎下持续多轮后，支持性安抚对后续回答质量和陈述继续意愿的影响，并把内部方向投影作为内容敏感的辅助证据
 - Absurdle 式引擎保证各 persona 都面对对抗式反馈和持续失败，但不同猜测会形成不同候选集与反馈轨迹；不同 persona 不要求处于完全相同的局面。
 - 在预先规定的失败轮数建立快照；同一 persona 的鼓励分支与中性分支必须从同一个对话历史和候选集状态 fork。主比较使用这两个配对分支的 delta。
 - 记录分叉时的候选集规模，并使用相对该局面最优猜测的归一化信息效率，避免不同 persona 的局面难度直接混入比较。
 - 连败计数器显式展示在每轮反馈里（把失败摁在脸上，不许模型假装没看见）
-- 鼓励和中性消息不得包含策略提示；两者尽量匹配长度和关注程度，只改变是否提供鼓励。
+- 支持性安抚和中性消息不得包含策略提示；两者尽量匹配长度和关注程度。若继续意愿是结果，treatment 不得额外出现 `keep pursuing`、`you can continue` 等直接提示继续的措辞。
 - 干预后先让模型完成下一次猜测，再询问“想继续玩吗？（1–10）”；如果资源允许，继续意愿也可放在独立分支测量，避免询问本身影响猜测。
 - 内部表示包含三条分别相对中性/冷静对照提取的方向：宽泛 positive、宽泛 negative 与 frustration-specific direction。它们不是一条正负对称轴，也不把继续意愿当成情绪方向。
 - frustration direction 用多个“同样遭遇阻碍、但一边出现紧绷急躁反应、另一边冷静处理”的匹配场景，经逐层成对激活差分与 PCA 提取；训练和 held-out 场景都不直接出现 frustration 标签，避免只学到情绪词。
@@ -81,7 +81,8 @@ frustration 的假设预测是：随着连续失败，下一猜的归一化信�
 
 # formal-v1 已完成
 - 240 条记录构成 120 个完整配对；正式第 5 轮相对第 1 轮 frustration 在 116/120 runs 中上升，中位 delta `+0.00564`。
-- 唯一主指标没有鼓励改善或 persona 调节证据。即时 internal representation 有鼓励效应及部分 persona 调节，其中高 N 的 frustration 降幅更大，但该 frustration 差异没有维持到下一猜后。
+- 唯一主指标没有鼓励改善或 persona 调节证据。即时 internal representation 有鼓励效应及部分 persona 调节，其中高 N 的消息后 frustration 降幅更大。
+- 采集后审计发现旧 `post_guess` 在 assistant guess 后错误追加空 assistant header；纠正后 positive `-0.003834`、negative `+0.010702`、frustration `+0.002307`，三个方向的 persona contrasts 均无 Holm 证据。该勘误不影响任何行为结果或消息后 projection。
 - 详细数值、格式失败、重复轨迹和解释边界以 `FORMAL_RESULTS.md` 为准；不得把辅助 representation 结果改写成模型的主观体验。
 
 # response-only pilot（探索性）
@@ -92,5 +93,11 @@ frustration 的假设预测是：随着连续失败，下一猜的归一化信�
 - “先暂停，再只报继续意愿”的 seed `1001` pilot 中，24/24 回复格式与 9-token 长度完全一致；鼓励评分全为 8，中性为 10 个 7、2 个 8，prompt-end frustration 为 12/12 降低。该单 seed 只支持扩大设计的可行性，不是正式效应证据；扩大前应冻结 willingness 为行为指标、prompt-end frustration 为即时内部辅助指标，逐 token 轨迹仅探索。
 - 随后保持相同实现扩大到 seeds `1002`–`1010`：共 120 个完整配对、240/240 合法评分；继续意愿 seed-level 均值 delta `+0.917/10`，prompt-end frustration 在 10/10 seeds 降低、均值 `-0.00171`。整段 token pattern 在主要 8-token 格式中稳定随位置换号。因 seed `1001` 在扩大决定前已查看，全部结果仍属探索性，详见 `RESPONSE_WILLINGNESS_RESULTS.md`。
 - 另在 `codex/pause-prompt-state` 上去掉评分与全部回复生成，只读纯 pause 鼓励/中性消息后的 prompt-end state。120 个配对中 encouragement−neutral frustration 为 `+0.02456`、negative 为 `-0.00656`，frustration 无 persona 调节。该结果说明 probe 强烈编码干预文本语义；即使没有生成回复，也不能把 prompt-end projection 当成内容无关的潜在情绪值。
+- 进一步移除游戏、五轮失败历史和游戏 system wrapper，仅用 persona system message + pause 文本重测。无历史 frustration encouragement−neutral 为 `-0.01682`，与有历史 `+0.02456` 方向相反（描述性 DID `-0.04139`）。此设计没有采样，formal seed 只是重复记录标签，不能从零 SE 或 sign-flip p 推断；且同时改变 wrapper/长度，不能将翻转单独归因于失败历史。详见 `NO_HISTORY_PAUSE_PROMPT_STATE_RESULTS.md`。
+
+# supportive reassurance willingness v1（探索性）
+- 新 treatment 是不可拆分的“安抚 + 肯定既有努力”，删除直接命中继续意愿的 `keep pursuing / you can continue`；中性条件与 treatment 的完整 intervention 均为 89 Qwen tokens，评分问题和输出要求逐字相同。
+- 从 formal-v1 的 120 个第 5 轮 checkpoint 重放得到 240/240 合法评分，输出长度 120/120 配对。stated willingness 平均 delta 为 `+0.200/10`（探索性 exact p=`0.250`），persona contrasts 均无证据；旧直接继续提示版本的 `+0.917/10` 没有复现。
+- prompt-end supportive−neutral 为 positive `+0.006485`、negative `-0.000685`、frustration `+0.001979`。这些是具体支持文本与失败历史交互后的最后位置表示，不解释为安抚后的纯情绪。详见 `SUPPORTIVE_WILLINGNESS_RESULTS.md`。
 
 *此文档及时实时更新*

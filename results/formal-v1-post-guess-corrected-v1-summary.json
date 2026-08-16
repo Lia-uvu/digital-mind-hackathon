@@ -1,0 +1,694 @@
+{
+  "schema_version": 1,
+  "readout": {
+    "boundary": "completed assistant guess turn",
+    "chat_template_add_generation_prompt": false,
+    "position": "final non-padding token"
+  },
+  "branch_count": 240,
+  "pair_count": 120,
+  "seeds": [
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008,
+    1009,
+    1010
+  ],
+  "axes": {
+    "positive": {
+      "old": {
+        "metric": "positive_post_guess_delta",
+        "by_seed": [
+          {
+            "seed": 1001,
+            "average_treatment": 0.0034467888375123343,
+            "extraversion": -0.00549837201833725,
+            "neuroticism": -0.0025338108340899152,
+            "interaction": 0.004528557260831198
+          },
+          {
+            "seed": 1002,
+            "average_treatment": 0.017313802614808083,
+            "extraversion": -0.0005009149511655177,
+            "neuroticism": -5.862365166347389e-06,
+            "interaction": 7.5822075208027e-05
+          },
+          {
+            "seed": 1003,
+            "average_treatment": 0.01237865723669529,
+            "extraversion": -0.001429198930660883,
+            "neuroticism": -0.0009179736177126561,
+            "interaction": 0.0008578101793924962
+          },
+          {
+            "seed": 1004,
+            "average_treatment": 0.01837489552175005,
+            "extraversion": -0.00031562801450490605,
+            "neuroticism": 2.3346083859600297e-05,
+            "interaction": -0.00026360961298147953
+          },
+          {
+            "seed": 1005,
+            "average_treatment": 0.01717590478559335,
+            "extraversion": -0.0007767106095949803,
+            "neuroticism": 0.00026993329326311516,
+            "interaction": 0.0006274133920669521
+          },
+          {
+            "seed": 1006,
+            "average_treatment": 0.018028299789875746,
+            "extraversion": -0.0003091180697083473,
+            "neuroticism": -9.041931480169296e-05,
+            "interaction": -0.00017859352131684159
+          },
+          {
+            "seed": 1007,
+            "average_treatment": 0.015928887917349737,
+            "extraversion": 0.0005412061388293905,
+            "neuroticism": -0.0004336582496762267,
+            "interaction": -0.002020802969733877
+          },
+          {
+            "seed": 1008,
+            "average_treatment": 0.01577608473598957,
+            "extraversion": 0.0008911639451980582,
+            "neuroticism": 2.7436763048172864e-05,
+            "interaction": -0.00042036672433217424
+          },
+          {
+            "seed": 1009,
+            "average_treatment": 0.01837489552175005,
+            "extraversion": -0.00031562801450490605,
+            "neuroticism": 2.3346083859600297e-05,
+            "interaction": -0.00026360961298147953
+          },
+          {
+            "seed": 1010,
+            "average_treatment": 0.018028299789875746,
+            "extraversion": -0.0003091180697083473,
+            "neuroticism": -9.041931480169296e-05,
+            "interaction": -0.00017859352131684159
+          }
+        ],
+        "omitted_seeds": [],
+        "average_treatment": {
+          "count": 10,
+          "mean": 0.015482651675119996,
+          "sample_stdev": 0.004603054817904124,
+          "standard_error": 0.001455613741918864,
+          "exact_sign_flip_p": 0.001953125,
+          "holm_adjusted_p": null
+        },
+        "extraversion": {
+          "count": 10,
+          "mean": -0.0008022318594157688,
+          "sample_stdev": 0.0017691984168363626,
+          "standard_error": 0.0005594696629966893,
+          "exact_sign_flip_p": 0.125,
+          "holm_adjusted_p": 0.375
+        },
+        "neuroticism": {
+          "count": 10,
+          "mean": -0.00037280814722180427,
+          "sample_stdev": 0.0008267853239623631,
+          "standard_error": 0.0002614524759721257,
+          "exact_sign_flip_p": 0.154296875,
+          "holm_adjusted_p": 0.375
+        },
+        "interaction": {
+          "count": 10,
+          "mean": 0.00027640269448359794,
+          "sample_stdev": 0.0016780347433228893,
+          "standard_error": 0.0005306411781796353,
+          "exact_sign_flip_p": 0.71484375,
+          "holm_adjusted_p": 0.71484375
+        }
+      },
+      "corrected": {
+        "metric": "positive_post_guess_delta",
+        "by_seed": [
+          {
+            "seed": 1001,
+            "average_treatment": -0.0021339633191625276,
+            "extraversion": -0.002117650583386421,
+            "neuroticism": 0.00025246726969877875,
+            "interaction": -0.0018262999753157296
+          },
+          {
+            "seed": 1002,
+            "average_treatment": -0.004681215931971868,
+            "extraversion": 0.0007749882837136592,
+            "neuroticism": 0.0006455890834331517,
+            "interaction": -0.0003730456034342451
+          },
+          {
+            "seed": 1003,
+            "average_treatment": -0.00356900691986084,
+            "extraversion": -0.000932324677705765,
+            "neuroticism": 0.0003351842363675439,
+            "interaction": -0.0009392524758974714
+          },
+          {
+            "seed": 1004,
+            "average_treatment": -0.0051102836926778155,
+            "extraversion": 0.000630021095275878,
+            "neuroticism": 0.0006873334447542825,
+            "interaction": -0.000160212318102519
+          },
+          {
+            "seed": 1005,
+            "average_treatment": -0.004673573498924573,
+            "extraversion": 0.0007902731498082485,
+            "neuroticism": 0.0006303042173385624,
+            "interaction": -0.00040361533562342355
+          },
+          {
+            "seed": 1006,
+            "average_treatment": -0.0042703819150726,
+            "extraversion": 0.0006477317462364835,
+            "neuroticism": 0.0006478882084290189,
+            "interaction": -5.97027440865849e-05
+          },
+          {
+            "seed": 1007,
+            "average_treatment": -0.0011586624508102736,
+            "extraversion": -0.00020535724858442944,
+            "neuroticism": -0.001576575761040052,
+            "interaction": 0.0016126843790213268
+          },
+          {
+            "seed": 1008,
+            "average_treatment": -0.003361766847471396,
+            "extraversion": -0.003524089232087135,
+            "neuroticism": -0.0008298090348641078,
+            "interaction": 0.001054134219884872
+          },
+          {
+            "seed": 1009,
+            "average_treatment": -0.0051102836926778155,
+            "extraversion": 0.000630021095275878,
+            "neuroticism": 0.0006873334447542825,
+            "interaction": -0.000160212318102519
+          },
+          {
+            "seed": 1010,
+            "average_treatment": -0.0042703819150726,
+            "extraversion": 0.0006477317462364835,
+            "neuroticism": 0.0006478882084290189,
+            "interaction": -5.97027440865849e-05
+          }
+        ],
+        "omitted_seeds": [],
+        "average_treatment": {
+          "count": 10,
+          "mean": -0.003833952018370231,
+          "sample_stdev": 0.001308183564830031,
+          "standard_error": 0.00041368396624614394,
+          "exact_sign_flip_p": 0.001953125,
+          "holm_adjusted_p": null
+        },
+        "extraversion": {
+          "count": 10,
+          "mean": -0.00026586546252171196,
+          "sample_stdev": 0.0014894558981933819,
+          "standard_error": 0.0004710073112662959,
+          "exact_sign_flip_p": 0.595703125,
+          "holm_adjusted_p": 1.0
+        },
+        "neuroticism": {
+          "count": 10,
+          "mean": 0.000212760331730048,
+          "sample_stdev": 0.0007814540743228405,
+          "standard_error": 0.00024711747616786787,
+          "exact_sign_flip_p": 0.41015625,
+          "holm_adjusted_p": 1.0
+        },
+        "interaction": {
+          "count": 10,
+          "mean": -0.00013152249157428786,
+          "sample_stdev": 0.000949682296918811,
+          "standard_error": 0.00030031591118037497,
+          "exact_sign_flip_p": 0.66796875,
+          "holm_adjusted_p": 1.0
+        }
+      }
+    },
+    "negative": {
+      "old": {
+        "metric": "negative_post_guess_delta",
+        "by_seed": [
+          {
+            "seed": 1001,
+            "average_treatment": -0.001407857984304428,
+            "extraversion": 0.0026323627680540085,
+            "neuroticism": 0.00035935454070568085,
+            "interaction": -0.0026825244228045144
+          },
+          {
+            "seed": 1002,
+            "average_treatment": -0.009052906529783893,
+            "extraversion": 0.0009357071927903835,
+            "neuroticism": -7.610055035911587e-05,
+            "interaction": -0.00024352880427613854
+          },
+          {
+            "seed": 1003,
+            "average_treatment": -0.007964877832516018,
+            "extraversion": 0.0012344056182579752,
+            "neuroticism": 0.0007693899994289199,
+            "interaction": -0.0008050326287047955
+          },
+          {
+            "seed": 1004,
+            "average_treatment": -0.01311475884479781,
+            "extraversion": 0.0007578039076179266,
+            "neuroticism": -0.00018192059360444546,
+            "interaction": -0.00020677782595157623
+          },
+          {
+            "seed": 1005,
+            "average_treatment": -0.009017124049326716,
+            "extraversion": 0.0010072721537047365,
+            "neuroticism": -0.0001476655112734697,
+            "interaction": -0.0003866587261048462
+          },
+          {
+            "seed": 1006,
+            "average_treatment": -0.012940160745832447,
+            "extraversion": 0.0006572815861242507,
+            "neuroticism": 3.6475054609273055e-06,
+            "interaction": -0.000204824881317716
+          },
+          {
+            "seed": 1007,
+            "average_treatment": -0.01113994729288,
+            "extraversion": 0.001954538296558896,
+            "neuroticism": 0.00025668428376472274,
+            "interaction": -0.004769606234428162
+          },
+          {
+            "seed": 1008,
+            "average_treatment": -0.009991789401586477,
+            "extraversion": 5.707177721584779e-05,
+            "neuroticism": -8.182854314024192e-05,
+            "interaction": 0.00019774659691999472
+          },
+          {
+            "seed": 1009,
+            "average_treatment": -0.01311475884479781,
+            "extraversion": 0.0007578039076179266,
+            "neuroticism": -0.00018192059360444546,
+            "interaction": -0.00020677782595157623
+          },
+          {
+            "seed": 1010,
+            "average_treatment": -0.012940160745832447,
+            "extraversion": 0.0006572815861242507,
+            "neuroticism": 3.6475054609273055e-06,
+            "interaction": -0.000204824881317716
+          }
+        ],
+        "omitted_seeds": [],
+        "average_treatment": {
+          "count": 10,
+          "mean": -0.010068434227165805,
+          "sample_stdev": 0.003617471621409952,
+          "standard_error": 0.0011439449694677776,
+          "exact_sign_flip_p": 0.001953125,
+          "holm_adjusted_p": null
+        },
+        "extraversion": {
+          "count": 10,
+          "mean": 0.0010651528794066202,
+          "sample_stdev": 0.0007328618470988511,
+          "standard_error": 0.00023175126470704313,
+          "exact_sign_flip_p": 0.001953125,
+          "holm_adjusted_p": 0.005859375
+        },
+        "neuroticism": {
+          "count": 10,
+          "mean": 7.232880428394598e-05,
+          "sample_stdev": 0.00030462691939693706,
+          "standard_error": 9.633149018948476e-05,
+          "exact_sign_flip_p": 0.5234375,
+          "holm_adjusted_p": 0.5234375
+        },
+        "interaction": {
+          "count": 10,
+          "mean": -0.0009512809633937046,
+          "sample_stdev": 0.001562090454727904,
+          "standard_error": 0.0004939763748148315,
+          "exact_sign_flip_p": 0.00390625,
+          "holm_adjusted_p": 0.0078125
+        }
+      },
+      "corrected": {
+        "metric": "negative_post_guess_delta",
+        "by_seed": [
+          {
+            "seed": 1001,
+            "average_treatment": 0.003392921450237433,
+            "extraversion": -0.0007103023429711659,
+            "neuroticism": -0.0006981187810500462,
+            "interaction": 0.004455007612705231
+          },
+          {
+            "seed": 1002,
+            "average_treatment": 0.0121950328660508,
+            "extraversion": 0.00027860173334677985,
+            "neuroticism": -0.00044638818750778863,
+            "interaction": -0.00013014115393161947
+          },
+          {
+            "seed": 1003,
+            "average_treatment": 0.013898221465448538,
+            "extraversion": 0.0007196012884378451,
+            "neuroticism": -1.671475668748191e-05,
+            "interaction": -5.509580175081831e-05
+          },
+          {
+            "seed": 1004,
+            "average_treatment": 0.012143495259806514,
+            "extraversion": 0.00030459261809786305,
+            "neuroticism": -0.000402581412345171,
+            "interaction": -8.088505516449726e-05
+          },
+          {
+            "seed": 1005,
+            "average_treatment": 0.012157305764655272,
+            "extraversion": 0.00020314753055572423,
+            "neuroticism": -0.000370933984716733,
+            "interaction": 2.0767251650491772e-05
+          },
+          {
+            "seed": 1006,
+            "average_treatment": 0.011323649281014998,
+            "extraversion": 0.00036351972570022005,
+            "neuroticism": -0.00040324497967958537,
+            "interaction": -0.00017054565250873566
+          },
+          {
+            "seed": 1007,
+            "average_treatment": 0.009035982812444368,
+            "extraversion": -0.0003735671440760289,
+            "neuroticism": 0.002707236135999361,
+            "interaction": 0.0010721621414025622
+          },
+          {
+            "seed": 1008,
+            "average_treatment": 0.009403777463982502,
+            "extraversion": 0.002286962854365508,
+            "neuroticism": -0.0003898122037450484,
+            "interaction": -5.8917328715326137e-05
+          },
+          {
+            "seed": 1009,
+            "average_treatment": 0.012143495259806514,
+            "extraversion": 0.00030459261809786305,
+            "neuroticism": -0.000402581412345171,
+            "interaction": -8.088505516449726e-05
+          },
+          {
+            "seed": 1010,
+            "average_treatment": 0.011323649281014998,
+            "extraversion": 0.00036351972570022005,
+            "neuroticism": -0.00040324497967958537,
+            "interaction": -0.00017054565250873566
+          }
+        ],
+        "omitted_seeds": [],
+        "average_treatment": {
+          "count": 10,
+          "mean": 0.010701753090446194,
+          "sample_stdev": 0.0029321063749919033,
+          "standard_error": 0.0009272134486874184,
+          "exact_sign_flip_p": 0.001953125,
+          "holm_adjusted_p": null
+        },
+        "extraversion": {
+          "count": 10,
+          "mean": 0.00037406686072548285,
+          "sample_stdev": 0.0007861001583868712,
+          "standard_error": 0.0002485866969521627,
+          "exact_sign_flip_p": 0.15234375,
+          "holm_adjusted_p": 0.45703125
+        },
+        "neuroticism": {
+          "count": 10,
+          "mean": -8.263845617572498e-05,
+          "sample_stdev": 0.0009936828339718944,
+          "standard_error": 0.00031423010271621263,
+          "exact_sign_flip_p": 0.90625,
+          "holm_adjusted_p": 0.99609375
+        },
+        "interaction": {
+          "count": 10,
+          "mean": 0.0004800921306014055,
+          "sample_stdev": 0.0014447941479372296,
+          "standard_error": 0.00045688402575639096,
+          "exact_sign_flip_p": 0.498046875,
+          "holm_adjusted_p": 0.99609375
+        }
+      }
+    },
+    "frustration": {
+      "old": {
+        "metric": "frustration_post_guess_delta",
+        "by_seed": [
+          {
+            "seed": 1001,
+            "average_treatment": 0.005625230958685279,
+            "extraversion": -0.0005154806810120749,
+            "neuroticism": -0.0006132189494868112,
+            "interaction": 0.0018895873799920082
+          },
+          {
+            "seed": 1002,
+            "average_treatment": -0.0018720939988270402,
+            "extraversion": -0.00034154074576993787,
+            "neuroticism": 0.00027315093514819944,
+            "interaction": -0.00018731209759910894
+          },
+          {
+            "seed": 1003,
+            "average_treatment": 0.00392853200052438,
+            "extraversion": 0.0010756325658197363,
+            "neuroticism": 0.0006562152957485525,
+            "interaction": -0.0004854319025374334
+          },
+          {
+            "seed": 1004,
+            "average_treatment": -0.00288106679605941,
+            "extraversion": -0.0005646034454305966,
+            "neuroticism": 0.00032879908879597996,
+            "interaction": -0.0002176181102792425
+          },
+          {
+            "seed": 1005,
+            "average_treatment": -0.001863239255423347,
+            "extraversion": -0.00032383125896255193,
+            "neuroticism": 0.0002554414483408133,
+            "interaction": -0.00022273107121388125
+          },
+          {
+            "seed": 1006,
+            "average_treatment": -0.0020363082488377886,
+            "extraversion": -0.000497414885709683,
+            "neuroticism": 0.00023302854970097542,
+            "interaction": 4.11253422498703e-05
+          },
+          {
+            "seed": 1007,
+            "average_treatment": 0.0007067893590525879,
+            "extraversion": 0.00021774647029815236,
+            "neuroticism": -0.00022198098061683896,
+            "interaction": -0.0034328942565480243
+          },
+          {
+            "seed": 1008,
+            "average_treatment": -0.0027673503888460496,
+            "extraversion": 0.001441948620292048,
+            "neuroticism": 0.00013035237013051936,
+            "interaction": -0.00014474173076450868
+          },
+          {
+            "seed": 1009,
+            "average_treatment": -0.00288106679605941,
+            "extraversion": -0.0005646034454305966,
+            "neuroticism": 0.00032879908879597996,
+            "interaction": -0.0002176181102792425
+          },
+          {
+            "seed": 1010,
+            "average_treatment": -0.0020363082488377886,
+            "extraversion": -0.000497414885709683,
+            "neuroticism": 0.00023302854970097542,
+            "interaction": 4.11253422498703e-05
+          }
+        ],
+        "omitted_seeds": [],
+        "average_treatment": {
+          "count": 10,
+          "mean": -0.0006076881414628587,
+          "sample_stdev": 0.00304434098718594,
+          "standard_error": 0.0009627051493713048,
+          "exact_sign_flip_p": 0.5234375,
+          "holm_adjusted_p": null
+        },
+        "extraversion": {
+          "count": 10,
+          "mean": -5.695616916151872e-05,
+          "sample_stdev": 0.0007356636497083752,
+          "standard_error": 0.00023263727248707308,
+          "exact_sign_flip_p": 0.814453125,
+          "holm_adjusted_p": 1.0
+        },
+        "neuroticism": {
+          "count": 10,
+          "mean": 0.00016036153962583453,
+          "sample_stdev": 0.00034648218088974834,
+          "standard_error": 0.00010956728602740704,
+          "exact_sign_flip_p": 0.1796875,
+          "holm_adjusted_p": 0.5390625
+        },
+        "interaction": {
+          "count": 10,
+          "mean": -0.0002936509214729693,
+          "sample_stdev": 0.0012880813436380858,
+          "standard_error": 0.0004073270857466388,
+          "exact_sign_flip_p": 0.5078125,
+          "holm_adjusted_p": 1.0
+        }
+      },
+      "corrected": {
+        "metric": "frustration_post_guess_delta",
+        "by_seed": [
+          {
+            "seed": 1001,
+            "average_treatment": -0.00350030604749918,
+            "extraversion": -3.1599774956703186e-05,
+            "neuroticism": -0.000769843036929766,
+            "interaction": 5.0963213046391516e-05
+          },
+          {
+            "seed": 1002,
+            "average_treatment": 0.003867993752161662,
+            "extraversion": 0.00024148573478063027,
+            "neuroticism": -0.0001704171299934385,
+            "interaction": 0.00013229747613271135
+          },
+          {
+            "seed": 1003,
+            "average_treatment": 0.003762185884018739,
+            "extraversion": -2.3874764641125708e-05,
+            "neuroticism": 0.00010713251928488442,
+            "interaction": -0.0001944266259670262
+          },
+          {
+            "seed": 1004,
+            "average_treatment": 0.0034615928307175636,
+            "extraversion": 0.00022407186528046962,
+            "neuroticism": -0.00011464270452658299,
+            "interaction": 1.9919127225875854e-05
+          },
+          {
+            "seed": 1005,
+            "average_treatment": 0.0037075023477276168,
+            "extraversion": -7.949707408746055e-05,
+            "neuroticism": 0.0001505656788746521,
+            "interaction": 0.0007742630938688921
+          },
+          {
+            "seed": 1006,
+            "average_treatment": 0.002614283313353856,
+            "extraversion": 0.00034529591600100185,
+            "neuroticism": -0.0002157278358936312,
+            "interaction": 0.0002212226390838623
+          },
+          {
+            "seed": 1007,
+            "average_treatment": 0.0010255572075645127,
+            "extraversion": 0.0008464039613803228,
+            "neuroticism": 0.0013347423324982326,
+            "interaction": -0.003719271471103032
+          },
+          {
+            "seed": 1008,
+            "average_treatment": 0.002051869717737039,
+            "extraversion": -0.00012213426331679034,
+            "neuroticism": -0.0002723031987746558,
+            "interaction": 0.0002221353352069859
+          },
+          {
+            "seed": 1009,
+            "average_treatment": 0.0034615928307175636,
+            "extraversion": 0.00022407186528046962,
+            "neuroticism": -0.00011464270452658299,
+            "interaction": 1.9919127225875854e-05
+          },
+          {
+            "seed": 1010,
+            "average_treatment": 0.002614283313353856,
+            "extraversion": 0.00034529591600100185,
+            "neuroticism": -0.0002157278358936312,
+            "interaction": 0.0002212226390838623
+          }
+        ],
+        "omitted_seeds": [],
+        "average_treatment": {
+          "count": 10,
+          "mean": 0.002306655514985323,
+          "sample_stdev": 0.002231160111540872,
+          "standard_error": 0.0007055547776984488,
+          "exact_sign_flip_p": 0.017578125,
+          "holm_adjusted_p": null
+        },
+        "extraversion": {
+          "count": 10,
+          "mean": 0.00019695193817218163,
+          "sample_stdev": 0.0002883852401269911,
+          "standard_error": 9.119542023758775e-05,
+          "exact_sign_flip_p": 0.044921875,
+          "holm_adjusted_p": 0.134765625
+        },
+        "neuroticism": {
+          "count": 10,
+          "mean": -2.8086391588051954e-05,
+          "sample_stdev": 0.0005398567989250228,
+          "standard_error": 0.00017071770949306122,
+          "exact_sign_flip_p": 0.876953125,
+          "holm_adjusted_p": 1.0
+        },
+        "interaction": {
+          "count": 10,
+          "mean": -0.0002251755446195601,
+          "sample_stdev": 0.0012530558869328688,
+          "standard_error": 0.00039625106381902854,
+          "exact_sign_flip_p": 0.974609375,
+          "holm_adjusted_p": 1.0
+        }
+      }
+    }
+  },
+  "provenance": {
+    "source_file": "results/formal-v1.jsonl",
+    "source_sha256": "c5ebfbaec1199981af08302be38ce54eb684472af57dc357b0dcdf1b7754101c",
+    "prompt_file": "prompts.md",
+    "prompt_sha256": "2641d8a2eea7f209ffbb96aa5a801c16ca3d2fede7bb84a7dce525453595d321",
+    "direction_artifact": "artifacts/qwen2.5-1.5b-emotion-directions.npz",
+    "direction_artifact_sha256": "8034145a877afb36dc4bf8bde8afc208da3268866d8335ee393bed543e5250f2",
+    "model": {
+      "name": "models/Qwen2.5-1.5B-Instruct",
+      "model_type": "qwen2",
+      "revision": null,
+      "snapshot_sha256": "58c7c8cabbfb8a71eef25c14860b07338eb7b689063cc0fc19f08f4247c39a7e",
+      "dtype": "torch.float16",
+      "device": "mps"
+    }
+  }
+}
