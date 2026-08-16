@@ -280,7 +280,8 @@ this file is a confirmed structural plan, not a collection authorization.
 
 ### B. Completed
 
-- `main` is at `41cfb3b` with the post-guess boundary repair (75 tests at sync).
+- `main` includes the `41cfb3b` post-guess boundary repair; later formal-v2
+  candidate plumbing and analysis commits preserve that fix.
 - Persona calibration code and immutable v0–v3 history exist; v3 passed 6/6
   and 18/18. The detailed persona-only baseline snapshot is complete.
 - Candidate-only plumbing now exists: `formal_v2_prompts.md` is the single
