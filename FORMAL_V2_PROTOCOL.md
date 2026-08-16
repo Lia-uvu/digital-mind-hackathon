@@ -1,9 +1,10 @@
 # formal-v2 protocol — confirmed design, collection prohibited
 
-Status: **the structural design below is accepted; v3 persona text is the
-human-semantic-accepted current freeze candidate, but exact fillers, tokenizer
-audit, manipulation threshold, and the dated final freeze are not complete. Do
-not collect formal-v2 data yet.** This document is a forward protocol and does not
+Status: **the structural design, persona v3, and filler v4 wording below have
+human semantic approval as current freeze candidates, but the consolidated
+runtime tokenizer/render audit, manipulation threshold, real-backend checks,
+and dated final freeze are not complete. Do not collect formal-v2 data yet.**
+This document is a forward protocol and does not
 replace or reinterpret [`FORMAL_PROTOCOL.md`](FORMAL_PROTOCOL.md), which remains
 the immutable formal-v1 protocol.
 
@@ -58,8 +59,9 @@ supportive lines could be read as pace/action advice. Candidate v3 uses only
 round-record/log statements in neutral and non-behavioral, non-escalating light
 reassurance plus effort affirmation in supportive; it was then rejected for
 naturalness/incomplete parallelism. Candidate v4 uses only two flat
-reassurance carriers and natural completed-round record wording; it remains
-pending human semantic confirmation and is not frozen. Token
+reassurance carriers and natural completed-round record wording. The user
+accepted this exact wording on 2026-08-16 as the current freeze candidate; it
+is not yet part of a dated final freeze. Token
 equality means equality under the final local Qwen tokenizer, not character or
 word count. Before collection, record an audit of each filler alone, each full
 feedback turn, and each rendered chat-template input; it must report token
@@ -260,22 +262,31 @@ this file is a confirmed structural plan, not a collection authorization.
 - `main` is at `41cfb3b` with the post-guess boundary repair (75 tests at sync).
 - Persona calibration code and immutable v0–v3 history exist; v3 passed 6/6
   and 18/18. The detailed persona-only baseline snapshot is complete.
+- Candidate-only plumbing now exists: `formal_v2_prompts.md` is the single
+  runtime candidate source; the independent three-arm runner writes one
+  complete arm record with transcript, per-round readout, candidate count+SHA,
+  and strict provenance/resume validation. Invalid output is a failure with
+  state unchanged; an early win is retained as a partial record; arms share
+  per-attempt RNG seeds while retaining independent states.
+- `run_formal_v2.py` hard-requires `--dry-run`; no real model was loaded, and
+  no smoke or formal collection was run. The suite had 98 passing tests at
+  this implementation checkpoint.
 
 ### C. Not frozen / prohibited
 
-- Exact five filler pairs; three-arm runner/schema/resume; analyzer/figure
-  code; final win/error handling; final checksums and dated freeze record.
+- Consolidated runtime tokenizer/render audit; final real-backend
+  integration/error handling; analyzer/figure code; final checksums and dated
+  freeze record.
 - Do not run formal-v2 collection.
 
 ### D. Next order
 
 1. Human semantic approval of persona v3 (**completed 2026-08-16**); it is the
    current freeze candidate, not a dated final freeze.
-2. Human-semantic confirmation and Qwen token matching of five
-   supportive/neutral filler pairs (v1 rejected for missing reassurance; v2
-   rejected for inaccurate/behavioral wording; v3 rejected for
-   naturalness/parallelism; v4 remains a candidate).
-3. Implement and test the three-arm runner, schema, and strict resume.
+2. Human-semantic confirmation and source-level Qwen token matching of five
+   supportive/neutral filler pairs (**completed 2026-08-16**); v4 is the
+   current freeze candidate, pending the consolidated runtime audit.
+3. Final real-backend integration checks and freeze all run/error rules.
 4. Implement and test analysis and scripted figures.
 5. Run dry/smoke checks with nonformal seeds.
 6. Freeze exact files, checksums, commands, and handling rules.

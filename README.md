@@ -23,6 +23,10 @@ and the completed formal-v1 report is in [`FORMAL_RESULTS.md`](FORMAL_RESULTS.md
 The accepted-but-not-yet-frozen formal-v2 structure is in
 [`FORMAL_V2_PROTOCOL.md`](FORMAL_V2_PROTOCOL.md); it is explicitly not a
 collection command.
+
+`formal_v2_prompts.md`、`run_formal_v2.py` 和独立 records/runner 目前仅是
+dry-run-only candidate plumbing；非 dry-run 被拒绝，尚未加载真实模型，也不授权
+freeze、smoke 或 formal collection。
 The immutable v3 persona-only probe baseline and its tidy table are documented
 in [`FORMAL_V2_PERSONA_CALIBRATION_RESULTS.md`](FORMAL_V2_PERSONA_CALIBRATION_RESULTS.md).
 The current bundled-intervention protocol and results are in
