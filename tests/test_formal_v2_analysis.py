@@ -15,6 +15,7 @@ from encouragement_lab.formal_v2_analysis import (
 )
 from encouragement_lab.formal_v2_runner import FormalV2Runner
 from encouragement_lab.formal_v2_records import append
+from encouragement_lab.formal_v2_figures import write_figure_bundle
 from encouragement_lab.model import SamplingConfig
 from encouragement_lab.personas import PERSONA_SPECS
 from run_formal_v2_analysis import TABLE_FIELDS, write_analysis_bundle
@@ -310,3 +311,36 @@ def test_bundle_writer_is_tidy_hashed_and_refuses_overwrite(tmp_path):
 
     with pytest.raises(FileExistsError, match="already exists"):
         write_analysis_bundle(source, destination, expected_seeds=(1,))
+
+
+def test_figure_bundle_exports_paper_formats_and_self_contained_html(tmp_path):
+    source = tmp_path / "source.jsonl"
+    for record in _design():
+        append(source, record)
+    analysis = tmp_path / "analysis"
+    write_analysis_bundle(source, analysis, expected_seeds=tuple(range(1, 11)))
+    figures = tmp_path / "figures"
+
+    manifest = write_figure_bundle(analysis, figures)
+
+    expected = {
+        "formal-v2-trajectory.svg",
+        "formal-v2-trajectory.pdf",
+        "formal-v2-trajectory.png",
+        "formal-v2-slope-contrasts.svg",
+        "formal-v2-slope-contrasts.pdf",
+        "formal-v2-slope-contrasts.png",
+        "formal-v2-report.html",
+    }
+    assert set(manifest["artifacts_sha256"]) == expected
+    assert manifest["complete_all_arm_seeds"] == list(range(1, 11))
+    assert (figures / "formal-v2-trajectory.png").read_bytes().startswith(
+        b"\x89PNG\r\n\x1a\n"
+    )
+    assert (figures / "formal-v2-trajectory.pdf").read_bytes().startswith(b"%PDF")
+    svg = (figures / "formal-v2-trajectory.svg").read_text(encoding="utf-8")
+    assert "frustration-direction" in svg
+    html = (figures / "formal-v2-report.html").read_text(encoding="utf-8")
+    assert "data:image/svg+xml;base64," in html
+    assert "Co-primary slope contrasts" in html
+    assert "subjective experience" in html

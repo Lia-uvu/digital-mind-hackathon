@@ -150,6 +150,15 @@ CSVs, exact planned tests, exclusions, hashes, and a data dictionary:
 This command does not authorize collection; the dated freeze gate in
 `FORMAL_V2_PROTOCOL.md` still applies.
 
+Render the hash-validated analysis bundle to publication formats and a
+self-contained HTML review report with:
+
+```sh
+.venv/bin/python run_formal_v2_figures.py \
+  --analysis-dir results/formal-v2-analysis \
+  --output-dir results/formal-v2-figures
+```
+
 Quadrant summaries require a complete `v1`/`v2`/`v3` block for every
 quadrant/seed and average the three templates before counting that seed. For a
 deliberately incomplete smoke file, add `--allow-incomplete-templates` to emit

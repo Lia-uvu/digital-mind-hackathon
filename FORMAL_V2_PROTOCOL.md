@@ -235,7 +235,7 @@ audit; independent calibration materials, seeds, threshold, and result; all
 run/error rules; schema; analysis/figure commands; and checksums. Until then,
 this file is a confirmed structural plan, not a collection authorization.
 
-## Approved analysis rules (implemented; figures pending)
+## Approved analysis rules (implemented)
 
 - The two co-primary arm contrasts are `neutral − feedback_only` and
   `supportive − neutral`; their two tests receive one Holm adjustment. The
@@ -300,14 +300,18 @@ this file is a confirmed structural plan, not a collection authorization.
   feedback-only gate, and writes a non-overwriting tidy CSV/summary bundle.
   Synthetic hand-checkable coverage includes the full 360-cell schedule,
   missing arms/readouts, early wins, provenance drift, aggregation order, and
-  the 7/10 endpoint rule. The full local suite passed 105 tests at this
+  the 7/10 endpoint rule. The full local suite passed 106 tests at this
   checkpoint. No formal data were read.
+- `formal_v2_figures.py` and `run_formal_v2_figures.py` consume only the
+  hash-validated analysis bundle. They generate an R1-centered three-arm
+  trajectory, planned slope-contrast panels, SVG/PDF/PNG exports, a
+  self-contained HTML report, and an output manifest. Synthetic output was
+  rendered and visually inspected; no formal data were read.
 
 ### C. Not frozen / prohibited
 
 - Consolidated runtime tokenizer/render audit; final real-backend
-  integration/error handling; figure code; final checksums and dated
-  freeze record.
+  integration/error handling; final checksums and dated freeze record.
 - Do not run formal-v2 collection.
 
 ### D. Next order
@@ -318,7 +322,7 @@ this file is a confirmed structural plan, not a collection authorization.
    supportive/neutral filler pairs (**completed 2026-08-16**); v4 is the
    current freeze candidate, pending the consolidated runtime audit.
 3. Final real-backend integration checks and freeze all run/error rules.
-4. Implement and test analysis (**completed**) and scripted figures (pending).
+4. Implement and test analysis and scripted figures (**completed**).
 5. Run dry/smoke checks with nonformal seeds.
 6. Freeze exact files, checksums, commands, and handling rules.
 7. Only then run the 360 formal runs.
