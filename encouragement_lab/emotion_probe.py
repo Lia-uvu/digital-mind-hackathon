@@ -1,4 +1,4 @@
-"""Read-only internal activation directions for positive and negative affect."""
+"""Read-only internal activation directions for affect and external probes."""
 
 from __future__ import annotations
 
@@ -155,12 +155,16 @@ class EmotionDirections:
     def load(cls, path: str | Path) -> "EmotionDirections":
         data = np.load(Path(path), allow_pickle=False)
         metadata = json.loads(str(data["__metadata__"]))
-        directions: dict[str, dict[int, np.ndarray]] = {axis: {} for axis in AXES}
+        # Do not seed this with AXES: external artifacts can contain a different
+        # set of discrete concepts (for example joy, sadness, and anger).
+        # Legacy artifacts retain the same three keys because those keys are
+        # present in their saved arrays.
+        directions: dict[str, dict[int, np.ndarray]] = {}
         for key in data.files:
             if key == "__metadata__":
                 continue
             axis, layer = key.split("__", 1)
-            directions[axis][int(layer)] = data[key].astype(np.float32)
+            directions.setdefault(axis, {})[int(layer)] = data[key].astype(np.float32)
         return cls(
             model_type=metadata["model_type"],
             model_checksum=metadata.get("model_checksum"),
@@ -212,9 +216,11 @@ class EmotionProbe:
         self.model = model
         self.tokenizer = tokenizer
         self.directions = directions
-        missing = [axis for axis in AXES if not directions.directions.get(axis)]
-        if missing:
-            raise ValueError("emotion directions missing axes: " + ", ".join(missing))
+        self.axes = tuple(
+            axis for axis, layers in directions.directions.items() if layers
+        )
+        if not self.axes:
+            raise ValueError("emotion directions contain no non-empty axes")
 
     @classmethod
     def train(
@@ -278,7 +284,11 @@ class EmotionProbe:
         from repeng.extract import batched_get_hiddens
 
         layers = sorted(
-            {layer for axis in AXES for layer in self.directions.directions[axis]}
+            {
+                layer
+                for axis in self.axes
+                for layer in self.directions.directions[axis]
+            }
         )
         return batched_get_hiddens(
             self.model, self.tokenizer, list(texts), layers, batch_size=2
@@ -287,7 +297,7 @@ class EmotionProbe:
     def score_text(self, rendered_text: str) -> dict[str, Any]:
         hidden = self._hidden_states([rendered_text])
         result: dict[str, Any] = {}
-        for axis in AXES:
+        for axis in self.axes:
             by_layer = {
                 str(layer): _projection(hidden[layer][0], direction)
                 for layer, direction in self.directions.directions[axis].items()
@@ -320,7 +330,7 @@ class EmotionProbe:
         try:
             for position in range(token_start, len(token_ids)):
                 axes: dict[str, Any] = {}
-                for axis in AXES:
+                for axis in self.axes:
                     by_layer: dict[str, float] = {}
                     for layer, direction in self.directions.directions[axis].items():
                         hidden_index = layer + 1 if layer >= 0 else layer

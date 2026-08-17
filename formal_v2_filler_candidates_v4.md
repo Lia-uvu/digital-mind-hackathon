@@ -1,10 +1,9 @@
-# formal-v2 filler candidates v4 — final-review candidate, not frozen
+# formal-v2 filler v4 — human-approved and dated-frozen 2026-08-16
 
 Candidates v1–v3 and their audits remain immutable history. v1 was rejected
 for missing reassurance; v2 for inaccurate neutral metadata and behavioral
-wording; v3 for naturalness and incomplete parallelism. This v4 set is pending
-human final review only. It is not wired into a runner and does not authorize a
-freeze or formal-v2 collection.
+wording; v3 for naturalness and incomplete parallelism. Lia accepted this exact
+v4 wording on 2026-08-16; it is wired byte-for-byte into the frozen runtime.
 
 Supportive fillers use only two equally light, non-behavioral reassurance
 carriers: `It is okay if this feels difficult` and `It is understandable if

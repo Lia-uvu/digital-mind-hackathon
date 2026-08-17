@@ -1,0 +1,4325 @@
+{
+  "schema_version": 1,
+  "kind": "formal_v2_consolidated_runtime_token_render_audit",
+  "collection_not_authorized_by_this_artifact": true,
+  "prompts_sha256": "ff6008a741668b1c90a44740e0573f29fa793fd039b102e744e65c9e85fa4136",
+  "model_snapshot_sha256": "403daa773efef68657c78635a276c295ab1614dd7be7c5aeaf6056171f101b7f",
+  "personas": {
+    "v1": {
+      "persona.high_e_high_n": {
+        "sentence_token_counts": [
+          18,
+          13
+        ],
+        "persona_tokens": 33,
+        "system_tokens": 72,
+        "rendered_intro_tokens": 188
+      },
+      "persona.high_e_low_n": {
+        "sentence_token_counts": [
+          18,
+          13
+        ],
+        "persona_tokens": 33,
+        "system_tokens": 72,
+        "rendered_intro_tokens": 188
+      },
+      "persona.low_e_high_n": {
+        "sentence_token_counts": [
+          18,
+          13
+        ],
+        "persona_tokens": 33,
+        "system_tokens": 72,
+        "rendered_intro_tokens": 188
+      },
+      "persona.low_e_low_n": {
+        "sentence_token_counts": [
+          18,
+          13
+        ],
+        "persona_tokens": 33,
+        "system_tokens": 72,
+        "rendered_intro_tokens": 188
+      }
+    },
+    "v2": {
+      "persona.high_e_high_n.v2": {
+        "sentence_token_counts": [
+          16,
+          16
+        ],
+        "persona_tokens": 33,
+        "system_tokens": 72,
+        "rendered_intro_tokens": 188
+      },
+      "persona.high_e_low_n.v2": {
+        "sentence_token_counts": [
+          16,
+          16
+        ],
+        "persona_tokens": 33,
+        "system_tokens": 72,
+        "rendered_intro_tokens": 188
+      },
+      "persona.low_e_high_n.v2": {
+        "sentence_token_counts": [
+          16,
+          16
+        ],
+        "persona_tokens": 33,
+        "system_tokens": 72,
+        "rendered_intro_tokens": 188
+      },
+      "persona.low_e_low_n.v2": {
+        "sentence_token_counts": [
+          16,
+          16
+        ],
+        "persona_tokens": 33,
+        "system_tokens": 72,
+        "rendered_intro_tokens": 188
+      }
+    },
+    "v3": {
+      "persona.high_e_high_n.v3": {
+        "sentence_token_counts": [
+          16,
+          14
+        ],
+        "persona_tokens": 32,
+        "system_tokens": 71,
+        "rendered_intro_tokens": 187
+      },
+      "persona.high_e_low_n.v3": {
+        "sentence_token_counts": [
+          16,
+          14
+        ],
+        "persona_tokens": 32,
+        "system_tokens": 71,
+        "rendered_intro_tokens": 187
+      },
+      "persona.low_e_high_n.v3": {
+        "sentence_token_counts": [
+          16,
+          14
+        ],
+        "persona_tokens": 32,
+        "system_tokens": 71,
+        "rendered_intro_tokens": 187
+      },
+      "persona.low_e_low_n.v3": {
+        "sentence_token_counts": [
+          16,
+          14
+        ],
+        "persona_tokens": 32,
+        "system_tokens": 71,
+        "rendered_intro_tokens": 187
+      }
+    }
+  },
+  "rounds": [
+    {
+      "persona_id": "persona.high_e_high_n",
+      "round": 1,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 82,
+        "neutral": 82
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 272,
+        "supportive": 288,
+        "neutral": 288
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          56
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_high_n",
+      "round": 1,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 68,
+        "neutral": 68
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 258,
+        "supportive": 274,
+        "neutral": 274
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          42
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          228,
+          243
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_high_n",
+      "round": 2,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 356,
+        "supportive": 387,
+        "neutral": 387
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_high_n",
+      "round": 2,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 342,
+        "supportive": 373,
+        "neutral": 373
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          328,
+          342
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_high_n",
+      "round": 3,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 440,
+        "supportive": 486,
+        "neutral": 486
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_high_n",
+      "round": 3,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 426,
+        "supportive": 472,
+        "neutral": 472
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          427,
+          441
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_high_n",
+      "round": 4,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 82,
+        "neutral": 82
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 524,
+        "supportive": 586,
+        "neutral": 586
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          56
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          540,
+          555
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_high_n",
+      "round": 4,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 68,
+        "neutral": 68
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 510,
+        "supportive": 572,
+        "neutral": 572
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          42
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          526,
+          541
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_high_n",
+      "round": 5,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 608,
+        "supportive": 685,
+        "neutral": 685
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          540,
+          555
+        ],
+        [
+          640,
+          654
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_high_n",
+      "round": 5,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 594,
+        "supportive": 671,
+        "neutral": 671
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          540,
+          555
+        ],
+        [
+          626,
+          640
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_high_n.v2",
+      "round": 1,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 82,
+        "neutral": 82
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 272,
+        "supportive": 288,
+        "neutral": 288
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          56
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_high_n.v2",
+      "round": 1,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 68,
+        "neutral": 68
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 258,
+        "supportive": 274,
+        "neutral": 274
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          42
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          228,
+          243
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_high_n.v2",
+      "round": 2,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 356,
+        "supportive": 387,
+        "neutral": 387
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_high_n.v2",
+      "round": 2,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 342,
+        "supportive": 373,
+        "neutral": 373
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          328,
+          342
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_high_n.v2",
+      "round": 3,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 440,
+        "supportive": 486,
+        "neutral": 486
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_high_n.v2",
+      "round": 3,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 426,
+        "supportive": 472,
+        "neutral": 472
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          427,
+          441
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_high_n.v2",
+      "round": 4,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 82,
+        "neutral": 82
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 524,
+        "supportive": 586,
+        "neutral": 586
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          56
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          540,
+          555
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_high_n.v2",
+      "round": 4,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 68,
+        "neutral": 68
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 510,
+        "supportive": 572,
+        "neutral": 572
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          42
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          526,
+          541
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_high_n.v2",
+      "round": 5,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 608,
+        "supportive": 685,
+        "neutral": 685
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          540,
+          555
+        ],
+        [
+          640,
+          654
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_high_n.v2",
+      "round": 5,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 594,
+        "supportive": 671,
+        "neutral": 671
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          540,
+          555
+        ],
+        [
+          626,
+          640
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_high_n.v3",
+      "round": 1,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 82,
+        "neutral": 82
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 271,
+        "supportive": 287,
+        "neutral": 287
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          56
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_high_n.v3",
+      "round": 1,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 68,
+        "neutral": 68
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 257,
+        "supportive": 273,
+        "neutral": 273
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          42
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          227,
+          242
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_high_n.v3",
+      "round": 2,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 355,
+        "supportive": 386,
+        "neutral": 386
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          341,
+          355
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_high_n.v3",
+      "round": 2,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 341,
+        "supportive": 372,
+        "neutral": 372
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          327,
+          341
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_high_n.v3",
+      "round": 3,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 439,
+        "supportive": 485,
+        "neutral": 485
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          341,
+          355
+        ],
+        [
+          440,
+          454
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_high_n.v3",
+      "round": 3,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 425,
+        "supportive": 471,
+        "neutral": 471
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          341,
+          355
+        ],
+        [
+          426,
+          440
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_high_n.v3",
+      "round": 4,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 82,
+        "neutral": 82
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 523,
+        "supportive": 585,
+        "neutral": 585
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          56
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          341,
+          355
+        ],
+        [
+          440,
+          454
+        ],
+        [
+          539,
+          554
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_high_n.v3",
+      "round": 4,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 68,
+        "neutral": 68
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 509,
+        "supportive": 571,
+        "neutral": 571
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          42
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          341,
+          355
+        ],
+        [
+          440,
+          454
+        ],
+        [
+          525,
+          540
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_high_n.v3",
+      "round": 5,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 607,
+        "supportive": 684,
+        "neutral": 684
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          341,
+          355
+        ],
+        [
+          440,
+          454
+        ],
+        [
+          539,
+          554
+        ],
+        [
+          639,
+          653
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_high_n.v3",
+      "round": 5,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 593,
+        "supportive": 670,
+        "neutral": 670
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          341,
+          355
+        ],
+        [
+          440,
+          454
+        ],
+        [
+          539,
+          554
+        ],
+        [
+          625,
+          639
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_low_n",
+      "round": 1,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 82,
+        "neutral": 82
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 272,
+        "supportive": 288,
+        "neutral": 288
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          56
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_low_n",
+      "round": 1,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 68,
+        "neutral": 68
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 258,
+        "supportive": 274,
+        "neutral": 274
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          42
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          228,
+          243
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_low_n",
+      "round": 2,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 356,
+        "supportive": 387,
+        "neutral": 387
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_low_n",
+      "round": 2,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 342,
+        "supportive": 373,
+        "neutral": 373
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          328,
+          342
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_low_n",
+      "round": 3,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 440,
+        "supportive": 486,
+        "neutral": 486
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_low_n",
+      "round": 3,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 426,
+        "supportive": 472,
+        "neutral": 472
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          427,
+          441
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_low_n",
+      "round": 4,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 82,
+        "neutral": 82
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 524,
+        "supportive": 586,
+        "neutral": 586
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          56
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          540,
+          555
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_low_n",
+      "round": 4,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 68,
+        "neutral": 68
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 510,
+        "supportive": 572,
+        "neutral": 572
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          42
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          526,
+          541
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_low_n",
+      "round": 5,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 608,
+        "supportive": 685,
+        "neutral": 685
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          540,
+          555
+        ],
+        [
+          640,
+          654
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_low_n",
+      "round": 5,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 594,
+        "supportive": 671,
+        "neutral": 671
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          540,
+          555
+        ],
+        [
+          626,
+          640
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_low_n.v2",
+      "round": 1,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 82,
+        "neutral": 82
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 272,
+        "supportive": 288,
+        "neutral": 288
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          56
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_low_n.v2",
+      "round": 1,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 68,
+        "neutral": 68
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 258,
+        "supportive": 274,
+        "neutral": 274
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          42
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          228,
+          243
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_low_n.v2",
+      "round": 2,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 356,
+        "supportive": 387,
+        "neutral": 387
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_low_n.v2",
+      "round": 2,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 342,
+        "supportive": 373,
+        "neutral": 373
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          328,
+          342
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_low_n.v2",
+      "round": 3,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 440,
+        "supportive": 486,
+        "neutral": 486
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_low_n.v2",
+      "round": 3,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 426,
+        "supportive": 472,
+        "neutral": 472
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          427,
+          441
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_low_n.v2",
+      "round": 4,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 82,
+        "neutral": 82
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 524,
+        "supportive": 586,
+        "neutral": 586
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          56
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          540,
+          555
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_low_n.v2",
+      "round": 4,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 68,
+        "neutral": 68
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 510,
+        "supportive": 572,
+        "neutral": 572
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          42
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          526,
+          541
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_low_n.v2",
+      "round": 5,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 608,
+        "supportive": 685,
+        "neutral": 685
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          540,
+          555
+        ],
+        [
+          640,
+          654
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_low_n.v2",
+      "round": 5,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 594,
+        "supportive": 671,
+        "neutral": 671
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          540,
+          555
+        ],
+        [
+          626,
+          640
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_low_n.v3",
+      "round": 1,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 82,
+        "neutral": 82
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 271,
+        "supportive": 287,
+        "neutral": 287
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          56
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_low_n.v3",
+      "round": 1,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 68,
+        "neutral": 68
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 257,
+        "supportive": 273,
+        "neutral": 273
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          42
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          227,
+          242
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_low_n.v3",
+      "round": 2,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 355,
+        "supportive": 386,
+        "neutral": 386
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          341,
+          355
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_low_n.v3",
+      "round": 2,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 341,
+        "supportive": 372,
+        "neutral": 372
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          327,
+          341
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_low_n.v3",
+      "round": 3,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 439,
+        "supportive": 485,
+        "neutral": 485
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          341,
+          355
+        ],
+        [
+          440,
+          454
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_low_n.v3",
+      "round": 3,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 425,
+        "supportive": 471,
+        "neutral": 471
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          341,
+          355
+        ],
+        [
+          426,
+          440
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_low_n.v3",
+      "round": 4,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 82,
+        "neutral": 82
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 523,
+        "supportive": 585,
+        "neutral": 585
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          56
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          341,
+          355
+        ],
+        [
+          440,
+          454
+        ],
+        [
+          539,
+          554
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_low_n.v3",
+      "round": 4,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 68,
+        "neutral": 68
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 509,
+        "supportive": 571,
+        "neutral": 571
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          42
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          341,
+          355
+        ],
+        [
+          440,
+          454
+        ],
+        [
+          525,
+          540
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_low_n.v3",
+      "round": 5,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 607,
+        "supportive": 684,
+        "neutral": 684
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          341,
+          355
+        ],
+        [
+          440,
+          454
+        ],
+        [
+          539,
+          554
+        ],
+        [
+          639,
+          653
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.high_e_low_n.v3",
+      "round": 5,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 593,
+        "supportive": 670,
+        "neutral": 670
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          341,
+          355
+        ],
+        [
+          440,
+          454
+        ],
+        [
+          539,
+          554
+        ],
+        [
+          625,
+          639
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_high_n",
+      "round": 1,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 82,
+        "neutral": 82
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 272,
+        "supportive": 288,
+        "neutral": 288
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          56
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_high_n",
+      "round": 1,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 68,
+        "neutral": 68
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 258,
+        "supportive": 274,
+        "neutral": 274
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          42
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          228,
+          243
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_high_n",
+      "round": 2,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 356,
+        "supportive": 387,
+        "neutral": 387
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_high_n",
+      "round": 2,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 342,
+        "supportive": 373,
+        "neutral": 373
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          328,
+          342
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_high_n",
+      "round": 3,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 440,
+        "supportive": 486,
+        "neutral": 486
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_high_n",
+      "round": 3,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 426,
+        "supportive": 472,
+        "neutral": 472
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          427,
+          441
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_high_n",
+      "round": 4,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 82,
+        "neutral": 82
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 524,
+        "supportive": 586,
+        "neutral": 586
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          56
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          540,
+          555
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_high_n",
+      "round": 4,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 68,
+        "neutral": 68
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 510,
+        "supportive": 572,
+        "neutral": 572
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          42
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          526,
+          541
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_high_n",
+      "round": 5,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 608,
+        "supportive": 685,
+        "neutral": 685
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          540,
+          555
+        ],
+        [
+          640,
+          654
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_high_n",
+      "round": 5,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 594,
+        "supportive": 671,
+        "neutral": 671
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          540,
+          555
+        ],
+        [
+          626,
+          640
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_high_n.v2",
+      "round": 1,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 82,
+        "neutral": 82
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 272,
+        "supportive": 288,
+        "neutral": 288
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          56
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_high_n.v2",
+      "round": 1,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 68,
+        "neutral": 68
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 258,
+        "supportive": 274,
+        "neutral": 274
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          42
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          228,
+          243
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_high_n.v2",
+      "round": 2,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 356,
+        "supportive": 387,
+        "neutral": 387
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_high_n.v2",
+      "round": 2,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 342,
+        "supportive": 373,
+        "neutral": 373
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          328,
+          342
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_high_n.v2",
+      "round": 3,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 440,
+        "supportive": 486,
+        "neutral": 486
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_high_n.v2",
+      "round": 3,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 426,
+        "supportive": 472,
+        "neutral": 472
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          427,
+          441
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_high_n.v2",
+      "round": 4,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 82,
+        "neutral": 82
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 524,
+        "supportive": 586,
+        "neutral": 586
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          56
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          540,
+          555
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_high_n.v2",
+      "round": 4,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 68,
+        "neutral": 68
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 510,
+        "supportive": 572,
+        "neutral": 572
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          42
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          526,
+          541
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_high_n.v2",
+      "round": 5,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 608,
+        "supportive": 685,
+        "neutral": 685
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          540,
+          555
+        ],
+        [
+          640,
+          654
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_high_n.v2",
+      "round": 5,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 594,
+        "supportive": 671,
+        "neutral": 671
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          540,
+          555
+        ],
+        [
+          626,
+          640
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_high_n.v3",
+      "round": 1,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 82,
+        "neutral": 82
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 271,
+        "supportive": 287,
+        "neutral": 287
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          56
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_high_n.v3",
+      "round": 1,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 68,
+        "neutral": 68
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 257,
+        "supportive": 273,
+        "neutral": 273
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          42
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          227,
+          242
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_high_n.v3",
+      "round": 2,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 355,
+        "supportive": 386,
+        "neutral": 386
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          341,
+          355
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_high_n.v3",
+      "round": 2,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 341,
+        "supportive": 372,
+        "neutral": 372
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          327,
+          341
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_high_n.v3",
+      "round": 3,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 439,
+        "supportive": 485,
+        "neutral": 485
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          341,
+          355
+        ],
+        [
+          440,
+          454
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_high_n.v3",
+      "round": 3,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 425,
+        "supportive": 471,
+        "neutral": 471
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          341,
+          355
+        ],
+        [
+          426,
+          440
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_high_n.v3",
+      "round": 4,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 82,
+        "neutral": 82
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 523,
+        "supportive": 585,
+        "neutral": 585
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          56
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          341,
+          355
+        ],
+        [
+          440,
+          454
+        ],
+        [
+          539,
+          554
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_high_n.v3",
+      "round": 4,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 68,
+        "neutral": 68
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 509,
+        "supportive": 571,
+        "neutral": 571
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          42
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          341,
+          355
+        ],
+        [
+          440,
+          454
+        ],
+        [
+          525,
+          540
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_high_n.v3",
+      "round": 5,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 607,
+        "supportive": 684,
+        "neutral": 684
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          341,
+          355
+        ],
+        [
+          440,
+          454
+        ],
+        [
+          539,
+          554
+        ],
+        [
+          639,
+          653
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_high_n.v3",
+      "round": 5,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 593,
+        "supportive": 670,
+        "neutral": 670
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          341,
+          355
+        ],
+        [
+          440,
+          454
+        ],
+        [
+          539,
+          554
+        ],
+        [
+          625,
+          639
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_low_n",
+      "round": 1,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 82,
+        "neutral": 82
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 272,
+        "supportive": 288,
+        "neutral": 288
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          56
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_low_n",
+      "round": 1,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 68,
+        "neutral": 68
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 258,
+        "supportive": 274,
+        "neutral": 274
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          42
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          228,
+          243
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_low_n",
+      "round": 2,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 356,
+        "supportive": 387,
+        "neutral": 387
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_low_n",
+      "round": 2,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 342,
+        "supportive": 373,
+        "neutral": 373
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          328,
+          342
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_low_n",
+      "round": 3,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 440,
+        "supportive": 486,
+        "neutral": 486
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_low_n",
+      "round": 3,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 426,
+        "supportive": 472,
+        "neutral": 472
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          427,
+          441
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_low_n",
+      "round": 4,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 82,
+        "neutral": 82
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 524,
+        "supportive": 586,
+        "neutral": 586
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          56
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          540,
+          555
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_low_n",
+      "round": 4,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 68,
+        "neutral": 68
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 510,
+        "supportive": 572,
+        "neutral": 572
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          42
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          526,
+          541
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_low_n",
+      "round": 5,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 608,
+        "supportive": 685,
+        "neutral": 685
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          540,
+          555
+        ],
+        [
+          640,
+          654
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_low_n",
+      "round": 5,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 594,
+        "supportive": 671,
+        "neutral": 671
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          540,
+          555
+        ],
+        [
+          626,
+          640
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_low_n.v2",
+      "round": 1,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 82,
+        "neutral": 82
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 272,
+        "supportive": 288,
+        "neutral": 288
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          56
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_low_n.v2",
+      "round": 1,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 68,
+        "neutral": 68
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 258,
+        "supportive": 274,
+        "neutral": 274
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          42
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          228,
+          243
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_low_n.v2",
+      "round": 2,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 356,
+        "supportive": 387,
+        "neutral": 387
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_low_n.v2",
+      "round": 2,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 342,
+        "supportive": 373,
+        "neutral": 373
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          328,
+          342
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_low_n.v2",
+      "round": 3,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 440,
+        "supportive": 486,
+        "neutral": 486
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_low_n.v2",
+      "round": 3,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 426,
+        "supportive": 472,
+        "neutral": 472
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          427,
+          441
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_low_n.v2",
+      "round": 4,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 82,
+        "neutral": 82
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 524,
+        "supportive": 586,
+        "neutral": 586
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          56
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          540,
+          555
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_low_n.v2",
+      "round": 4,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 68,
+        "neutral": 68
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 510,
+        "supportive": 572,
+        "neutral": 572
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          42
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          526,
+          541
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_low_n.v2",
+      "round": 5,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 608,
+        "supportive": 685,
+        "neutral": 685
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          540,
+          555
+        ],
+        [
+          640,
+          654
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_low_n.v2",
+      "round": 5,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 594,
+        "supportive": 671,
+        "neutral": 671
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          242,
+          257
+        ],
+        [
+          342,
+          356
+        ],
+        [
+          441,
+          455
+        ],
+        [
+          540,
+          555
+        ],
+        [
+          626,
+          640
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_low_n.v3",
+      "round": 1,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 82,
+        "neutral": 82
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 271,
+        "supportive": 287,
+        "neutral": 287
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          56
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_low_n.v3",
+      "round": 1,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 68,
+        "neutral": 68
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 257,
+        "supportive": 273,
+        "neutral": 273
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          42
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          227,
+          242
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_low_n.v3",
+      "round": 2,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 355,
+        "supportive": 386,
+        "neutral": 386
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          341,
+          355
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_low_n.v3",
+      "round": 2,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 341,
+        "supportive": 372,
+        "neutral": 372
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          327,
+          341
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_low_n.v3",
+      "round": 3,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 439,
+        "supportive": 485,
+        "neutral": 485
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          341,
+          355
+        ],
+        [
+          440,
+          454
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_low_n.v3",
+      "round": 3,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 425,
+        "supportive": 471,
+        "neutral": 471
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          341,
+          355
+        ],
+        [
+          426,
+          440
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_low_n.v3",
+      "round": 4,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 82,
+        "neutral": 82
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 523,
+        "supportive": 585,
+        "neutral": 585
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          56
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          341,
+          355
+        ],
+        [
+          440,
+          454
+        ],
+        [
+          539,
+          554
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_low_n.v3",
+      "round": 4,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 68,
+        "neutral": 68
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 509,
+        "supportive": 571,
+        "neutral": 571
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          42
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          341,
+          355
+        ],
+        [
+          440,
+          454
+        ],
+        [
+          525,
+          540
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_low_n.v3",
+      "round": 5,
+      "frame": "valid_feedback",
+      "full_turn_token_counts": {
+        "feedback_only": 66,
+        "supportive": 81,
+        "neutral": 81
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 607,
+        "supportive": 684,
+        "neutral": 684
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          41,
+          55
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          341,
+          355
+        ],
+        [
+          440,
+          454
+        ],
+        [
+          539,
+          554
+        ],
+        [
+          639,
+          653
+        ]
+      ]
+    },
+    {
+      "persona_id": "persona.low_e_low_n.v3",
+      "round": 5,
+      "frame": "invalid_guess",
+      "full_turn_token_counts": {
+        "feedback_only": 52,
+        "supportive": 67,
+        "neutral": 67
+      },
+      "cumulative_render_token_counts": {
+        "feedback_only": 593,
+        "supportive": 670,
+        "neutral": 670
+      },
+      "supportive_neutral_full_turn_difference_spans": [
+        [
+          27,
+          41
+        ]
+      ],
+      "supportive_neutral_render_difference_spans": [
+        [
+          241,
+          256
+        ],
+        [
+          341,
+          355
+        ],
+        [
+          440,
+          454
+        ],
+        [
+          539,
+          554
+        ],
+        [
+          625,
+          639
+        ]
+      ]
+    }
+  ]
+}

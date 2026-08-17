@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "kind": "formal_v2_dated_freeze_manifest",
+  "freeze_id": "formal-v2-2026-08-16",
+  "date": "2026-08-16",
+  "git_head_at_freeze": "41cfb3b802b53159090ceadea88f50b73f7708e6",
+  "formal_seeds": [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010],
+  "arms": ["feedback_only", "supportive", "neutral"],
+  "model_snapshot_sha256": "58c7c8cabbfb8a71eef25c14860b07338eb7b689063cc0fc19f08f4247c39a7e",
+  "probe_materials_checksum": "6cce24b8f0e5379ae5155c8aaa29fd7d92df1025e66b95413db4423330df426a",
+  "files_sha256": {
+    "formal_v2_prompts.md": "ff6008a741668b1c90a44740e0573f29fa793fd039b102e744e65c9e85fa4136",
+    "formal_v2_personas_v3.md": "384652879ac24515e642afc12bba05c6482a8eefa40d6fa4846a5af29cc276df",
+    "formal_v2_filler_candidates_v4.md": "012c750ca775f5c8a5a562c0712e03b3f6105a17d8d8b65afcb666a907ea932c",
+    "results/formal-v2-persona-calibration-v3.json": "baa80e39d2c436d41cc90ce9574d0a9c168cf19271baff7047f5827306d1a2d5",
+    "results/formal-v2-runtime-token-render-audit-2026-08-16.json": "afd5393144b42c4352d87e0af62f56b945b4532c0c8cbc1015473967a0f8a96d",
+    "results/formal-v2-real-backend-smoke-2026-08-16.jsonl": "e1b7ccb4537e9fa9e35ca0463e903985065b59adf0ad798bbc0609bf6d742c96",
+    "artifacts/qwen2.5-1.5b-emotion-directions.npz": "8034145a877afb36dc4bf8bde8afc208da3268866d8335ee393bed543e5250f2",
+    "prompts.md": "2641d8a2eea7f209ffbb96aa5a801c16ca3d2fede7bb84a7dce525453595d321",
+    "requirements.txt": "03367483167ad0cf4af1b653cb22d70d39ff8cdcbfee1e549aab5b3df6ba5dcd",
+    "run_formal_v2.py": "ec0eed840172804dad5d0a44a245f0842b14263c763ef36ce873c631facc0fab",
+    "encouragement_lab/formal_v2_runner.py": "99e82eacc0ef998e31c8af34395a46fbb603a266f8991c2720f1c1b4905f3ab7",
+    "encouragement_lab/formal_v2_records.py": "01dba3a817aed6ea8b5fa51d91a9db0235a6c001ccf1fe45c4ad84db8635d26a",
+    "encouragement_lab/formal_v2_analysis.py": "6886f0b9262b069426bd52116e2444cbe6c9f0991c437d4709974a8eb4501f9e",
+    "run_formal_v2_analysis.py": "05afd9b1b0e3049c38eea8dc4b2c8e308bbbb66bab7f58463dee54ce9bb9a15b",
+    "encouragement_lab/formal_v2_figures.py": "455b8f74a78773ccce901c5e4718cd4cf01254fc082bab3fc73d833560bac849",
+    "run_formal_v2_figures.py": "931adb7542e341577dbe0f03f25a334d99fce594e3bd7078a7cd8143dbc1924d",
+    "run_formal_v2_runtime_audit.py": "2c6225a73155da0ab3b81839bf830f53e206e80ce7cb8ad0ccd91197e3126bf6"
+  },
+  "environment": {
+    "python": "3.12.13",
+    "torch": "2.13.0",
+    "transformers": "4.57.6",
+    "repeng": "0.5.0 @ 0ba7196d81f7c5de28b1159c9d1732440afd97ce",
+    "numpy": "2.5.2",
+    "scikit_learn": "1.9.0"
+  },
+  "smoke_scope": "real local model and validated probe on CPU float32; nonformal seed 9001; MPS rejected by the tool environment OS gate before inference",
+  "formal_runtime_required": "MPS float16; temperature 0.5; top_p 0.9; max_new_tokens 48",
+  "collection_started": false
+}

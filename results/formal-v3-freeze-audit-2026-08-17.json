@@ -1,0 +1,122 @@
+{
+  "checks": [
+    {
+      "name": "collection_lock",
+      "observed_freeze_id": null,
+      "passed": true
+    },
+    {
+      "arms": [
+        "feedback_only",
+        "supportive",
+        "neutral"
+      ],
+      "axes": [
+        "furious",
+        "grief_stricken",
+        "joyful"
+      ],
+      "formal_seeds": [
+        3001,
+        3002,
+        3003,
+        3004,
+        3005,
+        3006,
+        3007,
+        3008,
+        3009,
+        3010
+      ],
+      "layer": 17,
+      "name": "runner_constants",
+      "passed": true
+    },
+    {
+      "expected_sha256": "ff6008a741668b1c90a44740e0573f29fa793fd039b102e744e65c9e85fa4136",
+      "name": "prompt_source",
+      "passed": true,
+      "path": "/Users/lialind/lias-yard/lab/formal_v2_prompts.md",
+      "sha256": "ff6008a741668b1c90a44740e0573f29fa793fd039b102e744e65c9e85fa4136"
+    },
+    {
+      "expected_sha256": "58c7c8cabbfb8a71eef25c14860b07338eb7b689063cc0fc19f08f4247c39a7e",
+      "name": "model_snapshot",
+      "passed": true,
+      "path": "/Users/lialind/lias-yard/lab/models/Qwen2.5-1.5B-Instruct",
+      "sha256": "58c7c8cabbfb8a71eef25c14860b07338eb7b689063cc0fc19f08f4247c39a7e"
+    },
+    {
+      "axes": [
+        "furious",
+        "grief_stricken",
+        "joyful"
+      ],
+      "layers": [
+        17
+      ],
+      "materials_checksum": "external:f6c84d65832608b4c4457f3f4b248774a42df940:612f780909fe8f3e75b5a65882037a4b48f3372ac0ee96060133dc7947020475",
+      "model_checksum": "58c7c8cabbfb8a71eef25c14860b07338eb7b689063cc0fc19f08f4247c39a7e",
+      "name": "external_emotion_artifact",
+      "passed": true,
+      "path": "/Users/lialind/lias-yard/lab/artifacts/qwen2.5-1.5b-emotion-vector-bench-layer17.npz",
+      "sha256": "aca2a4806c5cb475455c2f914b26fe1fe107ed90a1f62b44a59121c6a54d6fc0",
+      "source_metadata_matches": true
+    },
+    {
+      "finite_round_readouts": 15,
+      "name": "real_backend_smoke",
+      "observed_schedule": [
+        [
+          "persona.high_e_high_n",
+          9002,
+          "feedback_only"
+        ],
+        [
+          "persona.high_e_high_n",
+          9002,
+          "supportive"
+        ],
+        [
+          "persona.high_e_high_n",
+          9002,
+          "neutral"
+        ]
+      ],
+      "passed": true,
+      "path": "/Users/lialind/lias-yard/lab/results/formal-v3-real-backend-smoke-2026-08-17.jsonl",
+      "provenance_consistent": true,
+      "provenance_matches_frozen_inputs": true,
+      "record_count": 3,
+      "smoke_code_version": "41cfb3b802b53159090ceadea88f50b73f7708e6+formal-v3-source-sha256:492194bca0b73af1703728327064cb5dc34b85e0704829fc2b4abac2ce7743f4"
+    },
+    {
+      "name": "protocol_freeze_constants",
+      "passed": true,
+      "path": "/Users/lialind/lias-yard/lab/FORMAL_V3_PROTOCOL.md",
+      "sha256": "334a163bbfa20349fefa9aab52344a4963e6b8c35b59bd98ee7c78567ec45fa0"
+    }
+  ],
+  "collection_started": false,
+  "files_sha256": {
+    "FORMAL_V3_PROTOCOL.md": "334a163bbfa20349fefa9aab52344a4963e6b8c35b59bd98ee7c78567ec45fa0",
+    "artifacts/qwen2.5-1.5b-emotion-vector-bench-layer17.npz": "aca2a4806c5cb475455c2f914b26fe1fe107ed90a1f62b44a59121c6a54d6fc0",
+    "encouragement_lab/emotion_probe.py": "152683fe372fe275be54dca13fa407f6d415de7bdecabefdbc5f43edc952474e",
+    "encouragement_lab/formal_v3_analysis.py": "4a303f435a9e6f6c5d943de1f930f83910c63d1f770f799496a3f716abf4c055",
+    "encouragement_lab/formal_v3_records.py": "7b627e34e18fdb33a1ee338c40712c0b6d3f852a7977a5dd9c73a5dd0d62620b",
+    "encouragement_lab/formal_v3_runner.py": "bc893450727ff4b678463763f177a959c7d647ddbba8367655fe308d9fc5d5f2",
+    "encouragement_lab/mastermind.py": "72878ff896fd813111f69980645e4cb96a8cbdca2448d92ce0b4b149147d56a6",
+    "formal_v2_prompts.md": "ff6008a741668b1c90a44740e0573f29fa793fd039b102e744e65c9e85fa4136",
+    "import_external_emotion_vectors.py": "913a9dc774d760f96ae46d286b4cb14ba2653ccfc255efc35e3ef07e76187750",
+    "results/formal-v3-real-backend-smoke-2026-08-17.jsonl": "450965aa5df445da54bbaddd0a5bdd81a5e1780e42bda330b880be4e29fcf210",
+    "run_formal_v3.py": "ceb496a451540f667969cf4a12a40df491270bfd47de14f3ae39ee9ca11d132f",
+    "run_formal_v3_analysis.py": "3b9eb5bfad30a93c934d5d2f632bc2fb38e14ed43b56dd3892459cdcb0f98c1c"
+  },
+  "formal_v3_freeze_id": null,
+  "git_head": "41cfb3b802b53159090ceadea88f50b73f7708e6",
+  "kind": "formal_v3_candidate_freeze_audit",
+  "model_snapshot_sha256": "58c7c8cabbfb8a71eef25c14860b07338eb7b689063cc0fc19f08f4247c39a7e",
+  "passed": true,
+  "runner_source_snapshot_sha256": "492194bca0b73af1703728327064cb5dc34b85e0704829fc2b4abac2ce7743f4",
+  "schema_version": 1
+}

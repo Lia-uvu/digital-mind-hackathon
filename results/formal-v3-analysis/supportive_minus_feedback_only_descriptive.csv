@@ -1,0 +1,4 @@
+axis,contrast,effect,count,mean,sample_stdev,standard_error,confirmatory_test
+joyful,supportive_minus_feedback_only,overall,10,0.0011699124922355017,0.000623133433844564,0.00019705209371506752,
+grief_stricken,supportive_minus_feedback_only,overall,10,-0.001059759296476841,0.0006649318564809292,0.00021026991552839291,
+furious,supportive_minus_feedback_only,overall,10,0.0005920842289924621,0.0008298163640066686,0.000262410974994044,

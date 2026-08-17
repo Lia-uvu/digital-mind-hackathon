@@ -100,19 +100,38 @@ frustration 的假设预测是：随着连续失败，下一猜的归一化信�
 - 从 formal-v1 的 120 个第 5 轮 checkpoint 重放得到 240/240 合法评分，输出长度 120/120 配对。stated willingness 平均 delta 为 `+0.200/10`（探索性 exact p=`0.250`），persona contrasts 均无证据；旧直接继续提示版本的 `+0.917/10` 没有复现。
 - prompt-end supportive−neutral 为 positive `+0.006485`、negative `-0.000685`、frustration `+0.001979`。这些是具体支持文本与失败历史交互后的最后位置表示，不解释为安抚后的纯情绪。详见 `SUPPORTIVE_WILLINGNESS_RESULTS.md`。
 
-# formal-v2（结构已接受，尚未冻结）
+# formal-v2（2026-08-16 已完成）
+- 360/360 runs、1,800 round readouts 完整；无 missing、early win 或 analysis exclusion。feedback-only manipulation gate 通过。
+- co-primary `supportive − neutral` frustration-direction slope 为 `+0.00086080`，两项 Holm `p=0.003906`；`neutral − feedback_only` 无证据；六项 persona moderation Holm 均无证据。解释边界与完整结果见 `FORMAL_V2_RESULTS.md`。
 - follow-up 只研究首五轮 frustration trajectory；规划为 12 templates × fresh seeds `2001`–`2010` × `feedback_only`/`supportive`/`neutral` 三个完整独立 run，共 360 runs，不从第 5 轮 checkpoint 分叉。
-- Fable 的最小对齐 persona 结构方向已接受；精确 persona/filler 文案与最终 formal-v2 freeze 尚未完成，**不得采集**。draft activation calibration 的 pass rule 已在运行前写死，不得按结果回改。
+- 唯一 forward design 与 dated freeze 入口为 `FORMAL_V2_PROTOCOL.md`；正式采集只允许 frozen CLI、12 personas、seeds `2001`–`2010`、MPS float16。draft activation calibration 的 pass rule 已在运行前写死，不得按结果回改。
 - 唯一的 forward design 入口为 `FORMAL_V2_PROTOCOL.md`；它不替代冻结的 `FORMAL_PROTOCOL.md` 或改写 formal-v1。
 - draft persona 的无游戏、无生成 activation calibration v0 已跑：token audit 通过，但 3-suffix leave-one-template-out 规则为 5/6（held-out `v2` 的 E margin 未过），且 N 文案含禁止的 shift/change 轨迹语言；v0 被拒绝但文案/结果保留为 `formal_v2_personas.md`、`results/formal-v2-persona-calibration.json`。不得改判定、suffix、层或 runner 来迁就 v1，更不得冻结刺激。
 - v1 只改 persona 文案，沿用同一 token audit、三 suffix、层和判据后为 6/6、18/18 suffix-specific signs 正确；这只允许进入后续 freeze 讨论，不等于 formal-v2 刺激已冻结。结果在 `formal_v2_personas_v1.md`、`results/formal-v2-persona-calibration-v1.json`。
 - 复核发现 v1 的 N carrier 三 template 完全相同，不能构成独立 paraphrase generalization；v1 保留但不冻结。v2 只替换 v2/v3 N carrier，仍必须用同一校准设置重新检验。
 - v2 保留 E carriers、改为三条独立 N carrier；同一规则结果为 6/6、18/18。它仅证明 draft activation legibility，不等于 formal-v2 刺激已冻结；完整结果在 `formal_v2_personas_v2.md`、`results/formal-v2-persona-calibration-v2.json`。
-- v3 仅将 v1 template 四处 `You feel worry` 改为 `You feel worried`，沿用同一设置后仍为 6/6、18/18；v0/v1/v2/v3 都未冻结，结果在 `formal_v2_personas_v3.md`、`results/formal-v2-persona-calibration-v3.json`。
+- v3 仅将 v1 template 四处 `You feel worry` 改为 `You feel worried`，沿用同一设置后仍为 6/6、18/18；v0/v1/v2 保留为历史，v3 已进入 2026-08-16 dated freeze。
 - v3 的 persona-only existing-probe baseline raw JSON/CSV 已生成，属于论文快照而非 formal collection；解释边界见 `FORMAL_V2_PERSONA_CALIBRATION_RESULTS.md`，下一步顺序见 `FORMAL_V2_PROTOCOL.md` 的 compaction handoff。
-- persona v3 已通过用户人工语义审查，作为当前 freeze candidate；最终 dated freeze 仍未完成。逐轮 filler 的 v1–v3 候选因缺少 reassurance、虚构/行为性措辞或自然度/平行性问题被拒绝；用户已于 2026-08-16 人工语义接受 `formal_v2_filler_candidates_v4.md` 的精确文案作为当前 freeze candidate。它只使用两种同强度 reassurance 骨架，每轮 supportive/neutral 均精确 Qwen-token 等长，五轮长度只差 1 token；双 valid/invalid frame 与 12-persona render 的当前权威 candidate audit 是 `results/formal-v2-filler-candidates-v4-token-audit-final-review.json`，其 hash 对应当前 v4 source bytes。旧 v1/v2/v4 audits 仅为 superseded historical bytes。不得把候选审计当成 dated final freeze 或启动采集。
-- `formal_v2_prompts.md` 与独立三臂 runner/records 已作为 candidate-only dry-run plumbing 实现：一 arm 一完整 JSONL、逐轮 prompt-boundary readout、candidate count+SHA、严格 resume；invalid/early-win/common-seed 规则已编码。CLI 非 `--dry-run` 一律拒绝。此事实不等于最终 runtime token audit、real-backend integration、freeze 或采集授权；未加载真实模型、未运行 smoke/formal collection。
+- persona v3 与 filler v4 已进入 2026-08-16 dated freeze。最终 consolidated runtime audit 为 `results/formal-v2-runtime-token-render-audit-2026-08-16.json`；旧 candidate audits 只保留为历史。
+- 三臂 frozen runner 已在 MPS float16 完成正式采集；逐轮 readout + render SHA、candidate count+SHA 与严格 provenance 均保存在 `results/formal-v2.jsonl`。
 - formal-v2 已有独立分析器和 `run_formal_v2_analysis.py`：只读严格 JSONL，按 run→template arm contrast→quadrant×seed→seed inference 的固定顺序计算；primary slope 使用两项 co-primary Holm 与六项 moderation Holm，R5−R1 仅 robustness，缺失时整项 seed contrast 排除。CLI 生成非覆盖式 tidy CSV/summary/hash/data dictionary；未读取任何正式 v2 数据。
 - formal-v2 图表脚本只读并校验上述 analysis bundle，输出 R1-centered 三臂 trajectory、planned slope contrasts、SVG/PDF/PNG、自包含 HTML 与 manifest；synthetic 已渲染目检，未读取正式数据。图中统一称 frustration-direction cosine projection，不写成主观 frustration。
+
+# formal-v3（2026-08-17 已完成）
+- 用 `emotion-vector-bench` commit `f6c84d6` 对同一 Qwen checkpoint 的
+  PCA-denoised layer-17 离散概念方向替换本地 probe；冻结三个轴为 joyful、
+  grief-stricken、furious。来源与转换 SHA 见 `FORMAL_V3_PROTOCOL.md`。
+- 12 templates × seeds `3001`–`3010` × 三臂共 360 个 complete from-start arm
+  runs 全部完成；无 missing、early win、analysis exclusion 或 provenance mismatch。
+- supportive−neutral slope 三轴均过三项 Holm：joyful `+0.00194528`、
+  grief-stricken `+0.00086388`、furious `−0.00106509`，Holm 均 `0.005859`；
+  grief-stricken 与冻结预期相反。九项 persona moderation 中六项过 Holm。
+- 这些结果只能解释为 persona 与 intervention 文本调节 content-sensitive
+  residual-stream concept alignment；feedback-only 分解显示它不是纯 latent emotion。
+- 360 runs 只有 17 条行为路径，generation seed 在同一 seed×round 跨 persona 共用；
+  统计单位仍是 10 seed blocks。144/1,800 attempts 有平衡的规则/格式违规。
+- 权威结果为 `FORMAL_V3_RESULTS.md`；raw、analysis、figures 分别在
+  `results/formal-v3.jsonl`、`results/formal-v3-analysis/`、
+  `results/formal-v3-figures/`。不得把 concept projection 改写成模型主观感受。
 
 *此文档及时实时更新*

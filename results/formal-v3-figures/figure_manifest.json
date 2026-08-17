@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "analysis_summary_sha256": "8fd998b50668a4d377a26c509f8c91cd4b44b66b7de55b5a11fcfc2e0f15a2f4",
+  "complete_all_arm_seeds": [
+    3001,
+    3002,
+    3003,
+    3004,
+    3005,
+    3006,
+    3007,
+    3008,
+    3009,
+    3010
+  ],
+  "artifacts_sha256": {
+    "formal-v3-persona-moderation.pdf": "942f2d53f5aa8963046ad9ddb0a36b7daa088a40314dac7ea5e2f2751618f288",
+    "formal-v3-persona-moderation.png": "904e5ff5296afec393194bed0e2915385541d56a4459b5518e964f2879ea517a",
+    "formal-v3-persona-moderation.svg": "dd8e0ddae48f8305553cf358122f134f0d8500de9ceb4a44921f9b55db3cbf81",
+    "formal-v3-planned-slope-effects.pdf": "9e05b8405a694e5e69f850a713124320e1aaf01c4c7932d73e780f95e2ca45ff",
+    "formal-v3-planned-slope-effects.png": "68095f1ed318575570296d9b35758fc723e1972ab9e9dd533d04914585e4a183",
+    "formal-v3-planned-slope-effects.svg": "e414e01a83af9720743530c2597cc1ae1f9147a0bc14f2dd3022cab829074db2",
+    "formal-v3-report.html": "cf7b6802a6e08ef69230ccc3852c12cf5522f1c406ee8c01c1358ffd3d034e86",
+    "formal-v3-trajectories.pdf": "c15fe02a58af4bd6d9fd41ee0317c655a99529fcc66e88bb383c0303fb42c2e6",
+    "formal-v3-trajectories.png": "973a410cb733b5af682813cea0a4bfe87a724992ccca499a398c0cdf2c4257c3",
+    "formal-v3-trajectories.svg": "a2fdfaee16f7a2b6852d9b07fe947885ee62be7591322f2da5d8dc0cb4424f1a"
+  }
+}

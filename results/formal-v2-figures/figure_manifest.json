@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "analysis_summary_sha256": "04746a304431799c2b5a9fd26ab48d0489d14cd3c3bf2c11a522c1ced4e02428",
+  "complete_all_arm_seeds": [
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010
+  ],
+  "artifacts_sha256": {
+    "formal-v2-report.html": "de2c456a81149903b7333cd9edbdd3f5fb858a247af84221d2907ea00c75d778",
+    "formal-v2-slope-contrasts.pdf": "47bde7b089522d11bbac4f22ee2fddba631b4663237cf03c64c0f0e98aa88b6b",
+    "formal-v2-slope-contrasts.png": "d54e45531935ba5bf6eab9b8f1ae8f4cbef6f789e03e3bfdfbdeb0f3169fd807",
+    "formal-v2-slope-contrasts.svg": "139a67b6dd5ff44c6d82e567662f10cbaade0bc84a28525329aec0c65e1cc696",
+    "formal-v2-trajectory.pdf": "63300a82cae153403b0a2eaf4f5565a57a7154fff780d09ea56e9fa81b4b5ee4",
+    "formal-v2-trajectory.png": "6d63d3937f3dd656471cea86cde17064f39b76d33f302ab5aa00c900dd72afa3",
+    "formal-v2-trajectory.svg": "1b5c6b48d302e0e04eb3edf066df0e23e2ce2a248facbb3ac2005a21983782d6"
+  }
+}

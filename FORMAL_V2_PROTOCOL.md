@@ -1,10 +1,11 @@
-# formal-v2 protocol — confirmed design, collection prohibited
+# formal-v2 protocol — frozen 2026-08-16
 
-Status: **the structural design, persona v3, and filler v4 wording below have
-human semantic approval as current freeze candidates, but the consolidated
-runtime tokenizer/render audit, manipulation threshold, real-backend checks,
-and dated final freeze are not complete. Do not collect formal-v2 data yet.**
-This document is a forward protocol and does not
+Status: **dated-frozen on 2026-08-16. Formal collection is authorized only
+through the frozen CLI, exact seeds `2001`–`2010`, and the MPS float16 runtime
+specified below.** The consolidated runtime audit and real-backend CPU smoke
+passed before freeze. The current tool execution environment rejected MPS at
+the OS backend gate, so that smoke is integration evidence, not a substitute
+for the required MPS formal runtime. This document does not
 replace or reinterpret [`FORMAL_PROTOCOL.md`](FORMAL_PROTOCOL.md), which remains
 the immutable formal-v1 protocol.
 
@@ -74,7 +75,7 @@ v1/v2/v4 audits are retained as superseded historical bytes (their source
 hashes may refer to an earlier candidate-document byte stream); none is a
 freeze record or collection authorization.
 
-## Persona text: accepted construction direction, not frozen text
+## Persona text: frozen v3 construction
 
 Fable's proposed minimal-alignment construction is accepted as the structural
 direction:
@@ -103,8 +104,9 @@ direction:
 Record those block lengths and pair quadrants only within the same template;
 do not add semantic filler merely to force equal lengths across templates.
 
-No exact persona text is frozen by this document. Existing formal-v1 prompts
-are historical materials, not implicit formal-v2 stimuli.
+The exact 12 persona texts in `formal_v2_prompts.md`, copied byte-for-byte from
+`formal_v2_personas_v3.md`, are frozen. Existing formal-v1 prompts remain
+historical materials, not implicit formal-v2 stimuli.
 
 ## Independent persona calibration
 
@@ -184,8 +186,7 @@ feedback turn. The provisional primary trajectory summary is the per-run OLS
 slope across rounds 1–5. `round5 − round1` is a robustness summary, not a
 replacement selected after seeing results.
 
-- The manipulation check is that the `feedback_only` slope is positive, using
-  a threshold and decision rule still to be frozen.
+- The manipulation check uses the frozen rule in “Approved analysis rules”.
 - The two co-primary planned arm contrasts are `neutral − feedback_only` and
   `supportive − neutral`. `supportive − feedback_only` is a derived total
   contrast, not an additional independently selected primary comparison.
@@ -227,13 +228,45 @@ personality in the model. In particular, a condition or persona difference in
 the projection may include the semantics of its own prompt and the rendered
 context; it must not be relabeled as a content-free inner emotional state.
 
-## Freeze gate
+## Freeze gate (completed 2026-08-16)
 
-Before any formal-v2 collection, append a dated freeze record covering: exact
+The dated freeze record covers: exact
 persona texts; the five filler pairs and their order; Qwen tokenizer/render
 audit; independent calibration materials, seeds, threshold, and result; all
-run/error rules; schema; analysis/figure commands; and checksums. Until then,
-this file is a confirmed structural plan, not a collection authorization.
+run/error rules; schema; analysis/figure commands; and checksums.
+
+### Dated freeze record
+
+- Freeze id: `formal-v2-2026-08-16`.
+- Runtime stimulus source: `formal_v2_prompts.md`; exact component sources are
+  persona v3 and filler v4. Persona order is `PERSONA_KEYS`; arm order is
+  `feedback_only`, `supportive`, `neutral`; filler order is rounds 1–5.
+- Persona calibration is deterministic and has no sampling seeds. It uses the
+  three frozen suffixes and layers −5…−9; v3 passed 6/6 primary margins and
+  18/18 suffix-specific signs. Artifact:
+  `results/formal-v2-persona-calibration-v3.json`.
+- Consolidated audit:
+  `results/formal-v2-runtime-token-render-audit-2026-08-16.json`. It covers all
+  12 personas × five rounds × valid/invalid frames with the exact system
+  wrapper, intro, cumulative transcript, full user turn, rendered counts, and
+  supportive/neutral difference positions. All required paired counts match.
+- Real-backend smoke:
+  `results/formal-v2-real-backend-smoke-2026-08-16.jsonl`, nonformal seed 9001,
+  one persona × three arms. CPU float32 was used because this tool environment
+  rejected MPS before inference. All arms completed five failures; readouts
+  contain all three directions and exact rendered-prompt checksums; strict
+  resume skipped 3/3 completed records. Formal data must use MPS float16.
+- A backend/generation/probe error writes no partial record. Existing complete
+  arm records stay immutable; correct the environment and use `--resume`.
+  There is no replacement seed, imputation, or partial arm record.
+- Schema is `formal_v2_run` v1. Each boundary readout records SHA-256 and UTF-8
+  length of the exact rendered input for reconstruction checks.
+- Collection command: `.venv/bin/python run_formal_v2.py --formal --device mps --output results/formal-v2.jsonl`.
+  Formal mode rejects persona subsets and any seed list other than 2001–2010.
+- Analysis command: `.venv/bin/python run_formal_v2_analysis.py --input results/formal-v2.jsonl --output-dir results/formal-v2-analysis`.
+  Figure command: `.venv/bin/python run_formal_v2_figures.py --analysis-dir results/formal-v2-analysis --output-dir results/formal-v2-figures`.
+- Exact checksums are in `results/formal-v2-freeze-manifest-2026-08-16.json`.
+  Any drift requires a new dated freeze, never silent continuation.
 
 ## Approved analysis rules (implemented)
 

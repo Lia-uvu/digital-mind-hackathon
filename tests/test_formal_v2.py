@@ -243,7 +243,7 @@ def test_resume_rejects_unscheduled_duplicate_and_provenance_drift(tmp_path):
         )
 
 
-def test_cli_is_dry_only_refuses_overwrite_and_resumes_without_duplicates(tmp_path):
+def test_cli_requires_mode_refuses_overwrite_and_resumes_without_duplicates(tmp_path):
     output = tmp_path / "dry.jsonl"
     command = [sys.executable, str(ROOT / "run_formal_v2.py")]
 
@@ -254,7 +254,7 @@ def test_cli_is_dry_only_refuses_overwrite_and_resumes_without_duplicates(tmp_pa
         text=True,
     )
     assert blocked.returncode != 0
-    assert "only the dependency-free --dry-run" in blocked.stderr
+    assert "choose exactly one" in blocked.stderr
 
     first = subprocess.run(
         [*command, "--dry-run", "--output", str(output), "--seed", "9001"],
@@ -292,3 +292,22 @@ def test_cli_is_dry_only_refuses_overwrite_and_resumes_without_duplicates(tmp_pa
     )
     assert resumed.stdout.count("skipped complete") == 3
     assert len(list(iter_runs(output))) == 3
+
+
+def test_formal_cli_rejects_non_mps_before_loading_model(tmp_path):
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(ROOT / "run_formal_v2.py"),
+            "--formal",
+            "--device",
+            "cpu",
+            "--output",
+            str(tmp_path / "formal.jsonl"),
+        ],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+    )
+    assert result.returncode != 0
+    assert "requires explicit --device mps" in result.stderr

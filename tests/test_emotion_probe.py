@@ -68,7 +68,7 @@ def test_emotion_directions_round_trip_without_pickle(tmp_path) -> None:
     assert loaded.validation["frustration"] == {"aggregate_accuracy": 1.0}
 
 
-def test_probe_rejects_directions_missing_frustration_axis() -> None:
+def test_probe_accepts_any_nonempty_axis_collection() -> None:
     class FakeModel:
         class config:
             model_type = "qwen2"
@@ -78,11 +78,43 @@ def test_probe_rejects_directions_missing_frustration_axis() -> None:
         model_checksum=None,
         materials_checksum="a" * 64,
         directions={
-            "positive": {11: np.asarray([1.0], dtype=np.float32)},
-            "negative": {11: np.asarray([1.0], dtype=np.float32)},
+            "joy": {11: np.asarray([1.0], dtype=np.float32)},
+            "sadness": {11: np.asarray([1.0], dtype=np.float32)},
+            "anger": {11: np.asarray([1.0], dtype=np.float32)},
         },
         validation={},
     )
 
-    with pytest.raises(ValueError, match="missing axes: frustration"):
-        EmotionProbe(FakeModel(), object(), directions)
+    probe = EmotionProbe(FakeModel(), object(), directions)
+
+    assert probe.axes == ("joy", "sadness", "anger")
+
+
+def test_external_axis_artifact_loads_and_scores_without_legacy_axes(tmp_path, monkeypatch) -> None:
+    class FakeModel:
+        class config:
+            model_type = "qwen2"
+
+    path = tmp_path / "external-directions.npz"
+    np.savez_compressed(
+        path,
+        joy__17=np.asarray([1.0, 0.0], dtype=np.float32),
+        sadness__17=np.asarray([0.0, 1.0], dtype=np.float32),
+        anger__17=np.asarray([-1.0, 0.0], dtype=np.float32),
+        __metadata__=np.asarray(
+            '{"model_type":"qwen2","materials_checksum":"external","validation":{}}'
+        ),
+    )
+    probe = EmotionProbe(FakeModel(), object(), EmotionDirections.load(path))
+    monkeypatch.setattr(
+        probe,
+        "_hidden_states",
+        lambda texts: {17: np.asarray([[3.0, 4.0]], dtype=np.float32)},
+    )
+
+    scores = probe.score_text("external probe text")
+
+    assert tuple(scores) == ("joy", "sadness", "anger")
+    assert scores["joy"]["median"] == pytest.approx(0.6)
+    assert scores["sadness"]["median"] == pytest.approx(0.8)
+    assert scores["anger"]["median"] == pytest.approx(-0.6)

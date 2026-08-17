@@ -23,10 +23,12 @@ class PromptBoundaryProbe(Protocol):
     def score_text(self, rendered_text: str) -> dict[str, Any]: ...
 
 
-def derive_generation_seed(seed: int, attempt_index: int) -> int:
+def derive_generation_seed(
+    seed: int, attempt_index: int, *, namespace: str = "formal-v2"
+) -> int:
     """Return a stable v2 seed shared across arms within a seed block."""
 
-    payload = f"formal-v2:{seed}:guess:{attempt_index}".encode("utf-8")
+    payload = f"{namespace}:{seed}:guess:{attempt_index}".encode("utf-8")
     return int.from_bytes(hashlib.sha256(payload).digest()[:8], "big") % (
         2**63 - 1
     )
@@ -42,7 +44,12 @@ def _score_prompt_boundary(
     if probe is None:
         return {}
     rendered = backend.render_messages(messages, add_generation_prompt=True)
-    return probe.score_text(rendered)
+    result = dict(probe.score_text(rendered))
+    result["rendered_prompt_sha256"] = hashlib.sha256(
+        rendered.encode("utf-8")
+    ).hexdigest()
+    result["rendered_prompt_utf8_bytes"] = len(rendered.encode("utf-8"))
+    return result
 
 
 def _candidate_state(codes: Sequence[str]) -> dict[str, Any]:
@@ -79,6 +86,7 @@ class FormalV2Runner:
         probe: PromptBoundaryProbe | None = None,
         probe_metadata: Mapping[str, Any] | None = None,
         code_version: str = "uncommitted",
+        seed_namespace: str = "formal-v2",
     ):
         self.backend = backend
         self.path = Path(prompts)
@@ -86,6 +94,7 @@ class FormalV2Runner:
         self.probe = probe
         self.probe_metadata = probe_metadata
         self.code_version = code_version
+        self.seed_namespace = seed_namespace
         self._validate_prompts()
 
     def _validate_prompts(self) -> None:
@@ -178,7 +187,9 @@ class FormalV2Runner:
         status = "complete_five_failures"
 
         for attempt_index in range(1, TARGET_FAILURES + 1):
-            generation_seed = derive_generation_seed(seed, attempt_index)
+            generation_seed = derive_generation_seed(
+                seed, attempt_index, namespace=self.seed_namespace
+            )
             output = self.backend.generate(
                 messages,
                 seed=generation_seed,

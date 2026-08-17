@@ -1,0 +1,4 @@
+axis,eligible_seed_count,slope_median,r5_minus_r1_median,positive_r5_minus_r1_count,confirmatory_test
+joyful,10,-0.0013907958442966142,-0.007953227187196413,1,
+grief_stricken,10,0.00324762687087059,0.009198944394787151,9,
+furious,10,0.002159779674063126,0.010050006521244844,9,

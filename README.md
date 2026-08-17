@@ -11,8 +11,7 @@ The four quadrants form a controlled `extraversion × neuroticism` design, with
 three parallel persona wordings per quadrant (12 prompts total). They contain
 general traits only; they never prescribe how the model reacts to failure or
 support. This describes the completed formal-v1 paired-checkpoint design;
-formal-v2's accepted three-arm, full-run structure is separately documented
-and is not yet frozen for collection.
+formal-v2's completed three-arm, full-run follow-up is separately documented.
 
 See [`AGENTS.md`](AGENTS.md) for the accepted research design and
 [`INSTRUCTION.md`](INSTRUCTION.md) for implementation boundaries. The dated
@@ -20,12 +19,14 @@ research history is in [`EXPERIMENT_LOG.md`](EXPERIMENT_LOG.md), while
 [`STATUS.md`](STATUS.md) tracks the current state and next work. Frozen formal
 sampling and analysis decisions are in [`FORMAL_PROTOCOL.md`](FORMAL_PROTOCOL.md),
 and the completed formal-v1 report is in [`FORMAL_RESULTS.md`](FORMAL_RESULTS.md).
-The accepted-but-not-yet-frozen formal-v2 structure is in
-[`FORMAL_V2_PROTOCOL.md`](FORMAL_V2_PROTOCOL.md); it is explicitly not a
-collection command.
+The frozen formal-v2 structure is in [`FORMAL_V2_PROTOCOL.md`](FORMAL_V2_PROTOCOL.md),
+and its completed results are in [`FORMAL_V2_RESULTS.md`](FORMAL_V2_RESULTS.md).
+The frozen external discrete-emotion replication is in
+[`FORMAL_V3_PROTOCOL.md`](FORMAL_V3_PROTOCOL.md), with completed results in
+[`FORMAL_V3_RESULTS.md`](FORMAL_V3_RESULTS.md).
 
-`formal_v2_prompts.md`、`run_formal_v2.py` 和独立 records/runner 目前仅是
-dry-run-only candidate plumbing；非 dry-run 被拒绝，尚未加载真实模型，也不授权
+`formal_v2_prompts.md`、`run_formal_v2.py` 和独立 records/runner 已冻结；
+formal mode 只接受完整 personas、精确 seeds 与协议指定的 MPS runtime。
 freeze、smoke 或 formal collection。
 The immutable v3 persona-only probe baseline and its tidy table are documented
 in [`FORMAL_V2_PERSONA_CALIBRATION_RESULTS.md`](FORMAL_V2_PERSONA_CALIBRATION_RESULTS.md).
@@ -137,7 +138,7 @@ analyzer:
   results/supportive-willingness-v1.jsonl
 ```
 
-The candidate formal-v2 three-arm trajectory has an independent analyzer. It
+The frozen formal-v2 three-arm trajectory has an independent analyzer. It
 refuses to overwrite an existing output directory and writes validated tidy
 CSVs, exact planned tests, exclusions, hashes, and a data dictionary:
 
@@ -147,8 +148,22 @@ CSVs, exact planned tests, exclusions, hashes, and a data dictionary:
   --output-dir results/formal-v2-analysis
 ```
 
-This command does not authorize collection; the dated freeze gate in
-`FORMAL_V2_PROTOCOL.md` still applies.
+Formal-v3 reuses the unchanged three-arm game with three published layer-17
+Qwen emotion-concept directions and fresh seeds. Its immutable data, strict
+analysis, and figures are reproduced with:
+
+```sh
+.venv/bin/python run_formal_v3_analysis.py \
+  --input results/formal-v3.jsonl \
+  --output-dir results/formal-v3-analysis
+
+.venv/bin/python run_formal_v3_figures.py \
+  --analysis-dir results/formal-v3-analysis \
+  --output-dir results/formal-v3-figures
+```
+
+Collection authorization and runtime constraints are in
+`FORMAL_V2_PROTOCOL.md` and `FORMAL_V3_PROTOCOL.md` respectively.
 
 Render the hash-validated analysis bundle to publication formats and a
 self-contained HTML review report with:
@@ -160,9 +175,9 @@ self-contained HTML review report with:
 ```
 
 Quadrant summaries require a complete `v1`/`v2`/`v3` block for every
-quadrant/seed and average the three templates before counting that seed. For a
-deliberately incomplete smoke file, add `--allow-incomplete-templates` to emit
-template-only summaries.
+quadrant/seed and average the three templates before counting that seed.
+Incomplete smoke files are inspected as strict JSONL, not analyzed by weakening
+the frozen aggregation rule.
 
 ## Older exploratory materials
 

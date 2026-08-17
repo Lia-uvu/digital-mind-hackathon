@@ -1,0 +1,746 @@
+{
+  "schema_version": 1,
+  "source": "/Users/lialind/lias-yard/lab/results/formal-v3.jsonl",
+  "source_sha256": "36bb49a865368eac85b51b56de66d31d217763bd6ce7f14e4c390043c1184e4a",
+  "expected_seeds": [
+    3001,
+    3002,
+    3003,
+    3004,
+    3005,
+    3006,
+    3007,
+    3008,
+    3009,
+    3010
+  ],
+  "expected_personas": [
+    "persona.high_e_high_n",
+    "persona.high_e_high_n.v2",
+    "persona.high_e_high_n.v3",
+    "persona.high_e_low_n",
+    "persona.high_e_low_n.v2",
+    "persona.high_e_low_n.v3",
+    "persona.low_e_high_n",
+    "persona.low_e_high_n.v2",
+    "persona.low_e_high_n.v3",
+    "persona.low_e_low_n",
+    "persona.low_e_low_n.v2",
+    "persona.low_e_low_n.v3"
+  ],
+  "row_counts": {
+    "rounds.csv": 5400,
+    "runs.csv": 1080,
+    "template_contrasts.csv": 1080,
+    "quadrant_contrasts.csv": 360,
+    "seed_contrasts.csv": 90,
+    "run_exclusions.csv": 0,
+    "missing_records.csv": 0,
+    "contrast_missing_map.csv": 0,
+    "manipulation_seeds.csv": 30,
+    "manipulation_summary.csv": 3,
+    "manipulation_missing_map.csv": 0,
+    "co_primary.csv": 3,
+    "moderation.csv": 9,
+    "r5_minus_r1_robustness.csv": 36,
+    "neutral_minus_feedback_only_diagnostic.csv": 3,
+    "supportive_minus_feedback_only_descriptive.csv": 3
+  },
+  "inference": {
+    "co_primary": [
+      {
+        "axis": "joyful",
+        "contrast": "supportive_minus_neutral",
+        "effect": "overall",
+        "count": 10,
+        "mean": 0.001945280246436596,
+        "sample_stdev": 0.000803442348823963,
+        "standard_error": 0.0002540707790919228,
+        "exact_sign_flip_p": 0.001953125,
+        "holm_adjusted_p": 0.005859375
+      },
+      {
+        "axis": "grief_stricken",
+        "contrast": "supportive_minus_neutral",
+        "effect": "overall",
+        "count": 10,
+        "mean": 0.0008638797203699747,
+        "sample_stdev": 0.0005015412349069479,
+        "standard_error": 0.00015860126427995027,
+        "exact_sign_flip_p": 0.001953125,
+        "holm_adjusted_p": 0.005859375
+      },
+      {
+        "axis": "furious",
+        "contrast": "supportive_minus_neutral",
+        "effect": "overall",
+        "count": 10,
+        "mean": -0.0010650856761882702,
+        "sample_stdev": 0.0007178596812743884,
+        "standard_error": 0.00022700716332295915,
+        "exact_sign_flip_p": 0.00390625,
+        "holm_adjusted_p": 0.005859375
+      }
+    ],
+    "moderation": [
+      {
+        "axis": "joyful",
+        "contrast": "supportive_minus_neutral",
+        "effect": "extraversion",
+        "count": 10,
+        "mean": -0.00011804441610972102,
+        "sample_stdev": 9.469476018696069e-05,
+        "standard_error": 2.9945112467422784e-05,
+        "exact_sign_flip_p": 0.005859375,
+        "holm_adjusted_p": 0.03515625
+      },
+      {
+        "axis": "joyful",
+        "contrast": "supportive_minus_neutral",
+        "effect": "neuroticism",
+        "count": 10,
+        "mean": 0.00018795967102050787,
+        "sample_stdev": 9.196117403766934e-05,
+        "standard_error": 2.908067662621781e-05,
+        "exact_sign_flip_p": 0.001953125,
+        "holm_adjusted_p": 0.017578125
+      },
+      {
+        "axis": "joyful",
+        "contrast": "supportive_minus_neutral",
+        "effect": "interaction",
+        "count": 10,
+        "mean": -0.00010137553016344698,
+        "sample_stdev": 0.0003543509972336215,
+        "standard_error": 0.00011205562424102684,
+        "exact_sign_flip_p": 0.515625,
+        "holm_adjusted_p": 1.0
+      },
+      {
+        "axis": "grief_stricken",
+        "contrast": "supportive_minus_neutral",
+        "effect": "extraversion",
+        "count": 10,
+        "mean": 0.00017940759658813466,
+        "sample_stdev": 0.00011202862187014676,
+        "standard_error": 3.5426560823941583e-05,
+        "exact_sign_flip_p": 0.001953125,
+        "holm_adjusted_p": 0.017578125
+      },
+      {
+        "axis": "grief_stricken",
+        "contrast": "supportive_minus_neutral",
+        "effect": "neuroticism",
+        "count": 10,
+        "mean": -3.2739837964375133e-06,
+        "sample_stdev": 5.4116039129356786e-05,
+        "standard_error": 1.711299415955628e-05,
+        "exact_sign_flip_p": 0.830078125,
+        "holm_adjusted_p": 1.0
+      },
+      {
+        "axis": "grief_stricken",
+        "contrast": "supportive_minus_neutral",
+        "effect": "interaction",
+        "count": 10,
+        "mean": 3.898402055104577e-05,
+        "sample_stdev": 0.00011717507107124973,
+        "standard_error": 3.705401095772551e-05,
+        "exact_sign_flip_p": 0.412109375,
+        "holm_adjusted_p": 1.0
+      },
+      {
+        "axis": "furious",
+        "contrast": "supportive_minus_neutral",
+        "effect": "extraversion",
+        "count": 10,
+        "mean": -4.723989094297092e-05,
+        "sample_stdev": 3.9934386246383565e-05,
+        "standard_error": 1.2628361749947412e-05,
+        "exact_sign_flip_p": 0.005859375,
+        "holm_adjusted_p": 0.03515625
+      },
+      {
+        "axis": "furious",
+        "contrast": "supportive_minus_neutral",
+        "effect": "neuroticism",
+        "count": 10,
+        "mean": 4.950982208053276e-05,
+        "sample_stdev": 4.6440349646598386e-05,
+        "standard_error": 1.4685728021784656e-05,
+        "exact_sign_flip_p": 0.005859375,
+        "holm_adjusted_p": 0.03515625
+      },
+      {
+        "axis": "furious",
+        "contrast": "supportive_minus_neutral",
+        "effect": "interaction",
+        "count": 10,
+        "mean": -2.556749929984412e-05,
+        "sample_stdev": 1.4898299606737984e-05,
+        "standard_error": 4.7112560020882875e-06,
+        "exact_sign_flip_p": 0.001953125,
+        "holm_adjusted_p": 0.017578125
+      }
+    ],
+    "neutral_minus_feedback_only_diagnostic": [
+      {
+        "axis": "joyful",
+        "contrast": "neutral_minus_feedback_only",
+        "effect": "overall",
+        "count": 10,
+        "mean": -0.0007753677542010944,
+        "sample_stdev": 0.0006580604388768433,
+        "standard_error": 0.00020809698249008406,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "grief_stricken",
+        "contrast": "neutral_minus_feedback_only",
+        "effect": "overall",
+        "count": 10,
+        "mean": -0.0019236390168468158,
+        "sample_stdev": 0.0004645531576536449,
+        "standard_error": 0.00014690460724088003,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "furious",
+        "contrast": "neutral_minus_feedback_only",
+        "effect": "overall",
+        "count": 10,
+        "mean": 0.0016571699051807322,
+        "sample_stdev": 0.0009343751619398605,
+        "standard_error": 0.0002954753700818632,
+        "confirmatory_test": null
+      }
+    ],
+    "supportive_minus_feedback_only_descriptive": [
+      {
+        "axis": "joyful",
+        "contrast": "supportive_minus_feedback_only",
+        "effect": "overall",
+        "count": 10,
+        "mean": 0.0011699124922355017,
+        "sample_stdev": 0.000623133433844564,
+        "standard_error": 0.00019705209371506752,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "grief_stricken",
+        "contrast": "supportive_minus_feedback_only",
+        "effect": "overall",
+        "count": 10,
+        "mean": -0.001059759296476841,
+        "sample_stdev": 0.0006649318564809292,
+        "standard_error": 0.00021026991552839291,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "furious",
+        "contrast": "supportive_minus_feedback_only",
+        "effect": "overall",
+        "count": 10,
+        "mean": 0.0005920842289924621,
+        "sample_stdev": 0.0008298163640066686,
+        "standard_error": 0.000262410974994044,
+        "confirmatory_test": null
+      }
+    ],
+    "r5_minus_r1_robustness": [
+      {
+        "axis": "joyful",
+        "contrast": "neutral_minus_feedback_only",
+        "effect": "overall",
+        "count": 10,
+        "mean": -0.0028082221746444703,
+        "sample_stdev": 0.0029248486331818814,
+        "standard_error": 0.0009249183492085082,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "joyful",
+        "contrast": "neutral_minus_feedback_only",
+        "effect": "extraversion",
+        "count": 10,
+        "mean": 0.00015487372875213623,
+        "sample_stdev": 0.0009837562596855837,
+        "standard_error": 0.0003110910443054524,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "joyful",
+        "contrast": "neutral_minus_feedback_only",
+        "effect": "neuroticism",
+        "count": 10,
+        "mean": -0.0002581335604190825,
+        "sample_stdev": 0.000341180950422745,
+        "standard_error": 0.00010789088975968619,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "joyful",
+        "contrast": "neutral_minus_feedback_only",
+        "effect": "interaction",
+        "count": 10,
+        "mean": 0.0007424955566724139,
+        "sample_stdev": 0.0012786828384190197,
+        "standard_error": 0.00040435501743731593,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "joyful",
+        "contrast": "supportive_minus_neutral",
+        "effect": "overall",
+        "count": 10,
+        "mean": 0.0060943510383367535,
+        "sample_stdev": 0.003376430655402799,
+        "standard_error": 0.0010677211232687951,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "joyful",
+        "contrast": "supportive_minus_neutral",
+        "effect": "extraversion",
+        "count": 10,
+        "mean": -0.0008278677860895795,
+        "sample_stdev": 0.0006325072956720655,
+        "standard_error": 0.00020001636909972885,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "joyful",
+        "contrast": "supportive_minus_neutral",
+        "effect": "neuroticism",
+        "count": 10,
+        "mean": 0.000969832638899485,
+        "sample_stdev": 0.00042087907340196466,
+        "standard_error": 0.00013309364914514002,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "joyful",
+        "contrast": "supportive_minus_neutral",
+        "effect": "interaction",
+        "count": 10,
+        "mean": -0.00046304116646448746,
+        "sample_stdev": 0.0015384335351502855,
+        "standard_error": 0.0004864953999859613,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "joyful",
+        "contrast": "supportive_minus_feedback_only",
+        "effect": "overall",
+        "count": 10,
+        "mean": 0.0032861288636922836,
+        "sample_stdev": 0.0027423385963046597,
+        "standard_error": 0.0008672036079711736,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "joyful",
+        "contrast": "supportive_minus_feedback_only",
+        "effect": "extraversion",
+        "count": 10,
+        "mean": -0.000672994057337443,
+        "sample_stdev": 0.0008298608630663006,
+        "standard_error": 0.00026242504683226126,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "joyful",
+        "contrast": "supportive_minus_feedback_only",
+        "effect": "neuroticism",
+        "count": 10,
+        "mean": 0.0007116990784804025,
+        "sample_stdev": 0.0004121393125175324,
+        "standard_error": 0.00013032989408513467,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "joyful",
+        "contrast": "supportive_minus_feedback_only",
+        "effect": "interaction",
+        "count": 10,
+        "mean": 0.0002794543902079264,
+        "sample_stdev": 0.0006539601807262935,
+        "standard_error": 0.00020680036701504337,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "grief_stricken",
+        "contrast": "neutral_minus_feedback_only",
+        "effect": "overall",
+        "count": 10,
+        "mean": -0.006650962928930918,
+        "sample_stdev": 0.0022832231682155535,
+        "standard_error": 0.0007220185618026914,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "grief_stricken",
+        "contrast": "neutral_minus_feedback_only",
+        "effect": "extraversion",
+        "count": 10,
+        "mean": -0.0008050267895062756,
+        "sample_stdev": 0.0005638385097415677,
+        "standard_error": 0.00017830139232983907,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "grief_stricken",
+        "contrast": "neutral_minus_feedback_only",
+        "effect": "neuroticism",
+        "count": 10,
+        "mean": 0.00018734882275263452,
+        "sample_stdev": 0.00029195211890673873,
+        "standard_error": 9.232336634576021e-05,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "grief_stricken",
+        "contrast": "neutral_minus_feedback_only",
+        "effect": "interaction",
+        "count": 10,
+        "mean": -0.00034224589665730827,
+        "sample_stdev": 0.0003726016765405993,
+        "standard_error": 0.00011782699578656216,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "grief_stricken",
+        "contrast": "supportive_minus_neutral",
+        "effect": "overall",
+        "count": 10,
+        "mean": 0.0014558915048837663,
+        "sample_stdev": 0.0022448631961960704,
+        "standard_error": 0.0007098880735465019,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "grief_stricken",
+        "contrast": "supportive_minus_neutral",
+        "effect": "extraversion",
+        "count": 10,
+        "mean": 0.0009139386316140491,
+        "sample_stdev": 0.0003142468890131883,
+        "standard_error": 9.937359169038173e-05,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "grief_stricken",
+        "contrast": "supportive_minus_neutral",
+        "effect": "neuroticism",
+        "count": 10,
+        "mean": -0.00014708464344342548,
+        "sample_stdev": 0.00025511165856311255,
+        "standard_error": 8.06733898722634e-05,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "grief_stricken",
+        "contrast": "supportive_minus_neutral",
+        "effect": "interaction",
+        "count": 10,
+        "mean": 7.974455753962189e-05,
+        "sample_stdev": 0.000548520376411842,
+        "standard_error": 0.0001734573732474318,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "grief_stricken",
+        "contrast": "supportive_minus_feedback_only",
+        "effect": "overall",
+        "count": 10,
+        "mean": -0.005195071424047152,
+        "sample_stdev": 0.0033993828199199933,
+        "standard_error": 0.0010749792349793183,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "grief_stricken",
+        "contrast": "supportive_minus_feedback_only",
+        "effect": "extraversion",
+        "count": 10,
+        "mean": 0.00010891184210777289,
+        "sample_stdev": 0.0006962239232103859,
+        "standard_error": 0.00022016533588429884,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "grief_stricken",
+        "contrast": "supportive_minus_feedback_only",
+        "effect": "neuroticism",
+        "count": 10,
+        "mean": 4.0264179309209095e-05,
+        "sample_stdev": 0.00041072306681204883,
+        "standard_error": 0.00012988203786955867,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "grief_stricken",
+        "contrast": "supportive_minus_feedback_only",
+        "effect": "interaction",
+        "count": 10,
+        "mean": -0.0002625013391176859,
+        "sample_stdev": 0.0007171323457863901,
+        "standard_error": 0.00022677715964644467,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "furious",
+        "contrast": "neutral_minus_feedback_only",
+        "effect": "overall",
+        "count": 10,
+        "mean": 0.0040772662653277315,
+        "sample_stdev": 0.004111737089045991,
+        "standard_error": 0.0013002454341175898,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "furious",
+        "contrast": "neutral_minus_feedback_only",
+        "effect": "extraversion",
+        "count": 10,
+        "mean": 0.00044904105986158055,
+        "sample_stdev": 0.00020830916666972156,
+        "standard_error": 6.58731424167952e-05,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "furious",
+        "contrast": "neutral_minus_feedback_only",
+        "effect": "neuroticism",
+        "count": 10,
+        "mean": -7.322781408826523e-05,
+        "sample_stdev": 0.0002096763184990114,
+        "standard_error": 6.630547378557736e-05,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "furious",
+        "contrast": "neutral_minus_feedback_only",
+        "effect": "interaction",
+        "count": 10,
+        "mean": 0.0002455461149414382,
+        "sample_stdev": 0.00017091132650470014,
+        "standard_error": 5.40469069675557e-05,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "furious",
+        "contrast": "supportive_minus_neutral",
+        "effect": "overall",
+        "count": 10,
+        "mean": -0.0034830421519776184,
+        "sample_stdev": 0.0034426265330838152,
+        "standard_error": 0.0010886540977873866,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "furious",
+        "contrast": "supportive_minus_neutral",
+        "effect": "extraversion",
+        "count": 10,
+        "mean": -0.0003419634575645128,
+        "sample_stdev": 0.00031555705937322406,
+        "standard_error": 9.978790393643732e-05,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "furious",
+        "contrast": "supportive_minus_neutral",
+        "effect": "neuroticism",
+        "count": 10,
+        "mean": 0.0002599362904826803,
+        "sample_stdev": 0.00020381169780065637,
+        "standard_error": 6.445091788360045e-05,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "furious",
+        "contrast": "supportive_minus_neutral",
+        "effect": "interaction",
+        "count": 10,
+        "mean": -0.00011967755854129817,
+        "sample_stdev": 9.383244262046803e-05,
+        "standard_error": 2.9672423709773735e-05,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "furious",
+        "contrast": "supportive_minus_feedback_only",
+        "effect": "overall",
+        "count": 10,
+        "mean": 0.0005942241133501132,
+        "sample_stdev": 0.0037657056876116085,
+        "standard_error": 0.0011908206970703194,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "furious",
+        "contrast": "supportive_minus_feedback_only",
+        "effect": "extraversion",
+        "count": 10,
+        "mean": 0.00010707760229706768,
+        "sample_stdev": 0.00044101060450833204,
+        "standard_error": 0.00013945979825340506,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "furious",
+        "contrast": "supportive_minus_feedback_only",
+        "effect": "neuroticism",
+        "count": 10,
+        "mean": 0.0001867084763944149,
+        "sample_stdev": 0.00016509671223983256,
+        "standard_error": 5.220816448832699e-05,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "furious",
+        "contrast": "supportive_minus_feedback_only",
+        "effect": "interaction",
+        "count": 10,
+        "mean": 0.0001258685564001401,
+        "sample_stdev": 0.00021371979215289332,
+        "standard_error": 6.758413242609239e-05,
+        "confirmatory_test": null
+      }
+    ]
+  },
+  "manipulation": {
+    "expected_seed_count": 10,
+    "axis_summaries": [
+      {
+        "axis": "joyful",
+        "eligible_seed_count": 10,
+        "slope_median": -0.0013907958442966142,
+        "r5_minus_r1_median": -0.007953227187196413,
+        "positive_r5_minus_r1_count": 1,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "grief_stricken",
+        "eligible_seed_count": 10,
+        "slope_median": 0.00324762687087059,
+        "r5_minus_r1_median": 0.009198944394787151,
+        "positive_r5_minus_r1_count": 9,
+        "confirmatory_test": null
+      },
+      {
+        "axis": "furious",
+        "eligible_seed_count": 10,
+        "slope_median": 0.002159779674063126,
+        "r5_minus_r1_median": 0.010050006521244844,
+        "positive_r5_minus_r1_count": 9,
+        "confirmatory_test": null
+      }
+    ],
+    "interpretation": "descriptive feedback-only trajectory summaries; not a confirmatory family"
+  },
+  "provenance": {
+    "prompt_sha256": "ff6008a741668b1c90a44740e0573f29fa793fd039b102e744e65c9e85fa4136",
+    "model": {
+      "name": "/Users/lialind/lias-yard/lab/models/Qwen2.5-1.5B-Instruct",
+      "model_type": "qwen2",
+      "revision": null,
+      "snapshot_sha256": "58c7c8cabbfb8a71eef25c14860b07338eb7b689063cc0fc19f08f4247c39a7e",
+      "dtype": "torch.float16",
+      "device": "mps"
+    },
+    "sampling": {
+      "max_new_tokens": 48,
+      "temperature": 0.5,
+      "top_p": 0.9
+    },
+    "emotion_probe": {
+      "artifact_name": "qwen2.5-1.5b-emotion-vector-bench-layer17.npz",
+      "artifact_sha256": "aca2a4806c5cb475455c2f914b26fe1fe107ed90a1f62b44a59121c6a54d6fc0",
+      "model_checksum": "58c7c8cabbfb8a71eef25c14860b07338eb7b689063cc0fc19f08f4247c39a7e",
+      "materials_checksum": "external:f6c84d65832608b4c4457f3f4b248774a42df940:612f780909fe8f3e75b5a65882037a4b48f3372ac0ee96060133dc7947020475",
+      "axes": [
+        "furious",
+        "grief_stricken",
+        "joyful"
+      ],
+      "layers": [
+        17
+      ],
+      "external_source": {
+        "joyful": {
+          "source_repository": "https://github.com/mufxio/emotion-vector-bench",
+          "source_commit": "f6c84d65832608b4c4457f3f4b248774a42df940",
+          "source_artifact_sha256": "612f780909fe8f3e75b5a65882037a4b48f3372ac0ee96060133dc7947020475",
+          "source_model": "Qwen/Qwen2.5-1.5B-Instruct",
+          "source_layer": 17,
+          "source_variant": "denoised_vectors.npz",
+          "source_concepts": {
+            "joyful": "joyful",
+            "grief_stricken": "grief-stricken",
+            "furious": "furious"
+          },
+          "selection_rule": "best reported 20-way probe accuracy layer"
+        },
+        "grief_stricken": {
+          "source_repository": "https://github.com/mufxio/emotion-vector-bench",
+          "source_commit": "f6c84d65832608b4c4457f3f4b248774a42df940",
+          "source_artifact_sha256": "612f780909fe8f3e75b5a65882037a4b48f3372ac0ee96060133dc7947020475",
+          "source_model": "Qwen/Qwen2.5-1.5B-Instruct",
+          "source_layer": 17,
+          "source_variant": "denoised_vectors.npz",
+          "source_concepts": {
+            "joyful": "joyful",
+            "grief_stricken": "grief-stricken",
+            "furious": "furious"
+          },
+          "selection_rule": "best reported 20-way probe accuracy layer"
+        },
+        "furious": {
+          "source_repository": "https://github.com/mufxio/emotion-vector-bench",
+          "source_commit": "f6c84d65832608b4c4457f3f4b248774a42df940",
+          "source_artifact_sha256": "612f780909fe8f3e75b5a65882037a4b48f3372ac0ee96060133dc7947020475",
+          "source_model": "Qwen/Qwen2.5-1.5B-Instruct",
+          "source_layer": 17,
+          "source_variant": "denoised_vectors.npz",
+          "source_concepts": {
+            "joyful": "joyful",
+            "grief_stricken": "grief-stricken",
+            "furious": "furious"
+          },
+          "selection_rule": "best reported 20-way probe accuracy layer"
+        }
+      }
+    },
+    "code_version": "41cfb3b802b53159090ceadea88f50b73f7708e6+formal-v3-source-sha256:7176200b9634b881230a4c3e3c34c32bf7cba24ed217e498722e4b95ccf1e1f7",
+    "dependency_versions": {
+      "numpy": "2.5.2",
+      "torch": "2.13.0",
+      "transformers": "4.57.6",
+      "repeng": "0.5.0"
+    },
+    "final_instruction": "To continue, Reply with exactly one JSON object in the form {\"guess\":\"0123\"} containing your next guess.",
+    "target_failure_rounds": 5,
+    "engine_sha256": "72878ff896fd813111f69980645e4cb96a8cbdca2448d92ce0b4b149147d56a6"
+  },
+  "artifact_sha256": {
+    "DATA_DICTIONARY.md": "c2c6efc1d8858255ef01e23eca14477a8c65489b54b368a198e13d64780e6d87",
+    "co_primary.csv": "3259b01e6bd07420b6c206b2963d34f08599d124fcbb119ab4cd6ccb3edddba4",
+    "contrast_missing_map.csv": "95f172effce16568840708b0b927e4b962aa4b8bc0495c4a5cfc9c461a310ed8",
+    "manipulation_missing_map.csv": "4f3e06c9c1341d0a96f70a0d8e489a79eb823a1bfb764a0dc20cc61c73aa5381",
+    "manipulation_seeds.csv": "5ddb9d708f6d3d26affe43473552a39f57f7f318966b1b1f5774bcc790ae43e9",
+    "manipulation_summary.csv": "dc54297564c9e08c1bd5d548e82fae4fbe47ebd61620512197b0ba10f806c2da",
+    "missing_records.csv": "858bc9c6d588e55e92d5dfdd3db54b55628b402978e735529ec3d7f96a04d790",
+    "moderation.csv": "7202958edabb168ed3c5b3848e9884962e0fb24dbfedb6e0da24f1a7245b39ab",
+    "neutral_minus_feedback_only_diagnostic.csv": "cfcbf60c9191d41cc09e91d658a7a2e74fd903c2278c4d356f565ce55cb90ac9",
+    "quadrant_contrasts.csv": "cbf2848a6391013df83721e635b0c9b0f8c7bbdfac76749c6238c773f094e6b5",
+    "r5_minus_r1_robustness.csv": "448f16587e614f7c9cb62977b5787f74f21e18dcf043586db79f4d91e6223c00",
+    "rounds.csv": "1ddcab6521364b4f243bc26b96d2bef6c4e684a92ef657c84dbfb23da9d7535b",
+    "run_exclusions.csv": "3ba379f192350399bc6527b42cc08c5128070be3b7184a7420f9ff307e967e83",
+    "runs.csv": "ffbe96f637a88030a7bd9cdd29f282c6e0a897934a253244dbecff8948902c5a",
+    "seed_contrasts.csv": "2710d3c892167e4627ce6edd9fff9e6c9b99293f988799c6683d9e8e682fcf34",
+    "supportive_minus_feedback_only_descriptive.csv": "7e43ad476177ecba987d02f4737a57c8a515be71b92bc8edd7b9f43335046cae",
+    "template_contrasts.csv": "d1ed4aeb5f66688b5b59c7b8ecfa51c76f30317e26430a655ccf8223cb49f41e"
+  }
+}
